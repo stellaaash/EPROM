@@ -48,12 +48,12 @@
             "state": {
               "type": "webviewer",
               "state": {
-                "url": "https://www.learncpp.com/cpp-tutorial/halts-exiting-your-program-early/",
-                "title": "8.12 — Halts (exiting your program early) – Learn C++",
+                "url": "https://www.learncpp.com/cpp-tutorial/introduction-to-random-number-generation/",
+                "title": "8.13 — Introduction to random number generation – Learn C++",
                 "mode": "webview"
               },
               "icon": "globe-2",
-              "title": "8.12 — Halts (exiting your program early) – Learn C++"
+              "title": "8.13 — Introduction to random number generation – Learn C++"
             }
           }
         ]
@@ -234,6 +234,7 @@
   "active": "ed7686771d186bc4",
   "lastOpenFiles": [
     "learncpp.com.md",
+    "clear.md",
     "PI",
     "Linked List.md",
     "Transmission Control Protocol.md",

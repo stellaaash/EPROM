@@ -7,7 +7,7 @@ Status: IN PROGRESS
 ---
 [[C++]] tutorials and learning materials.
 # Progress
-8.8
+8.13
 # Bookmarks - Stuff to remember
 ## 0 - Introduction
 ### 0.1
@@ -376,3 +376,6 @@ Keep the `i j k` counter variables inside `for` loop parenthesis, so their scope
 `std::exit()` is the function to terminate the program normally.
 It can be called by the code explicitly, but returning from the `main()` function also calls it by default.
 > `std::exit()` performs a number of cleanup functions. First, objects with static storage duration are destroyed. Then some other miscellaneous file cleanup is done if any files were used. Finally, control is returned back to the OS, with the argument passed to `std::exit()` used as the `status code`.
+> The `std::exit()` function does not clean up local variables in the current function or up the call stack.
+
+To make sure your program cleans up after itself when exiting, use the `std::atexit()` function.
