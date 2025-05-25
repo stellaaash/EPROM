@@ -48,12 +48,12 @@
             "state": {
               "type": "webviewer",
               "state": {
-                "url": "https://www.learncpp.com/cpp-tutorial/switch-statement-basics/",
-                "title": "8.5 — Switch statement basics – Learn C++",
+                "url": "https://www.learncpp.com/cpp-tutorial/halts-exiting-your-program-early/",
+                "title": "8.12 — Halts (exiting your program early) – Learn C++",
                 "mode": "webview"
               },
               "icon": "globe-2",
-              "title": "8.5 — Switch statement basics – Learn C++"
+              "title": "8.12 — Halts (exiting your program early) – Learn C++"
             }
           }
         ]
@@ -231,9 +231,10 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "68068e575d50463f",
+  "active": "ed7686771d186bc4",
   "lastOpenFiles": [
     "learncpp.com.md",
+    "PI",
     "Linked List.md",
     "Transmission Control Protocol.md",
     "Switch.md",
@@ -259,7 +260,6 @@
     "Compiler.md",
     "The Psychology of Computer Programming.md",
     "Sorting Algorithms.md",
-    "Current Working Directory.md",
     "Code projects/Philosophers.canvas",
     "Books",
     "Code projects/Minishell.canvas",

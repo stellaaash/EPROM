@@ -3,6 +3,7 @@ tags:
   - cpp
   - book
 Author: Bjarne Stroustrup
+Status: IN PROGRESS
 ---
 [[2013 Stroustrup - The C++ Programming Language 4th Edition.pdf]]
 

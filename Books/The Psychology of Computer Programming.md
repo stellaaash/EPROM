@@ -2,6 +2,7 @@
 Author: Gerald M. Weinberg
 tags:
   - book
+Status: IN PROGRESS
 ---
 # Bookmarks
 

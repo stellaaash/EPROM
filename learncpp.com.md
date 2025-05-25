@@ -3,10 +3,11 @@ tags:
   - Tutorial
   - cpp
 Website: https://www.learncpp.com/
+Status: IN PROGRESS
 ---
 [[C++]] tutorials and learning materials.
 # Progress
-8.4
+8.8
 # Bookmarks - Stuff to remember
 ## 0 - Introduction
 ### 0.1
@@ -318,3 +319,60 @@ Please.
 ## 8 - Control flow
 ### 8.4
 In C++17, you can do `constexpr` if statements. Use them if the condition contains only `constexpr` values.
+### 8.5
+Ideally don't indent `case` labels of `switch` statements.
+```cpp
+// Preferred version
+void printDigitName(int x)
+{
+    switch (x)
+    {
+    case 1: // not indented from switch statement
+        std::cout << "One";
+        return;
+    case 2:
+        std::cout << "Two";
+        return;
+    case 3:
+        std::cout << "Three";
+        return;
+    default:
+        std::cout << "Unknown";
+        return;
+    }
+}
+```
+### 8.6
+Be careful, if you don't end case statements with a `break`, `return` or something else that stops the flow, **switch fallthrough** will happen.
+That means that (in the example of 8.5), if there weren't any `return`s, in case 2, case 2 3 and default would execute back to back.
+To document intentional fallthrough in C++17, use the `[[fallthrough]]` tag.
+```cpp
+#include <iostream>
+
+int main()
+{
+    switch (2)
+    {
+    case 1:
+        std::cout << 1 << '\n';
+        break;
+    case 2:
+        std::cout << 2 << '\n'; // Execution begins here
+        [[fallthrough]]; // intentional fallthrough -- note the semicolon to indicate the null statement
+    case 3:
+        std::cout << 3 << '\n'; // This is also executed
+        break;
+    }
+
+    return 0;
+}
+```
+Remember that `case` labels don't define new scope. They're more like jump points.
+### 8.10
+You can omit statements in `for` loops between parentheses. For example, an infinite `for` loop would look like `for (;;)`.
+You can also have multiple init variables as well as multiple actions at the end of the loop (the third field in the for loop parentheses).
+Keep the `i j k` counter variables inside `for` loop parenthesis, so their scope is more limited.
+### 8.12
+`std::exit()` is the function to terminate the program normally.
+It can be called by the code explicitly, but returning from the `main()` function also calls it by default.
+> `std::exit()` performs a number of cleanup functions. First, objects with static storage duration are destroyed. Then some other miscellaneous file cleanup is done if any files were used. Finally, control is returned back to the OS, with the argument passed to `std::exit()` used as the `status code`.
