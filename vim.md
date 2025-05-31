@@ -5,7 +5,9 @@ tags:
 ---
 **The** perfect text editor.
 An in-terminal text editor to edit text files, code and do a lot of stuff.
+# Derivatives
 [[nvim]]
+[[vimium]]
 # Vim modes
 ## Normal mode
 

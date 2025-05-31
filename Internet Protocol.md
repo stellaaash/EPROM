@@ -11,8 +11,8 @@ Part of the [[Internet Protocol Suite]].
 Datagrams is basically another word for network packet.
 A datagram is composed of two sections: a header and a payload.
 The header is composed of many things:
-- The source [[IP address]]
-- The destination [[IP address]]
+- The source [[IP Address]]
+- The destination [[IP Address]]
 - Other metadata needed to route and deliver the packet
 # Addressing methods
 There are four ways for a packet to be addressed to hosts:

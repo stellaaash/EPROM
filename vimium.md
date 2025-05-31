@@ -3,6 +3,7 @@ tags:
   - cheatsheet
   - browser_extension
 ---
+[[vim]] emulation in the browser.
 # Navigating the page
 j, <c-e>		Scroll down (scrollDown)
 k, <c-y>		Scroll up (scrollUp)

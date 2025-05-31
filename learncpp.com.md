@@ -7,7 +7,7 @@ Status: IN PROGRESS
 ---
 [[C++]] tutorials and learning materials.
 # Progress
-8.13
+12.6
 # Bookmarks - Stuff to remember
 ## 0 - Introduction
 ### 0.1
@@ -379,3 +379,388 @@ It can be called by the code explicitly, but returning from the `main()` functio
 > The `std::exit()` function does not clean up local variables in the current function or up the call stack.
 
 To make sure your program cleans up after itself when exiting, use the `std::atexit()` function.
+### 8.13
+An algorithm is called stateful when it retains some information between calls.
+The opposite of that is a stateless algorithm.
+**Look at this and both the following sections to learn about generating pseudo-random numbers in C++.**
+## 9 - Error detection and handling
+### 9.1
+Use `assert` when doing unit tests for your code.
+Test each function individually and then test them working together.
+Start at the smallest unit possible (a class or a function) and then work your way up with tests.
+### 9.2
+When testing code, we need to aim for 100% coverage of the branches (as in, the tests need to cover all possible control flow possibilities in the code.)
+That means testing every if branch, and much more.
+The same counts for loops : let them run a few times, at least 3, to make sure everything works fine.
+When taking input, go wild with the tests. Give floats to functions accepting ints, `nullptr` to those that accept pointers, etc.
+### 9.4
+> The basic idea is that when an error occurs, an exception is “thrown”. If the current function does not “catch” the error, the caller of the function has a chance to catch the error. If the caller does not catch the error, the caller’s caller has a chance to catch the error. The error progressively moves up the call stack until it is either caught and handled (at which point execution continues normally), or until main() fails to handle the error (at which point the program is terminated with an exception error).
+
+Use `std::cerr` for logs.
+### 9.5 - Input error handling
+```cpp
+std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+```
+Use this to ignore everything currently present in the `std::cin` buffer up until the '\n' (useful for clearing the buffer in between `>>` extractions).
+- The `std::cin.eof()` function returns `true` if the last input operation (in this case the extraction to `x`) reached the end of the input stream.
+- The `std::cin.peek()` function allows us to peek at the next character in the input stream without extracting it.
+To put `std::cin` back in normal execution mode (after a failed extraction), use the `.clear()` method.
+Don't forget to clear the input buffer if you do that.
+You can also check if `std::cin` is in failure mode by comparing it against false, like `if (!std::cin)`.
+In C++, `EOF` is an error state, not a character.
+### 9.6 - Asserts
+**Preconditions** are conditions that stop code from being executed if some conditions aren't met.
+They're typically put at the very start of functions to check for edge cases and other invalid input.
+> Asserts are used to detect errors while developing and debugging.
+> When an assertion evaluates to false, your program is immediately stopped. This gives you an opportunity to use debugging tools to examine the state of your program and determine why the assertion failed. Working backwards, you can then find and fix the issue quickly.
+> Asserts are better than comments in the context of required value ranges and other cases, because they have document and enforce a condition. Comments can become stale when the code changes and the comment isn’t updated. An assert that has become out of date is a code correctness issue, so developers are less likely to let them languish.
+
+`assert()` is actually a preprocessor macro.
+```cpp
+assert(found && "Car could not be found in database");
+```
+This little trick above allows you to make more descriptive error messages when `assert` fails.
+The `NDEBUG` macro disables `assert`. Useful for production release code.
+Finally, `static_assert` allows you to assert things at compile time. Failed asserts will cause compilation errors.
+Careful, `NDEBUG` doesn't turn off `static_assert`.
+Since `assert` terminates the program rather abruptly, be careful using it while doing delicate operations that could result in corruption if stopped in the middle of them.
+## 10 - Type conversions
+### 10.2 - Numeric and float promotion
+The width of a data type is the number of bits it is composed of.
+Numeric promotion is the action of promoting a smaller type (like `char` or `short`) to a larger type that will be easier to handle by the target architecture's CPU.
+Most often, this is either `int` or `double`.
+This means that you could write a function that takes an `int` and give it `short`, `char` or things like `uint16` and it would work fine.
+Same thing with floats: a function that takes in `double` as an argument can accept a `float`.
+### 10.3 - Numeric conversions
+For pretty obvious reasons, be careful when numeric converting stuff.
+If you're converting from signed to unsigned, for example, you might lose some information (the sign).
+### 10.4 - Narrowing conversions
+Narrowing conversions happen when converting a type to a smaller one, potentially losing some information (because the width can't hold everything).
+When intentionally doing this, use a `static_cast` to make it clear that it was intentional.
+### 10.5 - Arithmetic conversions
+Be very careful mixing unsigned and signed values in arithmetic expressions.
+As in, **don't.**
+If you want to check what's the common type of two types when joined in an arithmetic expression (like addition, subtraction etc), use `std::common_type_t<type1, type2>`.
+### 10.6 - Casting
+There are 4 different named casts in C++, along the usual C-style casts with parentheses.
+
+| Cast             | Description                                                                                           | Safe?                 |
+| ---------------- | ----------------------------------------------------------------------------------------------------- | --------------------- |
+| static_cast      | Performs compile-time type conversions between related types.                                         | Yes                   |
+| dynamic_cast     | Performs runtime type conversions on pointers or references in an polymorphic (inheritance) hierarchy | Yes                   |
+| const_cast       | Adds or removes const.                                                                                | Only for adding const |
+| reinterpret_cast | Reinterprets the bit-level representation of one type as if it were another type                      | No                    |
+| C-style casts    | Performs some combination of `static_cast`, `const_cast`, or `reinterpret_cast`.                      | No                    |
+> Avoid `const_cast` and `reinterpret_cast` unless you have a very good reason to use them.
+
+Generally also avoid C-style casts, as it isn't always clear what it does under the hood.
+`static_cast` should usually be your go-to.
+### 10.7 - Typedefs and type aliases
+You can create a type alias by using the `using` keyword (heh) like this:
+```cpp
+using Distance = double; // define Distance as an alias for type double
+```
+When aliasing a type, use the usual C++ convention of using a name with a first capital letter and no suffix (like `_t`).
+Since aliasing a type is basically the modern version of `typedef`, use this instead.
+Aliases are very useful for making new names for longer types, or making an otherwise unclear type clearer (renaming `int` as `TestScore` for example).
+### 10.8 - Type deduction
+Use `auto` as a type to let the compiler do the work of figuring out what's the type of a variable.
+Seems kinda lazy, but in some cases it might be useful.
+Careful, it drops `const` and `constexpr` when assigning from a variable that has those.
+### 10.9 - `auto` with functions
+Read the title. You can also do `auto` with functions.
+Just- don't do that. It's not really worth the trade-offs.
+## 11 - Function overloading and templates
+### 11.1 - Function overloading
+You can create multiple functions with the same name if you change the parameters' type(s).
+You might wonder how the compiler figures out which one we wanna use? Well, it's all about the arguments' types.
+If you have two add functions that either takes `int` or `double` arguments, the compiler will check if the call you wrote has `double` or `int` and use the right function accordingly.
+### 11.2 - Differences between overloaded functions
+The differences the compiler checks for are the number of parameters and their types.
+**The return type is not checked.**
+### 11.4 - Deleting functions
+If you don't want an overloaded function to be used anymore, or if you want to forbid a particular use of a function, you can stamp a `= delete` after it's prototype to make the compiler flag it if it finds a use with the specified function signature.
+```cpp
+void printInt(char) = delete; // calls to this function will halt compilation
+void printInt(bool) = delete; // calls to this function will halt compilation
+```
+> `= delete` means “I forbid this”, not “this doesn’t exist”.
+> Deleted function participate in all stages of function overload resolution (not just in the exact match stage). If a deleted function is selected, then a compilation error results.
+### 11.5 - Default arguments
+In C++, you can provide functions a default value for their arguments.
+```cpp
+void print(int x, int y=10) // 10 is the default argument
+{
+    std::cout << "x: " << x << '\n';
+    std::cout << "y: " << y << '\n';
+}
+```
+Be careful, **all arguments with default values should be to the right of the arguments list**.
+In the above example, you can't have `int x=10, int y` for example.
+> If the function has a forward declaration (especially one in a header file), put the default argument there. Otherwise, put the default argument in the function definition.
+### 11.6 - Function templates
+> Instead of manually creating a bunch of mostly-identical functions or classes (one for each set of different types), we instead create a single _template_. Just like a normal definition, a **template** definition describes what a function or class looks like. Unlike a normal definition (where all types must be specified), in a template we can use one or more placeholder types. A placeholder type represents some type that is not known at the time the template is defined, but that will be provided later (when the template is used).
+> Once a template is defined, the compiler can use the template to generate as many overloaded functions (or classes) as needed, each using different actual types!
+> Templates can work with types that didn’t even exist when the template was written. This helps make template code both flexible and future proof!
+
+```cpp
+template <typename T> // this is the template parameter declaration defining T as a type template parameter
+T max(T x, T y) // this is the function template definition for max<T>
+{
+    return (x < y) ? y : x;
+}
+```
+The `typename` keyword in the example above can technically be replaced with `class`, but `typename` is more recent and thus prefered.
+#### More details?
+> As an example, the standard library has an overload of `std::max()` that is declared like this:
+```cpp
+template< class T, class Compare >
+const T& max( const T& a, const T& b, Compare comp ); // ignore the & for now, we'll cover these in a future lesson
+```
+By the way, you would call this a `max<T, Compare>` template.
+> Because `a` and `b` are of type `T`, we know that we don’t care what type `a` and `b` are -- they can be any type. Because `comp` has type `Compare`, we know that `comp` must be a type that meets the requirements for a `Compare` (whatever that is).
+> When a function template is instantiated, the compiler replaces the template parameters with the template arguments and then compiles the resulting instantiated function. Whether the function compiles depends on how the object(s) of each type are used within the function. Therefore, the requirements for a given template parameter are essentially implicitly defined.
+#### Wrapped up
+Use names that are pretty obvious are placeholders (single capital letters like `T`) for types that can be anything.
+If you have placeholder types that need to be replaced with a specific kind of type, give it a more descriptive name like `Allocator` or `TAllocator`.
+Make sure to document what the type is supposed to be so an outsider can use your template.
+### 11.7 - Function template instantiation
+To use a function template, you kind of call it with an added syntax thing:
+```cpp
+template<actual_type>(arg1, arg2); // replace actual_type with int, double or whatever you want to replace the type placeholder with
+```
+When the compiler finds such a use, it chooses which template to take from according to its signature, and creates a new function from it.
+This is called **implicit instantiation**.
+The result is technically called a specialization, or more commonly a function instance.
+If you want, you can leave the <> part entirely and let the compiler have fun figuring out your arguments' type(s) (if you don't already have another function with the same name as your template).
+For example:
+
+```cpp
+#include <iostream>
+
+template <typename T>
+T max(T x, T y)
+{
+    std::cout << "called max<int>(int, int)\n";
+    return (x < y) ? y : x;
+}
+
+int max(int x, int y)
+{
+    std::cout << "called max(int, int)\n";
+    return (x < y) ? y : x;
+}
+
+int main()
+{
+    std::cout << max<int>(1, 2) << '\n'; // calls max<int>(int, int)
+    std::cout << max<>(1, 2) << '\n';    // deduces max<int>(int, int) (non-template functions not considered)
+    std::cout << max(1, 2) << '\n';      // calls max(int, int)
+
+    return 0;
+}
+```
+Just like with function overloading, you can forbid some function templates by preparing a declaration for them and stamping `= delete` afterwards.
+That way, if somehow you tell the compiler to create such a function from your template, you'll get an error and will be able to fix it.
+Otherwise, you might end up with functions that won't work the way you expect them to work.
+```cpp
+// Use function template specialization to tell the compiler that addOne(const char*) should emit a compilation error
+template <>
+const char* addOne(const char* x) = delete;
+```
+___
+Non template parameters in templates can have default values.
+___
+If you have a `static` in your template, each function created from it will have its own instance (and value).
+___
+Template types are sometimes called **generic types**.
+As such, programming with them is called **generic programming**.
+### 11.8 - Function templates with multiple types
+If you need placeholder arguments to have different types in templates, use differently named placeholders (like `T`, `U` and `V`) to make their types independent.
+This means that they could be different types, but also all the same.
+___
+In C++20 and above, you can use the `auto` keyword to create abbreviated function templates.
+___
+You can also overload function templates... if that's something you're into.
+```cpp
+#include <iostream>
+
+// Add two values with matching types
+template <typename T>
+auto add(T x, T y)
+{
+    return x + y;
+}
+
+// Add two values with non-matching types
+// As of C++20 we could also use auto add(auto x, auto y)
+template <typename T, typename U>
+auto add(T x, U y)
+{
+    return x + y;
+}
+
+// Add three values with any type
+// As of C++20 we could also use auto add(auto x, auto y, auto z)
+template <typename T, typename U, typename V>
+auto add(T x, U y, V z)
+{
+    return x + y + z;
+}
+
+int main()
+{
+    std::cout << add(1.2, 3.4) << '\n'; // instantiates and calls add<double>()
+    std::cout << add(5.6, 7) << '\n';   // instantiates and calls add<double, int>()
+    std::cout << add(8, 9, 10) << '\n'; // instantiates and calls add<int, int, int>()
+
+    return 0;
+}
+```
+### 11.9 - Non-type template parameters
+Not only can you define placeholder arguments in templates, you can also define internal values the function will use as placeholders.
+```cpp
+#include <iostream>
+
+template <int N> // declare a non-type template parameter of type int named N
+void print()
+{
+    std::cout << N << '\n'; // use value of N here
+}
+
+int main()
+{
+    print<5>(); // 5 is our non-type template argument
+
+    return 0;
+}
+```
+Use `N` instead of `T` for naming non-type template parameters.
+> Non-type template parameters are used primarily when we need to pass constexpr values to functions (or class types) so they can be used in contexts that require a constant expression.
+> The class type `std::bitset` uses a non-type template parameter to define the number of bits to store because the number of bits must be a constexpr value.
+
+### 11.10
+Put your templates in header files.
+## F - Constexpr functions
+### F.1
+`constexpr` functions allow you to use them in `constexpr` variables. Usually, functions can't be used as initialization material for variables. Those can.
+If the arguments you give to a `constexpr` function aren't `constexpr` themselves, the function will be evaluated at run time (and will lose its `constexpr` return value stamp.)
+### F.2
+> All constexpr functions should be evaluatable at compile-time, as they will be required to do so in contexts that require a constant expression.
+> Always test your constexpr functions in a context that requires a constant expression, as the constexpr function may work when evaluated at runtime but fail when evaluated at compile-time.
+
+`constexpr` functions are implicitly inline functions (since they're evaluated at compile time if you have `constexpr` parameters).
+### F.3
+In C++20, there's a keyword to force a function to be evaluated at compile-time (`constexpr` isn't always depending on the function's uses) : `consteval`.
+### F.4
+When should I make function `constexpr`? As soon as you find one that's **pure** (no side effects, always the same return value provided the input stays the same).
+> Unless you have a specific reason not to, a function that can be evaluated as part of a constant expression should be made `constexpr` (even if it isn’t currently used that way).
+> A function that cannot be evaluated as part of a required constant expression should not be marked as `constexpr`.
+
+## 12 - References and pointers
+### 12.1
+Each type that is composed of other types is called a **compound type**. That counts functions, too, but also pointers, references, enums, C-style arrays and classes.
+### 12.2 - lvalues and rvalues
+> The **value category** of an expression (or sub-expression) indicates whether an expression resolves to a value, a function, or an object of some kind.
+
+lvalue and rvalue both stand for left and right value.
+An **lvalue** is an expression that evaluates to an identifiable object or function (or bit-field).
+___
+An **rvalue** is an expression that is not an lvalue.
+Rvalue expressions evaluate to a value. Commonly seen rvalues include literals (except C-style string literals, which are lvalues) and the return value of functions and operators that return by value.
+Rvalues aren’t identifiable (meaning they have to be used immediately), and only exist within the scope of the expression in which they are used.
+> An lvalue will implicitly convert to an rvalue. This means an lvalue can be used anywhere an rvalue is expected.
+
+### 12.3 - lvalue references
+References are essentially an alias for an existing object. A bonified pointer of sorts.
+There are lvalue and rvalue references. Prior to C++11, there were only lvalue references, so these were simply called references.
+___
+References are identified by their ampersand : `int&`, `double&` etc.
+There's a distinction between lvalue references to const objects and non-const objects.
+___
+```cpp
+#include <iostream>
+
+int main()
+{
+    int x { 5 };    // x is a normal integer variable
+    int& ref { x }; // ref is an lvalue reference variable that can now be used as an alias for variable x
+
+    std::cout << x << '\n';  // print the value of x (5)
+    std::cout << ref << '\n'; // print the value of x via ref (5)
+
+    return 0;
+}
+```
+Of course, the ampersand in this case does not mean "address of" like with pointers. It means "lvalue reference to".
+You can also modify the underlying object by assigning a new value to the reference.
+___
+Careful, references in C++ can't be reseated. That means they can't be reassigned to another object.
+Once a reference is locked in on an object, it stays on that one for ever until it gets deleted.
+```cpp
+#include <iostream>
+
+int main()
+{
+    int x { 5 };
+    int y { 6 };
+
+    int& ref { x }; // ref is now an alias for x
+
+    ref = y; // assigns 6 (the value of y) to x (the object being referenced by ref)
+    // The above line does NOT change ref into a reference to variable y!
+
+    std::cout << x << '\n'; // user is expecting this to print 5
+
+    return 0;
+}
+```
+Assigning an lvalue to a reference actually transforms that lvalue into a rvalue and assigns the result to the underlying object of the reference.
+___
+References in C++ aren't actually objects like pointers. They'll often be optimized away by the compiler.
+As such, you can't use them where objects are required. That means you can't have a reference to a reference, for example.
+```cpp
+int var{};
+int& ref1{ var };  // an lvalue reference bound to var
+int& ref2{ ref1 }; // an lvalue reference bound to var
+```
+Same as the example a bit above, this `ref2` gets assigned the underlying value of `ref1`, which is `var`. As such, both `ref1` and `ref2` end up as references to the same object.
+### 12.4 - lvalue references to const
+You can have references to const objects by stamping `const` in front of the reference's type.
+If you're certain you won't modify a non-const value through a reference, you can even make the reference `const` while the underlying object isn't.
+This is good practice for when you don't need to modify the underlying object through the ref.
+___
+You can also bind a const reference to a temporary object like a literal.
+```cpp
+    const int& ref { 5 }; // okay: 5 is an rvalue
+```
+When you do that, this temporary object isn't discarded at the end of the expression anymore.
+Its lifetime becomes bounded to the reference's.
+___
+Though you can bind a `const int&` to a `short` for example, don't do it.
+This would create a temporary `int` converted from the `short`, and modifying the underlying `short` wouldn't modify the temporary object.
+A whole mess. Don't do it.
+### 12.5 - Pass by lvalue reference
+Bigger objects like classes and other big compound types are expensive to copy.
+In such cases, it becomes interesting to pass them by reference instead.
+Most types provided by the standard library are classes, by the way. That includes `std::string`, too.
+```cpp
+#include <iostream>
+#include <string>
+
+void printValue(std::string& y) // type changed to std::string&
+{
+    std::cout << y << '\n';
+} // y is destroyed here
+
+int main()
+{
+    std::string x { "Hello, world!" };
+
+    printValue(x); // x is now passed by reference into reference parameter y (inexpensive)
+
+    return 0;
+}
+```
+Notice how we only changed the type of argument in the function prototype? No need to use `&x` or anything like that when passing the argument itself.
+Same thing as C, passing by reference allows us to modify the underlying object, something you can't do when passing by value.
