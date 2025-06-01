@@ -7,8 +7,10 @@ Status: IN PROGRESS
 ---
 [[C++]] tutorials and learning materials.
 # Progress
-12.6
+12.10
 # Bookmarks - Stuff to remember
+My personal bookmarks are those of someone that comes from a small background of working in C over several months in a wide variety of projects.
+This is why I'm not noting everything down, only those things relevant to someone with knowledge of standard C.
 ## 0 - Introduction
 ### 0.1
 Don't code when you're tired or stressed out. Sort out the things that stress you out or go sleep or something. Then come back and write good code.
@@ -764,3 +766,64 @@ int main()
 ```
 Notice how we only changed the type of argument in the function prototype? No need to use `&x` or anything like that when passing the argument itself.
 Same thing as C, passing by reference allows us to modify the underlying object, something you can't do when passing by value.
+### 12.6 - Pass by const lvalue reference
+Unlike a reference to non-const, a reference to const can refer to **not only modifiable values, but also non-modifiables values and even rvalues**.
+Basically, a reference to const will be able to bind to any type of argument.
+```cpp
+#include <iostream>
+
+void printRef(const int& y) // y is a const reference
+{
+    std::cout << y << '\n';
+}
+
+int main()
+{
+    int x { 5 };
+    printRef(x);   // ok: x is a modifiable lvalue, y binds to x
+
+    const int z { 5 };
+    printRef(z);   // ok: z is a non-modifiable lvalue, y binds to z
+
+    printRef(5);   // ok: 5 is rvalue literal, y binds to temporary int object
+
+    return 0;
+}
+```
+This allows you to pass any value by reference, while making sure the underlying function will be unable to modify it.
+Which is most cases.
+___
+As such, favor passing by const reference rather than non-const.
+___
+For strings, definitely use `std::string_view` instead of `const std::string&` unless you really need the `std::string` type for some reason.
+Of course, if you're using C++14 or older, `std::string_view` isn't available. So a reference it is.
+### 12.7 - Pointers
+To differentiate from the more recent smart pointers, C style pointers are often called **"raw pointers"**.
+When declaring a pointer type, place the asterisk next to the type instead of the name of the variable.
+___
+Always initialize your pointers, to not keep the garbage address found in them when created.
+> There are some other differences between pointers and references worth mentioning:
+> - References must be initialized, pointers are not required to be initialized (but should be).
+> - References are not objects, pointers are.
+> - References can not be reseated (changed to reference something else), pointers can change what they are pointing at.
+> - References must always be bound to an object, pointers can point to `NULL`.
+> **- References are “safe” (outside of dangling references), pointers are inherently dangerous.**
+
+___
+Pointer sizes are directly dependent upon the architecture the executable is compiled (32 bits for 32-bit machines, 64 bits for 64-bit, etc etc).
+___
+> **Dereferencing an invalid pointer will lead to undefined behavior. Any other use of an invalid pointer value is implementation-defined.**
+### 12.8 - Null pointers
+Assign your pointers to null if you're not planning to give them a value soon, while waiting for an actual value.
+Use `nullptr` to initialize a pointer to null.
+___
+If a pointer is going to be dangling and its underlying variable gone to the ashes, better set it as `nullptr` so there's less risks.
+___
+**Use references instead of pointers where possible.**
+### 12.9 - Const pointers
+There are two ways to use the `const` keyword with pointers :
+- A pointer to a `const` value: `const T* ptr = ...`
+- A const pointer to a value: `T* const ptr = ...`
+The first can also point to non-`const` values, just like references. It'll just prevent modifications of the value through that pointer.
+The latter can't have its address changed after initialization.
+### 
