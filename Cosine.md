@@ -6,6 +6,8 @@ The cosine of the angle between two vectors or lines represents the difference i
 This provides valuable information indicated whether they are aligned or perpendicular, or somewhere in between.
 Used extensively in computer graphics, physics and engineering.
 # For vectors
+You can use the cosine of the angle between two vectors to determine how similar they are to each other.
+The angle between two vectors $A$ and $B$:
 $$
 cos(\theta) = \frac{A \cdot B}{|A||B|} 
 $$

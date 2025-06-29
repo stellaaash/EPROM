@@ -6,4 +6,7 @@ tags:
 ---
 The Orthodox Canonical Form is a set of guidelines for building classes that are easy to use and simple to clean.
 The idea is to always have classes that have :
-- A default constructor (for default values), a copy constructor (for assigning a [[Class]]' values to a copy of itself), an assignment operator (to assign the object's values to another) and a destructor (to clean it all up afterwards).
+- A default constructor (for default values)
+- A copy constructor (for assigning a [[Class]]' values to a copy of itself)
+- An assignment operator (to assign the object's values to another)
+- A destructor (to clean it all up afterwards).

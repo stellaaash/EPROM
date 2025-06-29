@@ -36,5 +36,5 @@ Some networks are usually only used in cases of a private, internal network (you
 They provide enough distinct addresses to be used without problems inside of a single, private network.
 # Loopback addresses
 There's a range of IP addresses specifically reserved for internal testing and communications within a single device.
-Its range is `127.0.0.0` - `127.255.255.255`.
+This range is `127.0.0.0` - `127.255.255.255`.
 The `127.0.0.1` is referred to as `localhost`, and represents the device itself.

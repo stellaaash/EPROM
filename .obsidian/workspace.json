@@ -6,130 +6,33 @@
       {
         "id": "7d9603f7aeaa0f3f",
         "type": "tabs",
-        "dimension": 58.89183808891838,
         "children": [
           {
-            "id": "e148e48fe48d6ea8",
+            "id": "18f8810937c99f20",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "learncpp.com.md",
+                "file": "Zabbix.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Zabbix"
+            }
+          },
+          {
+            "id": "00e8c5f37e21e367",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Tutorials/learncpp.com.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
               "title": "learncpp.com"
-            }
-          },
-          {
-            "id": "fecf545af736e033",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Algorithm.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": false
-              },
-              "icon": "lucide-file",
-              "title": "Algorithm"
-            }
-          },
-          {
-            "id": "2ab84f69c0e759d2",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Ray Tracing in One Weekend.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Ray Tracing in One Weekend"
-            }
-          },
-          {
-            "id": "8e8e6eb6f1974971",
-            "type": "leaf",
-            "state": {
-              "type": "canvas",
-              "state": {
-                "file": "Code projects/miniRT.canvas",
-                "viewState": {
-                  "x": 941.9722585640193,
-                  "y": -2288.448454192469,
-                  "zoom": -1.2375025397479984
-                }
-              },
-              "icon": "lucide-layout-dashboard",
-              "title": "miniRT"
-            }
-          }
-        ],
-        "currentTab": 1
-      },
-      {
-        "id": "e14b0786cf4b3d94",
-        "type": "tabs",
-        "dimension": 41.10816191108162,
-        "children": [
-          {
-            "id": "ed7686771d186bc4",
-            "type": "leaf",
-            "state": {
-              "type": "webviewer",
-              "state": {
-                "url": "https://www.learncpp.com/cpp-tutorial/pass-by-address/",
-                "title": "12.10 — Pass by address – Learn C++",
-                "mode": "webview"
-              },
-              "icon": "globe-2",
-              "title": "12.10 — Pass by address – Learn C++"
-            }
-          },
-          {
-            "id": "60bdf8534e82f30e",
-            "type": "leaf",
-            "state": {
-              "type": "webviewer",
-              "state": {
-                "url": "https://gabrielgambetta.com/computer-graphics-from-scratch/02-basic-raytracing.html",
-                "title": "Basic Raytracing - Computer Graphics from Scratch - Gabriel Gambetta",
-                "mode": "webview"
-              },
-              "icon": "globe-2",
-              "title": "Basic Raytracing - Computer Graphics from Scratch - Gabriel Gambetta"
-            }
-          },
-          {
-            "id": "0acb2d45ca359077",
-            "type": "leaf",
-            "state": {
-              "type": "webviewer",
-              "state": {
-                "url": "https://en.wikipedia.org/wiki/Data_structure",
-                "title": "Data structure - Wikipedia",
-                "mode": "webview"
-              },
-              "icon": "globe-2",
-              "title": "Data structure - Wikipedia"
-            }
-          },
-          {
-            "id": "0807ceb7a24d1aff",
-            "type": "leaf",
-            "state": {
-              "type": "webviewer",
-              "state": {
-                "url": "https://neetcode.io/courses/lessons/how-to-use-neetcode-effectively",
-                "title": "How to Use Neetcode Effectively (Coding Interviews)",
-                "mode": "webview"
-              },
-              "icon": "globe-2",
-              "title": "How to Use Neetcode Effectively (Coding Interviews)"
             }
           }
         ],
@@ -145,6 +48,7 @@
       {
         "id": "a10290a45f0b7cfa",
         "type": "tabs",
+        "dimension": 59.530791788856305,
         "children": [
           {
             "id": "407d7f91a45acf99",
@@ -165,7 +69,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "[\"status\":]",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -191,6 +95,7 @@
       {
         "id": "0a6e8af355e46c4a",
         "type": "tabs",
+        "dimension": 40.469208211143695,
         "children": [
           {
             "id": "68068e575d50463f",
@@ -293,8 +198,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -309,78 +213,41 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "floating": {
-    "id": "58d1c770582a1ca7",
-    "type": "floating",
-    "children": [
-      {
-        "id": "853937e91e89e6cd",
-        "type": "window",
-        "children": [
-          {
-            "id": "c8953e3c1717af2d",
-            "type": "tabs",
-            "children": [
-              {
-                "id": "97d0f4b67ec612ad",
-                "type": "leaf",
-                "state": {
-                  "type": "webviewer",
-                  "state": {
-                    "url": "https://raytracing.github.io/books/RayTracingInOneWeekend.html#diffusematerials",
-                    "title": "Ray Tracing in One Weekend",
-                    "mode": "webview"
-                  },
-                  "icon": "globe-2",
-                  "title": "Ray Tracing in One Weekend"
-                }
-              }
-            ]
-          }
-        ],
-        "direction": "vertical",
-        "x": 2588,
-        "y": 32,
-        "width": 852,
-        "height": 1408,
-        "maximize": false,
-        "zoom": 0
-      }
-    ]
-  },
-  "active": "60bdf8534e82f30e",
+  "active": "00e8c5f37e21e367",
   "lastOpenFiles": [
-    "Algorithm.md",
-    "Data structures.md",
-    "Hash Table.md",
-    "Ray Tracing in One Weekend.md",
-    "Graph.md",
-    "Record.md",
-    "Array.md",
-    "Linked List.md",
-    "Hash Set.md",
-    "Set.md",
-    "learncpp.com.md",
     "Code projects/miniRT.canvas",
-    "tawsqg \u001bqqq",
-    "IP Address.md",
-    "Greek Letters.md",
+    "Tutorials/learncpp.com.md",
+    "Zabbix.md",
     "Cosine.md",
-    "Windows.md",
+    "Tutorials/Learning Modern 3D Graphics Programming.md",
+    "Project Ideas.md",
+    "Tutorials/The Vulkan Tutorial.md",
+    "Tutorials/The Rust Book.md",
+    "Job opportunities.md",
+    "Things to Learn.md",
+    "Orthodox Canonical Form.md",
+    "SSL.md",
+    "TLS.md",
+    "SharePoint.md",
+    "Core Dump.md",
+    "Apache.md",
+    "Tutorials/The Raytracing Challenge.md",
+    "The Rust Book.md",
+    "Memory.md",
+    "en.wikipedia.org/wiki/Virtual_memory.md",
+    "en.wikipedia.org/wiki",
+    "en.wikipedia.org",
+    "Graph.md",
+    "Executable and Linkable Format.md",
+    "Tutorials/Ray Tracing in One Weekend.md",
+    "Algorithm.md",
+    "Tutorials/Scratch a Pixel.md",
+    "Tutorials/Nand to Tetris.md",
+    "Tutorials",
+    "tawsqg \u001bqqq",
     "Pasted image 20250528102848.png",
     "Pasted image 20250528102811.png",
-    "Scratch a Pixel.md",
-    "Books/The C++ Programming Language.md",
-    "clear.md",
     "PI",
-    "Transmission Control Protocol.md",
-    "Switch.md",
-    "Routing Table.md",
-    "Router.md",
-    "Internet Protocol.md",
-    "IP address.md",
-    "vim.md",
-    "Window Manager.md",
     "Books/2013 Stroustrup - The C++ Programming Language 4th Edition.pdf",
     "Code projects/Philosophers.canvas",
     "Books",

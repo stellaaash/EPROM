@@ -7,10 +7,12 @@ Status: IN PROGRESS
 ---
 [[C++]] tutorials and learning materials.
 # Progress
-12.10
+Skipped around some chapters that aren't necessary for 42 school right now
+22.1
 # Bookmarks - Stuff to remember
 My personal bookmarks are those of someone that comes from a small background of working in C over several months in a wide variety of projects.
 This is why I'm not noting everything down, only those things relevant to someone with knowledge of standard C.
+If you want to know the specifics of a particular note of mine, or don't understand what I've written, go read the related section of learncpp.com!
 ## 0 - Introduction
 ### 0.1
 Don't code when you're tired or stressed out. Sort out the things that stress you out or go sleep or something. Then come back and write good code.
@@ -53,6 +55,16 @@ You can also use comments to explain why a certain approach was used and not ano
 > - At the statement level, use comments to describe _why_.
 ### 1.4
 Apparently in [[C++]], initialization of variables is a whole thing. It's not just about saying `x = 4` anymore, you can do crazy stuff with braces, parentheseses and more.
+```cpp
+int a;         // no initializer (default initialization)
+int b = 5;     // initializer after equals sign (copy initialization)
+int c( 6 );    // initializer in parentheses (direct initialization)
+
+// List initialization methods (C++11)
+int d { 7 };   // initializer in braces (direct list initialization)
+int e = { 8 }; // initializer in braces after equals sign (copy list initialization)
+int f {};      // initializer is empty braces (value initialization)
+```
 ### 1.5
 Keep in mind `std::cout` is buffered, which means some output might only appear past a certain point.
 `std::cin` is also buffer, which is how C++ extracts variables from the input in cases like `std::cin >> x`.
@@ -826,4 +838,1319 @@ There are two ways to use the `const` keyword with pointers :
 - A const pointer to a value: `T* const ptr = ...`
 The first can also point to non-`const` values, just like references. It'll just prevent modifications of the value through that pointer.
 The latter can't have its address changed after initialization.
-### 
+### 12.10 - Passing by address
+Unlike with references (where you can just set a function's argument as a reference in the prototype and passing an lvalue to it that will be converted to a reference automatically), with pointers, you not only have to set the type in the prototype, but you also have to explicitly provide a memory address as the argument.
+___
+> Prefer pointer-to-const function parameters over pointer-to-non-const function parameters, unless the function needs to modify the object passed in.  
+> Do not make function parameters const pointers unless there is some specific reason to do so.
+___
+
+In functions that take in a pointer as argument, do an `assert` if this function is NEVER supposed to receive a `nullptr`.
+Also do the traditional thing of checking `if (!ptr) {return ;}` before doing anything else in the function, so that in production optimized code, a check is still there (the `assert` will most likely be optimized out).
+```cpp
+void print(const int* ptr)
+{
+	assert(ptr); // fail the program in debug mode if a null pointer is passed (since this should never happen)
+
+	// (optionally) handle this as an error case in production mode so we don't crash if it does happen
+	if (!ptr)
+		return;
+
+	std::cout << *ptr << '\n';
+}
+```
+>**Prefer pass by reference to pass by address unless you have a specific reason to use pass by address.**
+### 12.11 - More passing by address
+In C++, a common way to use pointers as function parameters is to provide an optional argument:
+```cpp
+#include <iostream>
+
+void printIDNumber(const int *id=nullptr)
+{
+    if (id)
+        std::cout << "Your ID number is " << *id << ".\n";
+    else
+        std::cout << "Your ID number is not known.\n";
+}
+
+int main()
+{
+    printIDNumber(); // we don't know the user's ID yet
+
+    int userid { 34 };
+    printIDNumber(&userid); // we know the user's ID now
+
+    return 0;
+}
+```
+For most purposes, though, **function overloading is better.**
+___
+You can actually have a **reference to a pointer** if a function needs to modify a pointer's address itself.
+___
+In C++, you don't use `0` or `NULL` as null pointer representations, because they're ambiguous in regards to function overloading especially.
+Use `nullptr` instead. If you wanna know the specifics, read that optional subsection in 12.11 again.
+### 12.12 - Returning by reference/address
+Assigning or initializing a variable with a returned reference makes a copy of the underlying value.
+```cpp
+#include <iostream>
+#include <string>
+
+const int& getNextId()
+{
+    static int s_x{ 0 };
+    ++s_x;
+    return s_x;
+}
+
+int main()
+{
+    const int id1 { getNextId() }; // id1 is a normal variable now and receives a copy of the value returned by reference from getNextId()
+    const int id2 { getNextId() }; // id2 is a normal variable now and receives a copy of the value returned by reference from getNextId()
+
+    std::cout << id1 << id2 << '\n';
+
+    return 0;
+}
+```
+___
+> **Prefer return by reference over return by address unless the ability to return “no object” (using `nullptr`) is important.**
+### 12.13 - In and out parameters
+A function parameter that is used for input to the called function is called an **in parameter**.
+A function parameter that is used for output of a called function is called an **out parameter**.
+The latter is for cases when you pass something to a function by reference or address, knowing it's going to be modified by it for later use by the caller.
+In general, **avoid out parameters**, as they are harder to read and work with generally.
+### 12.14 - Type deduction and references/pointers
+> A **top-level const** is a const qualifier that applies to an object itself.
+> In contrast, a **low-level const** is a const qualifier that applies to the object being referenced or pointed to.
+___
+
+Using `auto` on a reference will drop the reference. Const objects also lose their const modifier (but not `constexpr`).
+```cpp
+#include <string>
+
+std::string& getRef(); // some function that returns a reference
+
+int main()
+{
+    auto ref1 { getRef() };  // std::string (reference dropped)
+    auto& ref2 { getRef() }; // std::string& (reference dropped, reference reapplied)
+
+    return 0;
+}
+```
+### 12.15 - std::optional
+```cpp
+#include <iostream>
+#include <optional> // for std::optional (C++17)
+
+// Our function now optionally returns an int value
+std::optional<int> doIntDivision(int x, int y)
+{
+    if (y == 0)
+        return {}; // or return std::nullopt
+    return x / y;
+}
+
+int main()
+{
+    std::optional<int> result1 { doIntDivision(20, 5) };
+    if (result1) // if the function returned a value
+        std::cout << "Result 1: " << *result1 << '\n'; // get the value
+    else
+        std::cout << "Result 1: failed\n";
+
+    std::optional<int> result2 { doIntDivision(5, 0) };
+
+    if (result2)
+        std::cout << "Result 2: " << *result2 << '\n';
+    else
+        std::cout << "Result 2: failed\n";
+
+    return 0;
+}
+```
+Note that while optionals have the same syntax for dereferencing as pointers, they're not pointers.
+## 13 - Enums and structs
+### 13.1 - Program defined types introduction
+> **Name your program-defined types starting with a capital letter and do not use a suffix like `_t`.**
+___
+
+| Type            | Meaning                                                                                                                                                                    | Examples                             |
+| --------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ |
+| Fundamental     | A basic type built into the core C++ language                                                                                                                              | int, std::nullptr_t                  |
+| Compound        | A type defined in terms of other types                                                                                                                                     | int&, double*, std::string, Fraction |
+| User-defined    | A class type or enumerated type  <br>(Includes those defined in the standard library or implementation)  <br>(In casual use, typically used to mean program-defined types) | std::string, Fraction                |
+| Program-defined | A class type or enumerated type  <br>(Excludes those defined in standard library or implementation)                                                                        | Fraction                             |
+### 13.2 - Enums
+The identifiers contained in enums are called **enumerators**, and are implicitly constexpr.
+> Prefer putting your enumerations inside a named scope region (such as a namespace or class) so the enumerators don’t pollute the global namespace.
+### 13.3 - Enumerators are integral
+The first enumerator of your enums should be the default state, the best default value possible for your enum case.
+___
+You can specify the underlying type of your enums when really necessary.
+```cpp
+// Use an 8-bit integer as the enum underlying type
+enum Color : std::int8_t
+{
+    black,
+    red,
+    blue,
+};
+```
+### 12.5 - Operator overloading introduction
+In C++, you can define your own way of using the usual operators like `+-*/ == >> << = etc`.
+> Basic operator overloading is fairly straightforward:	
+> - Define a function using the name of the operator as the function’s name.
+> - Add a parameter of the appropriate type for each operand (in left-to-right order). One of these parameters must be a user-defined type (a class type or an enumerated type), otherwise the compiler will error.
+> - Set the return type to whatever type makes sense.
+> - Use a return statement to return the result of the operation.
+
+```cpp
+#include <iostream>
+#include <string_view>
+
+enum Color
+{
+	black,
+	red,
+	blue,
+};
+
+constexpr std::string_view getColorName(Color color)
+{
+    switch (color)
+    {
+    case black: return "black";
+    case red:   return "red";
+    case blue:  return "blue";
+    default:    return "???";
+    }
+}
+
+// Teach operator<< how to print a Color
+// std::ostream is the type of std::cout, std::cerr, etc...
+// The return type and parameter type are references (to prevent copies from being made)
+std::ostream& operator<<(std::ostream& out, Color color)
+{
+    out << getColorName(color); // print our color's name to whatever output stream out
+    return out;                 // operator<< conventionally returns its left operand
+
+    // The above can be condensed to the following single line:
+    // return out << getColorName(color)
+}
+
+int main()
+{
+	Color shirt{ blue };
+	std::cout << "Your shirt is " << shirt << '\n'; // it works!
+
+	return 0;
+}
+```
+If you look at the code example above, we're essentially overloading the function `operator<<` which is the function used by the operator of the same name.
+### 13.6 - Scoped enums
+The main differences of scoped enums with unscoped enums (see previous section) is that their enumerators don't implicitly convert to integrals, and that their scope is limited to the class itself instead of the global scope the enum is defined in.
+```cpp
+#include <iostream>
+int main()
+{
+    enum class Color // "enum class" defines this as a scoped enumeration rather than an unscoped enumeration
+    {
+        red, // red is considered part of Color's scope region
+        blue,
+    };
+
+    enum class Fruit
+    {
+        banana, // banana is considered part of Fruit's scope region
+        apple,
+    };
+
+    Color color { Color::red }; // note: red is not directly accessible, we have to use Color::red
+    Fruit fruit { Fruit::banana }; // note: banana is not directly accessible, we have to use Fruit::banana
+
+    if (color == fruit) // compile error: the compiler doesn't know how to compare different types Color and Fruit
+        std::cout << "color and fruit are equal\n";
+    else
+        std::cout << "color and fruit are not equal\n";
+
+    return 0;
+}
+```
+___
+Despite the use of the `class` keyword, scoped enums **aren't really classes**.
+Scoped enums create their own scope, that's why you access enumerators with `enum::enumerators`.
+**Favor scoped enums over the unscoped ones usually, unless you need to have one that implicitly converts to ints.**
+### 13.7 - Structs, members and member selection
+In C++, a **member** is a variable, function or type that **belongs to a struct or class**.
+### 13.8 - Aggregate initialization
+Like normal variables, data members have garbage values by default.
+```cpp
+struct Employee
+{
+    int id {};
+    int age {};
+    double wage {};
+};
+
+int main()
+{
+    Employee frank = { 1, 32, 60000.0 }; // copy-list initialization using braced list
+    Employee joe { 2, 28, 45000.0 };     // list initialization using braced list (preferred)
+
+    return 0;
+}
+```
+If you initialize a struct with a list, and some or all members are missing from the list, they will be set to the default value set in the function, 0, or the default Constructor if it's a class.
+You can overload the output operator `<<` to print any type, not just enums, the way you want.
+```cpp
+#include <iostream>
+
+struct Employee
+{
+    int id {};
+    int age {};
+    double wage {};
+};
+
+std::ostream& operator<<(std::ostream& out, const Employee& e)
+{
+    out << e.id << ' ' << e.age << ' ' << e.wage;
+    return out;
+}
+
+int main()
+{
+    Employee joe { 2, 28 }; // joe.wage will be value-initialized to 0.0
+    std::cout << joe << '\n';
+
+	joe = {2, 29, 10}; // You can also modify multiple members like this
+
+    return 0;
+}
+```
+### 13.9 - Default member initialization
+Past C++11, you can give default values to members so that they are set when the struct or class is created.
+```cpp
+struct Something
+{
+    int x;       // no initialization value (bad)
+    int y {};    // value-initialized by default
+    int z { 2 }; // explicit default value
+};
+
+int main()
+{
+    Something s1;             // No initializer list: s1.x is uninitialized, s1.y and s1.z use defaults
+    Something s2 { 5, 6, 7 }; // Explicit initializers: s2.x, s2.y, and s2.z use explicit values (no default values are used)
+    Something s3 {};          // Missing initializers: s3.x is value initialized, s3.y and s3.z use defaults
+
+    return 0;
+}
+```
+If you can (when you don't use an obsolete version of C++), **always give default values to your members**.
+### 13.10 - Passing structs
+You can pass a temporary struct to a function, without explicitly assigning it to a variable beforehand.
+```cpp
+#include <iostream>
+
+struct Employee
+{
+    int id {};
+    int age {};
+    double wage {};
+};
+
+void printEmployee(const Employee& employee) // note pass by reference here
+{
+    std::cout << "ID:   " << employee.id << '\n';
+    std::cout << "Age:  " << employee.age << '\n';
+    std::cout << "Wage: " << employee.wage << '\n';
+}
+
+int main()
+{
+    // Print Joe's information
+    printEmployee(Employee { 14, 32, 24.15 }); // construct a temporary Employee to pass to function (type explicitly specified) (preferred)
+
+    std::cout << '\n';
+
+    // Print Frank's information
+    printEmployee({ 15, 28, 18.27 }); // construct a temporary Employee to pass to function (type deduced from parameter)
+
+    return 0;
+}
+```
+Careful though, because the temporary object will be destroyed at the end of the line that created it.
+Your underlying function shouldn't keep references of this struct's members, as such.
+### 13.12 - Accessing members from referenced/struct pointers
+Since references are essentially an alias for an object, you don't have to use `->` notation to access members of a struct reference.
+### 13.13 - Class templates
+You can also do templates of structs, not just functions.
+```cpp
+#include <iostream>
+
+template <typename T>
+struct Pair
+{
+    T first{};
+    T second{};
+};
+
+int main()
+{
+    Pair<int> p1{ 5, 6 };        // instantiates Pair<int> and creates object p1
+    std::cout << p1.first << ' ' << p1.second << '\n';
+
+    Pair<double> p2{ 1.2, 3.4 }; // instantiates Pair<double> and creates object p2
+    std::cout << p2.first << ' ' << p2.second << '\n';
+
+    Pair<double> p3{ 7.8, 9.0 }; // creates object p3 using prior definition for Pair<double>
+    std::cout << p3.first << ' ' << p3.second << '\n';
+
+    return 0;
+}
+```
+In case you really need a pair template, there's one in the standard library, so use it: `std::pair`.
+### 13.14 - Class template argument deduction (CTDA)
+In modern C++, the compiler can guess what the type of a template initializer's argument is, and create the right struct from that template automatically.
+```cpp
+#include <utility> // for std::pair
+
+int main()
+{
+    std::pair<int, int> p1{ 1, 2 }; // explicitly specify class template std::pair<int, int> (C++11 onward)
+    std::pair p2{ 1, 2 };           // CTAD used to deduce std::pair<int, int> from the initializers (C++17)
+
+    return 0;
+}
+```
+### 13.15 - Alias templates
+You can create aliases for types and templates with `using`:
+```cpp
+#include <iostream>
+
+template <typename T>
+struct Pair
+{
+    T first{};
+    T second{};
+};
+
+// Here's our alias template
+// Alias templates must be defined in global scope
+template <typename T>
+using Coord = Pair<T>; // Coord is an alias for Pair<T>
+
+// Our print function template needs to know that Coord's template parameter T is a type template parameter
+template <typename T>
+void print(const Coord<T>& c)
+{
+    std::cout << c.first << ' ' << c.second << '\n';
+}
+
+int main()
+{
+    Coord<int> p1 { 1, 2 }; // Pre C++-20: We must explicitly specify all type template argument
+    Coord p2 { 1, 2 };      // In C++20, we can use alias template deduction to deduce the template arguments in cases where CTAD works
+
+    std::cout << p1.first << ' ' << p1.second << '\n';
+    print(p2);
+
+    return 0;
+}
+```
+## 14 - Classes
+### 14.2 - Classes introduction
+You define classes much like structs as a starting point, just replacing `struct` with `class` instead.
+Most of the C++ standard library is classes.
+### 14.3 - Member functions
+Member functions are **a class's functions**. They exist to separate attributes and actions related to a class.
+You declare member functions inside the class's body, but you can define them either inside or outside, in another file, for example.
+Inside a member function, any member identifier that is not prefixed with the member selection operator (.) is associated with the implicit object that is passed by calling the member function.
+```cpp
+#include <iostream>
+#include <string>
+
+struct Person
+{
+    std::string name{};
+    int age{};
+
+    void kisses(const Person& person)
+    {
+        std::cout << name << " kisses " << person.name << '\n';
+    }
+};
+
+int main()
+{
+    Person joe{ "Joe", 29 };
+    Person kate{ "Kate", 27 };
+
+    joe.kisses(kate);
+
+    return 0;
+}
+```
+Also. erm. Structs can have member functions too. Yeah.
+AND ACTUALLY. Structs can just do everything classes can in C++. Okay. Welp.
+Keep your structs simple with only data members though. Classes are here for a reason.
+### 14.4 - Const classes and member functions
+Class instances that were const initialized can't call non-const member functions.
+**A const member function is a member function that guarantees won't change the object or call non-const member functions.**
+### 14.5 - Public and private members
+Members of a class are either `public`, `private` or `protected`.
+**The public** is code not part of the class type, so any other code, basically.
+Public members are accessible by the public. Private ones aren't.
+**Members of a struct are public by default, and members of a class are private by default.**
+Start your private members with a `m_` or just a `_` prefix (that one's my choice).
+
+| Access level | Access specifier | Member access | Derived class access | Public access |
+| ------------ | ---------------- | ------------- | -------------------- | ------------- |
+| Public       | public:          | yes           | yes                  | yes           |
+| Protected    | protected:       | yes           | yes                  | no            |
+| Private      | private:         | yes           | no                   | no            |
+Usually keep all **data** members of classes private, and write access functions for these.
+Keep all structs members public to keep them as aggregates.
+___
+Classes and struct actually only differ in that their members are public by default for structs, and private by default for classes.
+That's their only real difference, but we use the two very differently usually.
+### 14.6 - Access functions (getters and setters)
+Instead of keeping data members public, you have getter and setter functions to return and/or modify these data members using an interface **you** define.
+This makes it cleaner and safer to make classes accessible to users.
+Getters are sometimes called accessors, and setters mutators.
+You usually make getters `const` so they can be called on const objects.
+Getters should give read-only access to their members, so if you're returning a reference (because the private data member is beeg), make sure to make it a reference to const.
+### 14.7 - Returning references on data members
+Make sure that your getters have the exact type as a reference than the private member, no conversions!
+That means no `string_view` for a string, the caller of the getter function can do that conversion themselves if they wish.
+### 14.8 - Encapsulation with data hiding
+Encapsulation (doing private and public members) allow you to make classes easier to understand from the outside: you expose only relevant fields and functions, the rest is hidden from the caller.
+This makes classes you create easier to use in other contexts, as the caller doesn't have to understand everything that it does under the hood.
+This is basically the raw concept for an **abstraction**: you hide what is happening under the hood to make the class easier to use.
+___
+Using setters rather than giving direct access to the data member itself also allows you to check if the data that is asked to be set is correct.
+If you have a number that isn't supposed to go over a certain limit, your class' user could just set the data member directly to a wrong value if it was public.
+With a getter, on the other hand, you can directly check if the value that is wanted is wrong or not, depending on the interface you want to define.
+___
+Encapsulation and making abstractions also allows you to make classes that have less breaking changes.
+Since users don't have to worry about the details of the implementation (only the getters, setters and other public members), you're free to change the inner workings without much of an issue.
+___
+Generally, functions that don't have to be member functions **shouldn't be**. This makes them easier to debug and maintain, and makes the interface of your classes smaller.
+___
+Declare your public members first, then your protected ones, and finally your privates.
+This is useful to people reading your code, they're more interested in the public interface than the private workings of it.
+### 14.9 - Constructors
+> A **constructor** is a special member function that is automatically called after a non-aggregate class type object is created.
+> When a non-aggregate class type object is defined, the compiler looks to see if it can find an accessible constructor that is a match for the initialization values provided by the caller (if any).
+> If an accessible matching constructor is found, memory for the object is allocated, and then the constructor function is called.
+> If no accessible matching constructor can be found, a compilation error will be generated.
+
+___
+Constructors themselves don't create the objects, they are merely called on an object that was just instantiated.
+### 14.10 - Constructor member initialiser lists
+There's a syntax for initializing members with a Constructor:
+```cpp
+class Foo
+{
+private:
+    int m_x {};
+    int m_y {};
+
+public:
+    Foo(int x, int y)
+        : m_x { x }, m_y { y } // here's our member initialization list
+    {
+        std::cout << "Foo(" << x << ", " << y << ") constructed\n";
+    }
+
+    void print() const
+    {
+        std::cout << "Foo(" << m_x << ", " << m_y << ")\n";
+    }
+};
+```
+___
+Members in an initializer list are initialized in the order they are defined in the class.
+___
+Most often, constructors have empty function bodies, since we only use them to init variables.
+Though, if your class involves some stuff to be done at init time, then you might add instructions and function calls inside your constructor's body.
+___
+> **Throwing an exception is usually the best thing to do when a constructor fails (and cannot recover).**
+### 14.11 - Default constructors and arguments
+**A default constructor is a constructor that accepts no arguments.**
+> **If all of the parameters in a constructor have default arguments, the constructor is a default constructor (because it can be called with no arguments).**
+
+___
+When creating a default constructor, you can use `ClassName() = default;` to specify it be a default initializer.
+Prefer using that, as it makes it explicitly clear what you're wanting to do.
+It also has other benefits, such as initializing members to 0 instead of default (which is garbage values if you haven't set a default value for members).
+___
+Classes that logically shouldn't have default values (like a class representing a person) shouldn't have a default constructor.
+Just have constructors that actually set the values to something meaningful.
+### 14.12 - Delegating constructors
+As a best practice, don't call a constructor directly from other functions (or worse, other constructors!)
+Doing so would create a temporary object, so if you're looking to create a new class instance, just use the standard syntax instead:
+`ClassName element;` or, for modern C++: `ClassName element{};`
+___
+Constructors are allowed to use other constructors (called delegating or chaining constructors).
+```cpp
+class Employee
+{
+private:
+    std::string m_name { "???" };
+    int m_id { 0 };
+
+public:
+    Employee(std::string_view name)
+        : Employee{ name, 0 } // delegate initialization to Employee(std::string_view, int) constructor
+    {
+    }
+
+    Employee(std::string_view name, int id)
+        : m_name{ name }, m_id { id } // actually initializes the members
+    {
+        std::cout << "Employee " << m_name << " created\n";
+    }
+
+};
+```
+
+> [!ERROR]
+> **A constructor that delegates to another constructor is not allowed to do any member initialization itself. So your constructors can delegate or initialize, but not both.**
+
+> It is common to have the constructor with fewer parameters delegate to one with more parameters.
+
+___
+If you can, use default values in Constructors or member fields directly, instead of chaining constructors. Makes it easier to read.
+```cpp
+class Employee
+{
+private:
+    static constexpr int default_id { 0 }; // define a named constant with our desired initialization value
+
+    std::string m_name {};
+    int m_id { default_id }; // we can use it here
+
+public:
+
+    Employee(std::string_view name, int id = default_id) // and we can use it here
+        : m_name { name }, m_id { id }
+    {
+        std::cout << "Employee " << m_name << " created\n";
+    }
+};
+```
+### 14.14 - Copy constructor
+When using a class instance to create another instance of that same class, it uses the **copy constructor**.
+This creates an exact copy of that instance.
+___
+If you don't copy an explicit copy constructor, C++ uses the implicit, default one.
+This default copy constructor will initialize each member with the corresponding member value on the first instance.
+___
+You can create your own copy constructor by creating a constructor that takes in **a reference to an instance of that same class**:
+```cpp
+class Fraction
+{
+private:
+    int m_numerator{ 0 };
+    int m_denominator{ 1 };
+
+public:
+    // Default constructor
+    Fraction(int numerator=0, int denominator=1)
+        : m_numerator{numerator}, m_denominator{denominator}
+    {
+    }
+
+    // Copy constructor
+    Fraction(const Fraction& fraction)
+        // Initialize our members using the corresponding member of the parameter
+        : m_numerator{ fraction.m_numerator }
+        , m_denominator{ fraction.m_denominator }
+    {
+        std::cout << "Copy constructor called\n"; // just to prove it works
+    }
+
+    void print() const
+    {
+        std::cout << "Fraction(" << m_numerator << ", " << m_denominator << ")\n";
+    }
+};
+```
+___
+In order to let the compiler do optimization thingies, **a copy constructor should do nothing other than copying an object**.
+If your copy constructor has other side effects, these might be removed by the compiler when optimization occurs.
+Also, when you pass a class instance by value to a function, it's actually the copy constructor that's called.
+Same thing for returning a class instance by value.
+___
+**Unless you have a specific reason to, don't define your own copy constructor.** The default is fine in most cases.
+___
+In the potential case when you don't want to allow copies of a class instance, make the copy constructor `= delete`.
+```cpp
+Fraction(const Fraction& fraction) = delete;
+```
+___
+> The **rule of three** is a well known C++ principle that states that if a class requires a user-defined copy constructor, destructor, or copy assignment operator, then it probably requires all three. In C++11, this was expanded to the **rule of five**, which adds the move constructor and move assignment operator to the list.
+### 14.15 - Copy elisions
+When the compiler optimizes out unnecessary copies, it is called **copy elision**. A copy that has been optimized is called **elided**.
+### 14.15 - Explicit conversions in constructors
+For user-defined types, you can define the way conversions should happen between types yourself.
+You do this by creating a member function that can produce such a conversion:
+```cpp
+class Foo
+{
+private:
+    int m_x{};
+public:
+    Foo(int x)
+        : m_x{ x }
+    {
+    }
+
+    int getX() const { return m_x; }
+};
+```
+___
+To prevent a constructor to be used a converting constructor (a constructor that takes in other types than required and converts them), you can mark a constructor as `explicit`.
+```cpp
+#include <iostream>
+
+class Dollars
+{
+private:
+    int m_dollars{};
+
+public:
+    explicit Dollars(int d) // now explicit
+        : m_dollars{ d }
+    {
+    }
+
+    int getDollars() const { return m_dollars; }
+};
+
+void print(Dollars d)
+{
+    std::cout << "$" << d.getDollars();
+}
+
+int main()
+{
+    print(5); // compilation error because Dollars(int) is explicit
+
+    return 0;
+}
+```
+> **Make any constructor that accepts a single argument `explicit` by default.** If an implicit conversion between types is both semantically equivalent and performant, you can consider making the constructor non-explicit.
+> Do not make copy or move constructors explicit, as these do not perform conversions.
+
+### 14.17 - Constexpr aggregates and classes
+You can easily make aggregates (structs and classes with no constructors, only public members and no virtual functions) and their member functions `constexpr`.
+When your classes aren't aggregates, though, things get sticky.
+___
+You can make something `constexpr` if its type is a **literal type**, as in a type that can be used in a constant expression.
+This means that an object can't be `constexpr` unless its type qualifies as a literal type.
+To make a non-aggregate class `constexpr` (and thus a literal type), we need to give it a **`constexpr` constructor**.
+It's also generally more useful to make your member functions for that class type `constexpr` as well, otherwise you won't be able to use them in a constant expression.
+
+## 15 - More on Classes
+### 15.1 - The `this` pointer
+The `this` pointer is a const pointer that holds the address of the current object being worked on in **non-static member functions**.
+___
+It's possible to do member function chaining because all non-static member functions return `*this`, allowing the next member function in line to pick up on it and continue.
+___
+You can reset a class to its default state by **NOT calling the default constructor** (it's not good practice to do so), but setting `*this = {}` to set default initialize the current object.
+### 15.2 - Classes and header files
+Try to keep the member function's bodies (definitions) in a separate `.cpp` file from the header.
+In other words, the declarations with the rough blueprint of the class in the header, and the nitty gritty of the details of the constructors, member functions etc in a separate file.
+___
+> Put any default arguments for member functions inside the class definition.
+
+### 15.3 - Nested (member) types
+You can create member types as part of class. For reasons. It can be useful to limit the scope of a type to only a class to not pollute the global namespace.
+Define them at the top of your class types.
+### 15.4 - Destructors
+The destructor of a class is a member function that is automatically called when a class instance is destroyed.
+For stack allocation, that means when the instance goes out of scope.
+For heap allocation, it's when `delete()` is called on it.
+___
+As with constructors, a default destructor with an empty body is added by the compiler if you don't provide one.
+### 15.5 - Class templates with member functions
+When using a class template, let's call it `Pair<T>`, inside the scope of that class, you can actually use `Pair` as a shorthand name for the `Pair<T>` type.
+___
+For member function templates, they should be defined below the class definition in the same header file.
+### 15.6 - Static member variables
+Static member variables are variables that are shared between all instances of a class.
+You usually access them not via an instance, but via the name of the class itself: `Class::variable`.
+You have to init them outside of the class, in an actual source code file, like globals.
+### 15.7 - Static member functions
+The same principle applies to member functions.
+You can make the static to make them global to all class instances.
+### 15.8 - Friend non member functions
+By making an external function `friend` inside of a class, you give that function access to private and protected members of that class.
+### 15.9 - Friend member functions and classes
+The same thing is possible for member functions of a class, and class themselves, allowing them to access all members of another class.
+## 16 - Dynamic arrays - `std::vector` \[WIP]
+### 16.1 - Containers and arrays
+Some types that behave like containers aren't considered ones by the C++ standard, like C-style arrays, `std::string` and `std::vector<bool>`.
+### 16.2 - `std::vector` and list constructors
+
+## 17 - `std::array` and C-style arrays \[WIP]
+## 18 - Iterators and Algorithms \[WIP]
+## 19 - Dynamic Allocation
+### 19.1 - new and delete
+You can allocate new **single** variables with the `new` keyword followed by a type.
+You can also directly allocate that new heap-stored variable to a pointer:
+```cpp
+int* ptr{ new int };
+```
+Don't forget to free `new` allocated variables with the `delete` keyword! Keep in mind this only deletes a single variable created with `new`.
+**Just `malloc`, `new` can fail. Don't forget to check if the pointer was set correctly if you assign the result to one (which you should).**
+### 19.2 - Dynamically allocating arrays
+You can also allocate C-style arrays with the `new` keyword:
+```cpp
+#include <cstddef>
+#include <iostream>
+
+int main()
+{
+    std::cout << "Enter a positive integer: ";
+    std::size_t length{};
+    std::cin >> length;
+
+    int* array{ new int[length]{} }; // use array new.  Note that length does not need to be constant!
+
+    std::cout << "I just allocated an array of integers of length " << length << '\n';
+
+    array[0] = 5; // set element 0 to value 5
+
+    delete[] array; // use array delete to deallocate array
+
+    // we don't need to set array to nullptr/0 here because it's going out of scope immediately after this anyway
+
+    return 0;
+}
+```
+**Make sure to use `delete[]` instead of `delete`, as these two operators are different and target scalar and array values respectively.**
+### 19.3 - Destructors
+Destructors are member functions that are executed when an object of that type is dropped.
+Destructor names start with a `~` tilde.
+If your object is completely stack-allocated, your destructor can have an empty body.
+If your object has some heap allocation or other dynamic ressource in its members, though, your destructor will be in charge of freeing that memory.
+#### RAII
+Ressource Acquisition Is Initialization is a technique where ressource use is directly tied to the lifetime of objects with an automatic duration (non-dynamically allocated objects).
+In C++, RAII is implemented with constructors and destructors of classes.
+A resource is typically acquired in the Constructor of a class, and typically release in the Destructor of that same class.
+This makes the management of ressources for each instance clear and precise, and helps prevents memory leaks.
+___
+Be wary that `std::exit()` doesn't call any destructor on being called. Leaks are to be expected.
+## 20 - Functions \[WIP]
+## 21 - Operator Overloading \[WIP]
+### 21.1 - Introduction
+Since operators in C++ are just functions, you can overload them just like any other function out there.
+There are a few exceptions though: conditional (?:), sizeof, scope (::), member selector (.), pointer member selector (.\*), typeid, and the casting operators.
+#### Best practices
+Overloaded operators should operate on at least one user-defined type.
+When overloading operators, it’s best to keep the function of the operators as close to the original intent of the operators as possible.
+If the meaning of an overloaded operator is not clear and intuitive, use a named function instead.
+Operators that do not modify their operands (e.g. arithmetic operators) should generally return results by value.
+Operators that modify their leftmost operand (e.g. pre-increment, any of the assignment operators) should generally return the leftmost operand by reference.
+### 21.2 - Using friend functions for arithmetic operators
+Since friend functions can access private members of classes, it's one of the easier ways of overloading arithmetic operators like + and -.
+You define the function as a friend of a class, and do the operations you need within.
+___
+Careful, when overloading binary operators like + and -, you need to take into account the cases in which you add or subtract an instance of your class with just an int, for example.
+In these case, you could have `Class(5) + 3` and `3 + Class(5)`, resulting in operator functions looking like this:
+- `operator+(Class, int)`
+- `operator+(int, Class)`
+As such, you'll need to overload both these operator functions and the one with both arguments being `Class`.
+```cpp
+#include <iostream>
+
+class Cents
+{
+private:
+	int m_cents {};
+
+public:
+	explicit Cents(int cents) : m_cents{ cents } { }
+
+	// add Cents + int using a friend function
+	friend Cents operator+(const Cents& c1, int value);
+
+	// add int + Cents using a friend function
+	friend Cents operator+(int value, const Cents& c1);
+
+
+	int getCents() const { return m_cents; }
+};
+
+// note: this function is not a member function!
+Cents operator+(const Cents& c1, int value)
+{
+	// use the Cents constructor and operator+(int, int)
+	// we can access m_cents directly because this is a friend function
+	return Cents { c1.m_cents + value };
+}
+
+// note: this function is not a member function!
+Cents operator+(int value, const Cents& c1)
+{
+	// use the Cents constructor and operator+(int, int)
+	// we can access m_cents directly because this is a friend function
+	return Cents { c1.m_cents + value };
+}
+
+int main()
+{
+	Cents c1{ Cents{ 4 } + 6 };
+	Cents c2{ 6 + Cents{ 4 } };
+
+	std::cout << "I have " << c1.getCents() << " cents.\n";
+	std::cout << "I have " << c2.getCents() << " cents.\n";
+
+	return 0;
+}
+```
+___
+Don't forget you can use some already overloaded operator functions to simplify the next ones, especially in the case of arithmetic operators.
+```cpp
+Class operator+(const Class& c1, int value)
+{
+	return Class { c1.value + value };
+}
+
+Class operator+(int value, const Class& c1)
+{
+	return c1 + value;
+}
+```
+### 21.3 - Using normal functions
+If you don't need access to private members of your classes to implement an operator, you can overload it using a normal function instead of a `friend` one.
+Those don't need to be declared inside of the class definition, as they aren't member functions at all:
+```cpp
+class Cents
+{
+private:
+  int m_cents{};
+
+public:
+  Cents(int cents)
+    : m_cents{ cents }
+  {}
+
+  int getCents() const { return m_cents; }
+};
+
+// note: this function is not a member function nor a friend function!
+Cents operator+(const Cents& c1, const Cents& c2)
+{
+  // use the Cents constructor and operator+(int, int)
+  // we don't need direct access to private members here
+  return Cents{ c1.getCents() + c2.getCents() };
+}
+```
+It's preferable to use normal functions instead of friend functions when possible.
+If your class implements getters (and setters for operators that modify values), you don't have to use a friend function at all.
+### 21.4 - Overloading the I/O operators
+#### `<<`
+In order to easily print a custom class of yours, you can overload the output `<<` operator.
+It's pretty similar to the arithmetic operators, in that they are also binary operators.
+The main difference is the types of the parameters and return values:
+- Its first argument is a reference to an `std::ostream` instance (usually just `std::cout`)
+- Its second argument is the class instance to print
+- It returns the first argument, that is the `std::ostream` instance.
+___
+```cpp
+std::ostream& operator<< (std::ostream& out, const Point& point)
+{
+    // Since operator<< is a friend of the Point class, we can access Point's members directly.
+    out << "Point(" << point.m_x << ", " << point.m_y << ", " << point.m_z << ')';
+
+    return out;
+}
+```
+#### `>>`
+You can overload the insertion operator much in the same way of the output operator.
+Just replace `std::ostream` with `std::istream`, and make sure your class' reference isn't `const` so it can be modified.
+```cpp
+// note that point must be non-const so we can modify the object
+std::istream& operator>> (std::istream& in, Point& point)
+{
+    // This version subject to partial extraction issues (see below)
+    in >> point.m_x >> point.m_y >> point.m_z;
+
+    return in;
+}
+```
+___
+In order to protect against partial extraction, you need to make sure your input operation only actually modifies the value if all steps have succeeded.
+You can achieve this by extracting every value, checking if everything worked and only then assign these values to the class instance.
+```cpp
+std::istream& operator>> (std::istream& in, Point& point)
+{
+    double x{};
+    double y{};
+    double z{};
+
+    if (in >> x >> y >> z)      // if all extractions succeeded
+        point = Point{x, y, z}; // overwrite our existing point
+
+    return in;
+}
+```
+You can also go the route of copying every value gradually, and if one extraction fails, restore everything back to normal.
+This would imply keeping a copy of the initial state somewhere, or rolling back all operations performed.
+You can also just restore the object to its default state if the extraction fails.
+This would put you in line with how the extraction operator works for fundamental types (putting `int` at 0 if it fails, for example).
+___
+If the values entered in the extraction operator don't match what's supposed to go inside the class, you can set cin to failure mode yourself (just like for fundamental types):
+```cpp
+std::istream& operator>> (std::istream& in, Point& point)
+{
+    double x{};
+    double y{};
+    double z{};
+
+    in >> x >> y >> z;
+    if (x < 0.0 || y < 0.0 || z < 0.0)       // if any extractable input is negative
+        in.setstate(std::ios_base::failbit); // set failure mode manually
+    point = in ? Point{x, y, z} : Point{};
+
+    return in;
+}
+```
+### 21.5 - Using member functions
+Overloading using a member function is basically like using `friend`, aside from these details:
+- The overloaded operator must be added as a member function **of the left operand.**
+- The left operand becomes the **implicit** `*this` object.
+- All other operands become function parameters.
+```cpp
+class Cents
+{
+private:
+    int m_cents {};
+
+public:
+    Cents(int cents)
+        : m_cents { cents } { }
+
+    // Overload Cents + int
+    Cents operator+(int value) const;
+
+    int getCents() const { return m_cents; }
+};
+
+// note: this function is a member function!
+// the cents parameter in the friend version is now the implicit *this parameter
+Cents Cents::operator+ (int value) const
+{
+    return Cents { m_cents + value };
+}
+```
+___
+You can't overload all operators as a member function, because these need to be a member of the left operand.
+This isn't possible for the output `<<` operator, for example, or the addition operator that has the class instance as the right operand, and a fundamental type or fixed class as the left one (`int + Class`).
+In these cases, you'll prefer using `friend` (ew) or non-member functions instead.
+#### When to use normal, friend or member function overloadings
+- When overloading a binary operator that don't modify the left operand, use a normal function, since it works on all parameter types, and it's more symmetrical since all operands become explicit parameters instead of an implicit `*this` being slapped in the middle of your pretty class.
+- When overloading a binary operator that does modify the left operand, prefer a member function, since in these cases you'll want to apply the changes to `*this` directly.
+- Unary operators are usually overloaded with member functions as well, with no parameters (since the only operand is implicit with `*this`.
+### 21.6 - Overloading unary operators
+You can also overload the unary operators like - and + (modifying the sign of values) and the not ! operator to invert a value.
+Since these are unaries, if you do it using a member function, it will take no arguments since only `*this` is required.
+That's how you differentiate between the unary - and the binary -.
+### 21.7 - Overloading the comparison operators
+Comparison operators are pretty straightforward, just like the other operators we've seen so far.
+Just two arguments, no modifications to the left operand so they can be implemented using normal functions.
+Only overload the < and > operators for a class if it makes sense semantically.
+For example, how would you represent a Car being "higher" than another?
+It might be useful in the case where you want to be able to easily sort an array of Cars though.
+In this case, you would overload the < operator (or >) according to the data member you want to sort from.
+Oh and don't forget about <= and >=.
+___
+Some comparison operators can be implemented using others:
+- operator!= can be implemented as !(operator\==)
+- operator> can be implemented as operator< with the order of the parameters flipped
+- operator>= can be implemented as !(operator<)
+- operator<= can be implemented as !(operator>)
+Thankfully, that means you actually only have to fully implement == and <! The rest can build upon those.
+### 21.8 - Overloading the increment and decrement operators
+When overloading the increment and decrement operators, keep in mind two things:
+- There are two version of each (prefix and postfix)
+- They are unary operators, and since you'll need to modify values, you'll have to implement them as member functions, so they will take no parameters (`*this`)
+Also don't forget to return `*this`, because that's what these operators do (so you can chain operators together).
+___
+Prefix increment and decrement are just the same as the other unaries in terms of overloading.
+The postfix ones are different though.
+Since their function signatures are the same as the prefix in theory, we have to give them a differentiating factor.
+In this case, the compiler knows an increment or decrement operator is postfix if the function takes a dummy `int` parameter.
+Here's an example with all operators overloaded:
+```cpp
+class Digit
+{
+private:
+    int m_digit{};
+public:
+    Digit(int digit=0)
+        : m_digit{digit}
+    {
+    }
+
+    Digit& operator++(); // prefix has no parameter
+    Digit& operator--(); // prefix has no parameter
+
+    Digit operator++(int); // postfix has an int parameter
+    Digit operator--(int); // postfix has an int parameter
+
+    friend std::ostream& operator<< (std::ostream& out, const Digit& d);
+};
+
+// No parameter means this is prefix operator++
+Digit& Digit::operator++()
+{
+    // If our number is already at 9, wrap around to 0
+    if (m_digit == 9)
+        m_digit = 0;
+    // otherwise just increment to next number
+    else
+        ++m_digit;
+
+    return *this;
+}
+
+// No parameter means this is prefix operator--
+Digit& Digit::operator--()
+{
+    // If our number is already at 0, wrap around to 9
+    if (m_digit == 0)
+        m_digit = 9;
+    // otherwise just decrement to next number
+    else
+        --m_digit;
+
+    return *this;
+}
+
+// int parameter means this is postfix operator++
+Digit Digit::operator++(int)
+{
+    // Create a temporary variable with our current digit
+    Digit temp{*this};
+
+    // Use prefix operator to increment this digit
+    ++(*this); // apply operator
+
+    // return temporary result
+    return temp; // return saved state
+}
+
+// int parameter means this is postfix operator--
+Digit Digit::operator--(int)
+{
+    // Create a temporary variable with our current digit
+    Digit temp{*this};
+
+    // Use prefix operator to decrement this digit
+    --(*this); // apply operator
+
+    // return temporary result
+    return temp; // return saved state
+}
+```
+Note that in the case of the postfixes, you don't return `*this` because you want to return the initial value **before** the operation occurred.
+Also note that it's easier to prepare the prefix operators, and then reuse them on the postfix ones so it reduces duplicate code.
+### 21.9 - Overloading the subscript operator
+The subscript operator is the one you use to access array elements `array[10]`.
+As such, it can be useful to overload it when your class implements a list or vector or just a great number of elements inside.
+The subscript operator **must be overloaded as a member function**, because it needs access to private members like the array you want to access.
+If the array wasn't private, you could just access it from anywhere and overloading the subscript operator would make little to no sense at all.
+```cpp
+class IntList
+{
+private:
+    int m_list[10]{};
+
+public:
+    int& operator[] (int index);
+};
+
+int& IntList::operator[] (int index)
+{
+	return m_list[index];
+}
+```
+Don't forget to return a reference to the index instead of copying the value; otherwise the user won't be able to modify the value.
+Also don't forget to handle cases with wrong indexes (like -1) inside your overloaded function.
+### 21.10 - Overloading the parenthesis operator
+The parenthesis operator, usually used to call a function, can be used for a variety of things in OOP C++.
+It is one of the rare operators that allows you to modify the number of arguments it takes.
+This makes it particularly useful for classes that contain multi dimensional arrays that you want quick access to, like matrices:
+```cpp
+#include <cassert> // for assert()
+
+class Matrix
+{
+private:
+    double m_data[4][4]{};
+
+public:
+    double& operator()(int row, int col);
+    double operator()(int row, int col) const; // for const objects
+};
+
+double& Matrix::operator()(int row, int col)
+{
+    assert(row >= 0 && row < 4);
+    assert(col >= 0 && col < 4);
+
+    return m_data[row][col];
+}
+
+double Matrix::operator()(int row, int col) const
+{
+    assert(row >= 0 && row < 4);
+    assert(col >= 0 && col < 4);
+
+    return m_data[row][col];
+}
+```
+```cpp
+#include <iostream>
+
+int main()
+{
+    Matrix matrix;
+    matrix(1, 2) = 4.5;
+    std::cout << matrix(1, 2) << '\n';
+
+    return 0;
+}
+```
+You could also overload it so it takes no argument at all, and make it do some action.
+___
+The bad thing about overusing this very powerful operator is that the `()` syntax really isn't intuitive.
+What is it going to do? Execute some code, sure, but to what end? You would have to know the class really well to understand it.
+That's a bit too obfuscated, so only use it when it's really useful, like with multidimensional arrays like seen before.
+___
+You can use the `()` operator to implement functors, which are classes that act like functions.
+### 21.11 - Overloading typecasts
+In case when you want your classes to be easily convertible to other types like fundamental ones or even other classes entirely, it's useful to overload the casting operators like `static_cast` and others.
+Usually, stamping a `()` in front of a type means you're converting to that type the value between parenthesis.
+That means you can overload a cast like this: `operator int() const { // do stuff // }`
+Note the space between `operator` and the actual type. Also, overloaded typecasts need to be `const` so they can be used on const objects.
+Overloaded typecasts don't take any parameters (`*this` still exists though).
+```cpp
+class Cents
+{
+private:
+    int m_cents{};
+public:
+    Cents(int cents=0)
+        : m_cents{ cents }
+    {
+    }
+
+    // Overloaded int cast
+    operator int() const { return m_cents; }
+
+    int getCents() const { return m_cents; }
+    void setCents(int cents) { m_cents = cents; }
+};
+
+class Dollars
+{
+private:
+    int m_dollars{};
+public:
+    Dollars(int dollars=0)
+        : m_dollars{ dollars }
+    {
+    }
+
+    // Allow us to convert Dollars into Cents
+    operator Cents() const { return Cents { m_dollars * 100 }; }
+};
+```
+___
+You can make your typecasts `explicit` to prevent implicit conversions using them.
+Usually, you should do that to make it always explicit when a conversion has to happen.
+You should prefer converting constructors usually though.
+### 21.12 - Overloading the assignment operator
+In contrast to the copy constructor, the copy assignment does not initialize a new object; it merely copies values into an already existing one.
+In practice, both do pretty much the same thing.
+The copy assignment must be overloaded as a member function to be able to access members.
+```cpp
+	Fraction& operator= (const Fraction& fraction);
+```
+In the body of the overloaded operator, don't forget to return `*this` so the operator can be chained.
+Also, make sure to **prevent self-assignment**, just like in the copy constructor.
+### 21.13 - Shallow vs Deep copying
+For simple classes that only have stack allocated members, shallow copying with a default copy constructor and assignment operator is fine.
+For more complex classes that have heap allocated members though, you might want to **deep copy** it instead.
+This implies copying all memory associated with a given class instance; because if we only did shadow copy, we might copy pointers to memory and have two instances pointing to the same memory, which could lead to loooots of problems.
+Deep copying implies allocating memory for all heap-allocated member in the target, and then copying the actual values (not the pointers).
+### 21.14 - Overloading operators and function templates
+Be careful using templates around your classes, since for example comparing multiple class types, you'd have to create overloaded operators for each of these cases, which could quickly ramp up the number of overloadings.
+## 22 - Move Semantics and Smart Pointers \[WIP]
+### 22.1 - Introduction
+
+## 23 - Object Relationships \[WIP]
+### 23.1 - Object relationships
+
+## 24 - Inheritance
+### 24.1 - Introduction
+Inheritance is the concept of an object taking properties from another, in effect being "a kind of" this object.
+One of the best examples would be a class Fruit that has child classes Apple and Banana.
+### 24.2 - Basic inheritance in C++
+To make a class a derived class of another, you can use this syntax:
+```cpp
+// BaseballPlayer publicly inheriting Person
+class BaseballPlayer : public Person
+{
+public:
+    double m_battingAverage{};
+    int m_homeRuns{};
+
+    BaseballPlayer(double battingAverage = 0.0, int homeRuns = 0)
+       : m_battingAverage{battingAverage}, m_homeRuns{homeRuns}
+    {
+    }
+};
+```
+When doing so, BaseballPlayer take all member functions and variables from Person.
+It also takes in two new data members, `battingAverage` and `homeRuns`.
+### 24.3 - Order of construction of derived classes
+C++ constructs derived classes in phases, starting with the most-base class (at the top of the inheritance tree) and finishing with the most-child class (at the bottom of the inheritance tree). As each class is constructed, the appropriate constructor from that class is called to initialize that part of the class.
+The inverse happens when destructing class instances.
+### 24.4 - Constructors and initialization of derived classes
+```cpp
+class Base
+{
+public:
+    int m_id {};
+
+    Base(int id=0)
+        : m_id{ id }
+    {
+    }
+
+    int getId() const { return m_id; }
+};
+
+class Derived: public Base
+{
+public:
+    double m_cost {};
+
+    Derived(double cost=0.0)
+        : m_cost{ cost }
+    {
+    }
+
+    double getCost() const { return m_cost; }
+};
+```
+When a `Derived` is initialized, the `Base` constructor is called first, then returning control to the `Derived` constructor which sets the `Derived` part of the class.

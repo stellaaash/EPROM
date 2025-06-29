@@ -1,7 +1,6 @@
 ---
 tags:
   - data_structure
-  - algor
 ---
 A collection of nodes connected by edges, representing relationships between entities.
 They're often used to model social networks, computer networks, transportation networks, among other stuff. Mostly networks.
