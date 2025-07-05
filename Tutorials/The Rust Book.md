@@ -8,7 +8,7 @@ Status: IN PROGRESS
 The official rust tutorial and also a form of documentation.
 This is what I'm gonna start with for learning Rust!
 # Progress
-10.2
+10.3
 # Bookmarks
 ## 3 - Common programming concepts
 ### 3.1 - Variables and Mutability
@@ -770,9 +770,162 @@ pub struct Asparagus {}
 ```
 ## 8 - Common Collections
 ### 8.1 - Vectors
-
+Vectors are dynamic arrays containing many values of the same type.
+Easily resizable and modifiable.
+### 8.2 - Strings
+### 8.3 - HashMaps
+Hashmaps are also called dictionaries in other languages.
+## 9 - Error handling
+### 9.1 - panic!
+`panic!` makes the program crash with a given error message.
+### 9.2 - Recoverable errors with `Result`
+Result is an enum that contains either an `Ok` value wrapping the actual return value of a function, or an `Err` wrapping the error that has been returned.
+### 9.3 - When to panic
+Panic only when an error could put your program in a very, very bad state.
+This means to panic only when unrecoverable errors happen, in the state of your current program.
+It's unwise to make library code panic whenever an error occurs; it's probably best to leave that choice to the code calling the function you're making.
 ## 10 - Generics, Traits and Lifetimes
 ### 10.1 - Generics
 Generics are basically like templates in C++. You replace a type with a placeholder, and when a function, struct or even implementation gets used with that type, the placeholder gets replaced.
 ### 10.2 - Traits
 Traits are groups of methods that pertain to a particular type. If a type implements a trait, it means it implements the methods contained within.
+You define method prototypes that this trait implements (name, return value, argument types).
+Then, each type implementing that trait has to define all methods specifically (unless a default method is provided).
+```rust
+pub trait Summary {
+    fn summarize(&self) -> String;
+}
+
+pub struct NewsArticle {
+    pub headline: String,
+    pub location: String,
+    pub author: String,
+    pub content: String,
+}
+
+impl Summary for NewsArticle {
+    fn summarize(&self) -> String {
+        format!("{}, by {} ({})", self.headline, self.author, self.location)
+    }
+}
+
+pub struct SocialPost {
+    pub username: String,
+    pub content: String,
+    pub reply: bool,
+    pub repost: bool,
+}
+
+impl Summary for SocialPost {
+    fn summarize(&self) -> String {
+        format!("{}: {}", self.username, self.content)
+    }
+}
+```
+___
+There's a rule (called the **orphan rule**) for traits in Rust:
+**You can only implement a trait for the type if you own at least one of the two.**
+This prevents conflicting implementations where you would implement external traits on external types in ways that weren't intended by the library you're using.
+___
+You can define default implementations for if an impl block doesn't implement a particular method, that default implementation be used instead.
+```rust
+pub trait Summary {
+    fn summarize(&self) -> String {
+        String::from("(Read more...)")
+    }
+}
+```
+___
+You can use generics to ask for any type that implements a given trait, which is called a **trait bound**.
+You can do so using multiple different syntaxes:
+```rust
+pub fn notify(item: &(impl Summary + Display)) {
+```
+```rust
+pub fn notify<T: Summary + Display>(item: &T) {
+```
+These two make `T` a type that implements both `Summary` and `Display`.
+When multiple trait bounds are present, it can be clearer to use `where` clauses:
+```rust
+fn some_function<T, U>(t: &T, u: &U) -> i32
+where
+    T: Display + Clone,
+    U: Clone + Debug,
+{
+```
+___
+You can also return types that implement a given trait by having a return type be `impl Type`.
+This is useful when you know the calling code of your function will only use methods of that given trait, so it doesn't need to care about the concrete type.
+Perhaps counter intuitively though, doing so will prevent you from returning different types: **you can only return one concrete type.**
+This is a compiler restriction, but there are ways around it. See chapter 18.
+___
+When using impl statements that work on generics, you can create different methods depending on the type being passed for the generic.
+This means when a type contains a certain type, create certains methods, when any other type, don't.
+Perhaps this is best explained with another example taken from the book:
+```rust
+use std::fmt::Display;
+
+struct Pair<T> {
+    x: T,
+    y: T,
+}
+
+impl<T> Pair<T> {
+    fn new(x: T, y: T) -> Self {
+        Self { x, y }
+    }
+}
+
+impl<T: Display + PartialOrd> Pair<T> {
+    fn cmp_display(&self) {
+        if self.x >= self.y {
+            println!("The largest member is x = {}", self.x);
+        } else {
+            println!("The largest member is y = {}", self.y);
+        }
+    }
+}
+```
+___
+You can also implement a trait **for any type that implements another trait**.
+This is called a **blanket implementation**; you will see those everywhere in the Rust std library.
+As an example, `ToString` is implemented for any type that implements `Display` as well:
+```rust
+impl<T: Display> ToString for T {
+    // --snip--
+}
+```
+This makes sense since to display a type in a readable form, you'd need to convert it to a string!
+### 10.3 - Lifetimes
+Lifetimes are another kind of generic, but rather than ensuring a type or trait, **they ensure that references stay valid as long as we need them to be**.
+Every reference in Rust has a lifetime. A lifetime is **the scope for which that reference is valid.**
+Most of the time, like types, lifetimes are implicit and inferred by the compiler.
+Sometimes though, you might want to define them explicitly instead!
+The main aim of lifetimes is to prevent dangling references.
+#### The Borrow Checker
+The Rust Compiler has a borrow checker that compares scopes to determine whether all borrows are valid.
+Lifetimes are actually compiler annotations that help it check if a reference is valid or dangling at a given point.
+___
+Lifetime annotations don't actually change how long any of the references live.
+Instead, they describe the **relationships of the lifetimes of multiple references to each other** without actually affecting them.
+If you want a function to be able to receive any type of lifetime, you can do so using generics (again).
+___
+You annotate lifetimes using an apostrophe `'`.
+```rust
+&i32        // a reference
+&'a i32     // a reference with an explicit lifetime
+&'a mut i32 // a mutable reference with an explicit lifetime
+```
+One lifetime annotation by itself doesn't do much, since the annotations are meant to tell Rust how generic lifetime parameters of multiple references refer to each other.
+___
+To use lifetime annotations in a function signature, you need to declare the generic lifetime parameters inside the angle brackets.
+```rust
+fn longest<'a>(x: &'a str, y: &'a str) -> &'a str {
+    if x.len() > y.len() { x } else { y }
+}
+```
+This `'a` lifetime ensures that the returned reference will be valid as long as both `x` and `y` remain valid.
+Keep in mind that this doesn't change any lifetimes of either arguments or return value.
+Rather, it gives a hint to the borrow checker: "hey, reject any value that doesn't adhere to the `'a` lifetime".
+When we pass concrete reference as `x` and `y`, the `'a` lifetime effectively becomes **the duration for which both `x` and `y` are valid**.
+As soon as one or both are dropped out of scope, the `'a` lifetime effectively ends, since continuing wouldn't satisfy the conditions we put in the `longest()` function signature.

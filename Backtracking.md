@@ -2,7 +2,6 @@
 tags:
   - programming_concept
 ---
-
 # Example code
 Here's an example of the concept of [[Recursion]] and backtracking, implemented in the form of the rip problem of an exam at 42 school.
 The idea is to remove all unclosed parenthesis in a string by replacing them with spaces. Of course, there are usually multiple solutions to each problem.

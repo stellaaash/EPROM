@@ -8,21 +8,21 @@
         "type": "tabs",
         "children": [
           {
-            "id": "18f8810937c99f20",
+            "id": "897043614a6076cf",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Zabbix.md",
+                "file": "Tutorials/The Rust Book.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Zabbix"
+              "title": "The Rust Book"
             }
           },
           {
-            "id": "00e8c5f37e21e367",
+            "id": "b109ec4a3e53e653",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -34,9 +34,33 @@
               "icon": "lucide-file",
               "title": "learncpp.com"
             }
+          },
+          {
+            "id": "320d1e75e05807bb",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Backtracking.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Backtracking"
+            }
+          },
+          {
+            "id": "3437b12797232f36",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -213,16 +237,21 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "00e8c5f37e21e367",
+  "active": "320d1e75e05807bb",
   "lastOpenFiles": [
     "Code projects/miniRT.canvas",
     "Tutorials/learncpp.com.md",
+    "Tutorials/The Rust Book.md",
+    "Tutorials/ARM Assembly - Raspberry Pi.md",
     "Zabbix.md",
+    "telnet.md",
+    "HTTPS.md",
+    "PSK.md",
+    "AI Fluency.md",
     "Cosine.md",
     "Tutorials/Learning Modern 3D Graphics Programming.md",
     "Project Ideas.md",
     "Tutorials/The Vulkan Tutorial.md",
-    "Tutorials/The Rust Book.md",
     "Job opportunities.md",
     "Things to Learn.md",
     "Orthodox Canonical Form.md",
@@ -238,11 +267,6 @@
     "en.wikipedia.org/wiki",
     "en.wikipedia.org",
     "Graph.md",
-    "Executable and Linkable Format.md",
-    "Tutorials/Ray Tracing in One Weekend.md",
-    "Algorithm.md",
-    "Tutorials/Scratch a Pixel.md",
-    "Tutorials/Nand to Tetris.md",
     "Tutorials",
     "tawsqg \u001bqqq",
     "Pasted image 20250528102848.png",

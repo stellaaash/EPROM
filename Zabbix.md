@@ -1,6 +1,6 @@
 ---
 tags:
-  - tool
+  - sysadmin
 ---
 **An open-source software allowing extensive monitoring of servers and clients's health and integrity.**
 Greatly configurable, it can target any device on which a Zabbix agent exists.
@@ -35,12 +35,15 @@ For example, you could create something that sends you an email if the CPU load 
 - The trigger is followed by an action to send you an email
 # Related software
 Zabbix works around modern web servers, database engines and [[PHP]].
+The databse, for example, supports many backends, like [[MySQL]], [[PostgreSQL]] and [[Oracle]].
 # Structure deep dive
 ## Server
 You usually set the server as a non-root **daemon** process (using [[systemctl]] for example). Zabbix can only run on [[Unix]] systems.
 ___
 It has a built-in High Availability feature which, if turned on, runs multiple Zabbix Server nodes in a cluster, with only one active.
 If one of them fails, another one picks up and continues where the other left off, in this way always having an instance up and running.
+___
+You can encrypt communications between Zabbix Agents, Proxies and the Server using [[PSK]] keys.
 ## Agent (1)
 The Zabbix Agent is **deployed on the monitoring target** to actively check ressources and **report to the Zabbix Server** (or a Proxy, more on that below).
 Same as the Server, it runs as a background process, using [[systemctl]] on unix-likes and a [[Service]] on Windows.
@@ -65,6 +68,23 @@ Here are the listed enhancements:
 ___
 The Zabbix Agent 2 also **supports passive and active checking**.
 It runs as a daemon on [[Unix]]-likes, but as a standalone process on [[Windows]] (though it can also be run as a [[Service]] if wanted).
+### Installing and configuring
+#### Linux
+You install the Zabbix Agent 2 on Debian/Ubuntu systems by **adding the repo's key and source**.
+Configuration file located at `/etc/zabbix/zabbix_agent2.conf`.
+You'll want to set the Zabbix server [[IP address]], [[Hostname]] directive matching the host config in the server, and [[ListenPort]] directive specifying the agent listening port.
+Enable and start the agent service using systemctl commands, then check proper operation by checking service status and reviewing log files at `/var/log/zabbix/`.
+You can check network connectivity using [[telnet]] and [[nc]] commands to verify that the agent can talk to the Zabbix server.
+#### Windows
+Download the appropriate installer **from the official website**.
+Run the installer **with admin privileges** and follow the installation.
+The installer provides options for service installation and basic configuration during the setup process.
+After installing, you'll want to do some more configuration by modifying the `zabbix_agent2.conf` file in the installation directory.
+That is usually located in `C:\Program Files\Zabbix Agent 2\`.
+The same parameters are relevant as the Linux installation.
+After config is done, restart the Zabbix Agent service through the Windows Services console or command line.
+Check if your installation works by checking the Windows Event Log for Zabbix Agent entries and testing network connectivity to the server.
+You might need to configure the Windows Firewall to allow agent communication.
 ## Proxy
 **A process that collects data from Agents on behalf of the Server, and then sends that data to it.**
 Deploying a proxy is optional, but very useful for cases where a lot of Agents have to report to the Server, potentially overwhelming with individual requests.
@@ -73,12 +93,37 @@ Ideally, only Proxies collect the data, before sending it over to the Server, th
 ## Java gateway
 
 ## Sender
-
+Custom data submission.
 ## Get
 
 ## JS
 
 ## Web service
-
+# Templates
+Templates serve as **blueprints** for monitoring configurations, containing predefined items, triggers, graphs and discovery rules.
+Zabbix 7.0 LTS, for example, contains an extensive library of templates for existing operating systems, applications and network devices.
+## Linking a template with a host
+You can **link a template** by associating one with a host in the Zabbix web interface, in `Configuration -> Hosts`.
+Select the target host, and use the Templates tab to link appropriate templates.
+The system will automatically create all template items, triggers, and graphs for the host.
+Add your custom items not included in the base template as you need/want.
+Items define what data to collect, how frequently, and how to process the information.
+Key parameters include item type, key syntax, update intervals and, data processing options.
+## Resources
+[Official List of Zabbix Integrations]([Zabbix Integrations and Templates](https://www.zabbix.com/integrations))
+[Community Templates Repository]([GitHub - zabbix/community-templates: Zabbix Community Templates repository](https://github.com/zabbix/community-templates))
+# Host configuration and management
+On the web interface, it is necessary to configure hosts to be able to receive data collected by the Agents.
+Each host requires proper configuration including network connectivity, associate templates and specific monitoring requirements.
+You can create new hosts in `Configuration -> Hosts` and selecting Create Host.
+Important configuration parameters include:
+- Host Name - Matching the agent configuration
+- Visible Name - For display purposes
+- Groups - For organizational structure
+- Interfaces - Define communication methods and parameters
+## Interface configuration
+Interface configuration specifies how the Server communicates with the Host.
+Agent interfaces require IP address and port configuration, while [[SNMP]] interfaces need community strings or credentials for SNMP v3.
+DNS names can be used instead of IP addresses when appropriate DNS resolution is available.
 # Resources
 [Zabbix Manual](https://www.zabbix.com/documentation/current/en/manual)
