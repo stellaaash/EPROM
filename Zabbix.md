@@ -59,7 +59,7 @@ It does so by retrieving a list of monitoring Items from the Server (Items are t
 ___
 Passive or Active checking is **chosen when configuring the Items** (Items of type "Zabbix agent" or "Zabbix agent (active)").
 ## Agent 2
-**A newer generation of the Zabbix Agent**, written in [[Go]] instead of [[C]].
+**A newer generation of the Zabbix Agent**, written in Go instead of C.
 Here are the listed enhancements:
 - Reduce the number of TCP connections.
 - Provide improved [concurrency of checks](https://www.zabbix.com/documentation/current/en/manual/concepts/agent2#check-concurrency).
@@ -110,8 +110,8 @@ Add your custom items not included in the base template as you need/want.
 Items define what data to collect, how frequently, and how to process the information.
 Key parameters include item type, key syntax, update intervals and, data processing options.
 ## Resources
-[Official List of Zabbix Integrations]([Zabbix Integrations and Templates](https://www.zabbix.com/integrations))
-[Community Templates Repository]([GitHub - zabbix/community-templates: Zabbix Community Templates repository](https://github.com/zabbix/community-templates))
+[Official List of Zabbix Integrations](https://www.zabbix.com/integrations)
+[Community Templates Repository](https://github.com/zabbix/community-templates)
 # Host configuration and management
 On the web interface, it is necessary to configure hosts to be able to receive data collected by the Agents.
 Each host requires proper configuration including network connectivity, associate templates and specific monitoring requirements.

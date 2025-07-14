@@ -2,8 +2,8 @@
 tags:
   - rust
   - Tutorial
-Website: https://doc.rust-lang.org/book/
 Status: IN PROGRESS
+Website: https://doc.rust-lang.org/book/
 ---
 The official rust tutorial and also a form of documentation.
 This is what I'm gonna start with for learning Rust!

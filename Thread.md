@@ -7,7 +7,7 @@ tags:
 ---
 **Threading is the concept of splitting the load of a particular [[Process]] across multiple [[Processor]] cores.** You can have more threads than cores on most [[Operating System]]s, it's usually the OS itself that will balance the threads between the cores.
 # How it works
-In [[C]] programming, for example, you create a new thread using the `pthreads` library (POSIX threads) (make sure to link it with your executable using `-lpthreads`~) by specifying the function that that thread will run. Kind of like your program starts at `main`, the thread will start a function YOU specify. Within limits, of course.
+In C programming, for example, you create a new thread using the `pthreads` library (POSIX threads) (make sure to link it with your executable using `-lpthreads`~) by specifying the function that that thread will run. Kind of like your program starts at `main`, the thread will start a function YOU specify. Within limits, of course.
 You then let the thread run while the parent thread (the `main`) still works in parallel.
 You can then wait for the thread to complete, by *joining* it.
 A thread can `exit()` or end its own life by returning from the "main" function you gave it.
@@ -23,7 +23,7 @@ Using `thrd_detach()`, you can tell a thread to keep on executing on its own, wi
 Since threads share their memory spaces, you can easily end up in something known as a "race condition", or "data race". In a nutshell, this is when two or more threads are trying to access and/or modify the same value at the same time. This can very easily cause said value to become completely corrupted with part of the first thread's modification and part of the second's.
 Thing is, **this isn't limited to only conventional variables you might set in your code.** This is pretty much to take into account for any resource that might be shared between threads. Ring any bells? That's right! Enter the standard input and output. What if two threads try to write something to stdout at the same time? You'll end up with two outputs mixed together, resulting in a garbled output. Not something we want. That's why we have concepts such as [[Mutex]]es.
 
-> [!WARNING] The [[C]] standard library and race conditions
+> [!WARNING] The C standard library and race conditions
 > Careful with some functions in the standard library that may keep a variable somewhere to keep states! If a standard libc function keeps a state between calls, it's probably not thread safe and needs protection set around that function.
 
 # C Program example

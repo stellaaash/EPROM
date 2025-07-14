@@ -2,13 +2,13 @@
 tags:
   - Tutorial
   - cpp
-Website: https://www.learncpp.com/
 Status: IN PROGRESS
+Website: https://www.learncpp.com/
 ---
 [[C++]] tutorials and learning materials.
 # Progress
 Skipped around some chapters that aren't necessary for 42 school right now
-22.1
+24.7
 # Bookmarks - Stuff to remember
 My personal bookmarks are those of someone that comes from a small background of working in C over several months in a wide variety of projects.
 This is why I'm not noting everything down, only those things relevant to someone with knowledge of standard C.
@@ -2104,6 +2104,11 @@ Be careful using templates around your classes, since for example comparing mult
 ### 24.1 - Introduction
 Inheritance is the concept of an object taking properties from another, in effect being "a kind of" this object.
 One of the best examples would be a class Fruit that has child classes Apple and Banana.
+In practice, when inheriting from a class, you first build that class object, then build your new class **around** it.
+This is called a *subobject*, because in memory the base class is embedded within the derived object's memory layout.
+This means that since you're effectively building a different class, **you can't access private member of the base class**.
+This is also why you can just cast a derived object to its base counterpart: in effect, you're just "looking at" that part of memory embedded within the derived object.
+
 ### 24.2 - Basic inheritance in C++
 To make a class a derived class of another, you can use this syntax:
 ```cpp
@@ -2123,7 +2128,8 @@ public:
 When doing so, BaseballPlayer take all member functions and variables from Person.
 It also takes in two new data members, `battingAverage` and `homeRuns`.
 ### 24.3 - Order of construction of derived classes
-C++ constructs derived classes in phases, starting with the most-base class (at the top of the inheritance tree) and finishing with the most-child class (at the bottom of the inheritance tree). As each class is constructed, the appropriate constructor from that class is called to initialize that part of the class.
+C++ constructs derive classes in phases, starting with the most-base class (at the top of the inheritance tree) and finishing with the most-child class (at the bottom of the inheritance tree).
+As each class is constructed, the appropriate constructor from that class is called to initialize that part of the class.
 The inverse happens when destructing class instances.
 ### 24.4 - Constructors and initialization of derived classes
 ```cpp
@@ -2154,3 +2160,51 @@ public:
 };
 ```
 When a `Derived` is initialized, the `Base` constructor is called first, then returning control to the `Derived` constructor which sets the `Derived` part of the class.
+### 24.5 - Inheritance and access specifiers
+Along `private` and `public` access specifiers, there also exists the **`protected` access specifier**.
+This is much like `private`, except it means those members are public to classes **inheriting from the class the members belong to**.
+Making a member `protected` has a side-effect: your derived classes will be able to modify the base parts.
+This is sometimes unwanted. As such, **you should try to favor `private` member over `protected` ones.**
+___
+Just as there are three access specifiers, **there are three ways to inherit a class**:
+- Publicly
+- Protectedly
+- Privately
+These all change the access specifiers of derived members in the new derived class.
+Let's go through all three, one by one.
+#### Public inheritance
+By far the most used kind of inheritance. It's the most simple one, too, because all members keep their initial access specifiers:
+
+| Access specifier in base class | Access specifier when inherited publicly |
+| ------------------------------ | ---------------------------------------- |
+| Public                         | Public                                   |
+| Protected                      | Protected                                |
+| Private                        | Inaccessible                             |
+**Use that kind of inheritance unless you have a specific reason not to.**
+#### Protected inheritance
+With protected inheritance, **the public and protected become protected.**
+
+| Access specifier in base class | Access specifier when inherited protectedly |
+| ------------------------------ | ------------------------------------------- |
+| Public                         | Protected                                   |
+| Protected                      | Protected                                   |
+| Private                        | Inaccessible                                |
+#### Private inheritance
+Same as protected, but they become **private instead**.
+> **Note that this does not affect the way that the derived class accesses members inherited from its parent! It only affects the code trying to access those members through the derived class.**
+
+| Access specifier in base class | Access specifier when inherited privately |
+| ------------------------------ | ----------------------------------------- |
+| Public                         | Private                                   |
+| Protected                      | Private                                   |
+| Private                        | Inaccessible                              |
+Private inheritance is mostly useful for inheriting a class you don't want the interface of accessible through your derived class.
+### 24.6 - Adding new functionality to a derived class
+When you derive from a class, you'll often want to add functionality to your derived class without modifying the base one.
+You can do that by simply declaring new members in your derived class.
+### 24.7 - Calling inherited functions and overriding behavior
+You can make functions derived from base classes have different behavior by overriding them.
+This happens by simply redefining them in your derived class.
+When you override a function or data member, its access specifier isn't inherited, you have to redefine it yourself.
+A function that was private in the base class can be public or protected in the derived class.
+___

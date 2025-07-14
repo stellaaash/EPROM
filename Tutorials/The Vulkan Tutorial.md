@@ -1,7 +1,7 @@
 ---
 tags:
   - Tutorial
-web: https://vulkan-tutorial.com/
 Status: TODO
+Website: https://vulkan-tutorial.com/
 ---
 Learning Vulkan with C++.

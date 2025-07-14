@@ -32,7 +32,7 @@ A simplified map looks like:
 ```
 # Stack vs Heap
 - **Stack Memory:** Automatically allocated and deallocated for local variables and function calls.
-- **Heap Memory:** Dynamically allocated using functions like `malloc()` and `free()` (for [[C]]).
+- **Heap Memory:** Dynamically allocated using functions like `malloc()` and `free()` (for C).
 # Virtual vs Physical Memory
 Physical memory refers to the entire memory attached to the system, usually in the form or RAM sticks.
 Virtual memory, on the other hand, refers to the part of that physical memory that is allocated for a singular process.

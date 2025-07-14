@@ -1,6 +1,6 @@
 ---
 tags:
   - Tutorial
-web: https://scratchapixel.com/
 Status: TODO
+Website: https://scratchapixel.com/
 ---

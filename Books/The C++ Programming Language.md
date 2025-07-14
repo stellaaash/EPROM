@@ -3,7 +3,7 @@ tags:
   - cpp
   - book
 Author: Bjarne Stroustrup
-Status: IN PROGRESS
+Status: TODO
 ---
 [[2013 Stroustrup - The C++ Programming Language 4th Edition.pdf]]
 
@@ -12,7 +12,7 @@ Status: IN PROGRESS
 Page 46 (PDF pages)
 ## Chapter 1 - Notes to the reader
 ### Section 1.3.3 - Suggestions for C Programmers
-Some nice advice coming from a [[C]] background. Do NOT think that C++ is just C with ++features. It's a different language completely, treat it as such.
+Some nice advice coming from a C background. Do NOT think that C++ is just C with ++features. It's a different language completely, treat it as such.
 ### Section 1.4 - History of C++
 
 > [!NOTE] Reading to be done!

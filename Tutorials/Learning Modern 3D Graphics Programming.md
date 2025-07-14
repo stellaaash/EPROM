@@ -2,8 +2,8 @@
 tags:
   - book
   - Tutorial
-web: https://paroj.github.io/gltut/
-Status: IN PROGRESS
+Status: TODO
+Website: https://paroj.github.io/gltut/
 ---
 Covers some of the [[OpenGL]] API to teach you Computer Graphics in C and C++.
 # Progress
