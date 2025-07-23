@@ -1,0 +1,13 @@
+{
+	"nodes":[
+		{"id":"46afe4650b8eb30d","type":"file","file":"Computer Science/Mutex.md","x":860,"y":-340,"width":740,"height":860},
+		{"id":"e1828499070028e6","type":"text","text":"---\n\n---\n# Philosophers\nA simulation of philosophers eating, sleeping, thinking and, potentially, dying.","x":-807,"y":-620,"width":405,"height":180},
+		{"id":"579087c3669e4271","type":"text","text":"## The plan\nI need one thread per philosopher and one more to do the monitoring of them all and check for deaths/completion of the simulation. I also apparently need a mutex for philosophers themselves, to write information to their structs.\nPotentially a mutex for reading and one for writing? I'm not sure why we'd need both though.\n\nStart the program by initializing ALL mutexes\nsimulation (table)\nphilosophers\nforks\n\neverything is to be stored in the table for easy access by everyone, basically\n\nhow should I tell a philosopher that it is dead and that the simulation should end? \nthe philosopher's main loop has a condition that checks if it is still alive. it is up to the monitoring thread to check for the time elapsed and set the state to be dead.","x":-820,"y":-380,"width":431,"height":820,"color":"4"},
+		{"id":"29f169a28d3450dc","type":"file","file":"Thread.md","x":-280,"y":-740,"width":940,"height":1460},
+		{"id":"643084ea4c51e455","x":1720,"y":-1016,"width":525,"height":552,"color":"6","type":"text","text":"# New stuff after reaching a working protoype\nPeople use more mutexes than just forks - philos - simulation. Some have mutexes for reading and writing data, others mutexes for deaths, eating states and just about every changing variable you can think of.\nIt seems increasing the mutex number to closer to one mutex per relevant resource (variable or fd) could help with execution.\n\nI also need a way to make philos deadlock less often. Something about making every uneven philo take the right fork first while all even philos take the left one first."}
+	],
+	"edges":[
+		{"id":"272be065ca56296b","fromNode":"579087c3669e4271","fromSide":"right","toNode":"29f169a28d3450dc","toSide":"left"},
+		{"id":"25325fec51d40d7f","fromNode":"29f169a28d3450dc","fromSide":"right","toNode":"46afe4650b8eb30d","toSide":"left"}
+	]
+}

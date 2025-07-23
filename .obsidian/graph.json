@@ -5,13 +5,20 @@
   "showAttachments": true,
   "hideUnresolved": false,
   "showOrphans": true,
-  "collapse-color-groups": true,
+  "collapse-color-groups": false,
   "colorGroups": [
     {
-      "query": "",
+      "query": "path:\"Computer Science\"  ",
       "color": {
         "a": 1,
-        "rgb": 14048348
+        "rgb": 12357556
+      }
+    },
+    {
+      "query": "path:Math  ",
+      "color": {
+        "a": 1,
+        "rgb": 12152430
       }
     }
   ],
@@ -25,6 +32,6 @@
   "repelStrength": 9.86979166666667,
   "linkStrength": 1,
   "linkDistance": 100,
-  "scale": 0.138921945018215,
+  "scale": 0.24260309460388188,
   "close": true
 }
