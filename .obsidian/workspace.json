@@ -4,39 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "7d9603f7aeaa0f3f",
+        "id": "66d0503c6d8d3f27",
         "type": "tabs",
-        "dimension": 64.3994691439947,
         "children": [
           {
-            "id": "b109ec4a3e53e653",
+            "id": "b0f49ab57a0479a6",
             "type": "leaf",
             "state": {
               "type": "empty",
               "state": {},
               "icon": "lucide-file",
               "title": "New tab"
-            }
-          }
-        ]
-      },
-      {
-        "id": "578c733434ddacc0",
-        "type": "tabs",
-        "dimension": 35.60053085600531,
-        "children": [
-          {
-            "id": "4f83ffbe7d9d6c84",
-            "type": "leaf",
-            "state": {
-              "type": "webviewer",
-              "state": {
-                "url": "https://exploringjs.com/js/book/ch_strings.html",
-                "title": "Strings • Exploring JavaScript (ES2025 Edition)",
-                "mode": "webview"
-              },
-              "icon": "globe-2",
-              "title": "Strings • Exploring JavaScript (ES2025 Edition)"
             }
           }
         ]
@@ -216,8 +194,14 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "b109ec4a3e53e653",
+  "active": "b0f49ab57a0479a6",
   "lastOpenFiles": [
+    "Computer Science/WebAssembly.md",
+    "Computer Science/Dynamic Host Configuration Protocol.md",
+    "Computer Science/Bubble Sort.md",
+    "Computer Science/Tutorials/AI Fluency.md",
+    "Computer Science/vim.md",
+    "Computer Science/Pre-Shared Key.md",
     "Bubble Sort.md",
     "Computer Science/Web Server.md",
     "Computer Science/nginx.md",
@@ -229,7 +213,6 @@
     "Computer Science/bg.md",
     "Computer Science/Tutorials/Ray Tracing in One Weekend.md",
     "Computer Science/Tutorials/learncpp.com.md",
-    "Computer Science/Tutorials/AI Fluency.md",
     "Computer Science/Tutorials/Learning Modern 3D Graphics Programming.md",
     "Computer Science/Tutorials/Nand to Tetris.md",
     "Web Server.md",
@@ -239,11 +222,6 @@
     "fg.md",
     "bg.md",
     "Fail2Ban.md",
-    "Domain Name.md",
-    "Computer Science/Apache.md",
-    "Computer Science/The Rust Book.md",
-    "Computer Science/Zabbix.md",
-    "Computer Science/Thread.md",
     "Computer Science/Code projects/Philosophers.canvas",
     "Computer Science/Tutorials",
     "Computer Science/Books/2013 Stroustrup - The C++ Programming Language 4th Edition.pdf",

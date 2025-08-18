@@ -43,7 +43,7 @@ ___
 It has a built-in High Availability feature which, if turned on, runs multiple Zabbix Server nodes in a cluster, with only one active.
 If one of them fails, another one picks up and continues where the other left off, in this way always having an instance up and running.
 ___
-You can encrypt communications between Zabbix Agents, Proxies and the Server using [[PSK]] keys.
+You can encrypt communications between Zabbix Agents, Proxies and the Server using [[Pre-Shared Key]] keys.
 ## Agent (1)
 The Zabbix Agent is **deployed on the monitoring target** to actively check ressources and **report to the Zabbix Server** (or a Proxy, more on that below).
 Same as the Server, it runs as a background process, using [[systemctl]] on unix-likes and a [[Service]] on Windows.
@@ -123,7 +123,7 @@ Important configuration parameters include:
 - Interfaces - Define communication methods and parameters
 ## Interface configuration
 Interface configuration specifies how the Server communicates with the Host.
-Agent interfaces require IP address and port configuration, while [[Simple Mail Transfer Protocol]] interfaces need community strings or credentials for SNMP v3.
+Agent interfaces require IP address and port configuration, while [[Simple Mail Transfer Protocol]] interfaces need community strings or credentials for [[Simple Network Management Protocol]] v3.
 [[Domain Name System]] names can be used instead of IP addresses when appropriate DNS resolution is available.
 # Resources
 [Zabbix Manual](https://www.zabbix.com/documentation/current/en/manual)

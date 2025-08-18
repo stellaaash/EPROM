@@ -5,7 +5,7 @@ tags:
 Telnet is a client-server application protocol that provides access to virtual terminals or remote systems on local networks or the Internet.
 It is a protocol for **bidirectional 8-bit communications**.
 Its main historical goal was to connect terminal devices and terminal-oriented processes.
-# Cheat sheet
+# Cheatsheet
 ```sh
 telnet [options ...] [host [port]]
 

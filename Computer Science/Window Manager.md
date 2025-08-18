@@ -2,7 +2,6 @@
 tags:
   - Linux
 ---
-# Primer
 System that manages windows in a desktop environment (or just a GUI). Usually is discussed on [[Unix]] systems, as it's harder to customize on [[Windows]] and even [[macOS]] systems.
 
 

@@ -7,7 +7,7 @@ Author: Axel Rauschmayer
 ---
 Learning JavaScript for programmers!
 # Progress
-22 - Strings
+27 - Callable values
 # Notes
 ## 8 - Using Javascript: the big picture
 This book teaches the JavaScript language, and just the language. It's not particularly eager about teaching web dev or such things as [[Node.js]].
@@ -315,3 +315,87 @@ Documented in [[Unicode]].
 In JavaScript source code, the code and strings contained are both encoded as UTF-16.
 When saving to source files though, both HTML and JavaScript are saved in UTF-8.
 ## 22 - Strings
+Strings are **immutable**, which means they don't get modified, instead, **new ones are created each time.**
+String literals are delimited by **either single or double quotes**.
+There is no "char" type, reading characters from a string with array notation provides a **new string containing a single character**.
+You can easily concatenate strings together using `+`.
+Keep in mind that when comparing strings, the numeric values are compared instead of the actual characters in a conventional manner (don't compare uppercase and lowercase chars, for example, like in C)
+## 23 - Template literals and tagged templates
+### 23.1 - Defining "template"
+There are **three terms using "template" as a word but meaning different things:**
+- A **text template** is a function from data to text.
+- A **template literal** is like a string literal, but with more flair, like interpolation with `${}` clauses. They are delimited with backticks \`.
+- A **tagged template** is a template literal that follows a function's name, effectively calling that function and parsing the template literal to find the arguments to pass the function.
+  An example might be more telling:
+```js
+ const getArgs = (...args) => args;
+ assert.deepEqual(
+	 getArgs`Count: ${5}!`
+	 [['Count: ', '!'], 5] );
+```
+Here, `getArgs()` receives both the text of the literal and the data interpolated with `${}`.
+### 23.2 - Template literals
+Template literals are like string literals with more features, namely **string interpolation**.
+You can put `${}` clauses inside of them and the expression gets evaluated and put inside of the string literal, at that point.
+Template literals evaluate to a string literal, obviously.
+### 23.3 - Tagged templates
+Tagged templates are template literals that come **directly after a function's name**.
+The names contained inside of the `${}` clauses are given as argument to the function mentioned, along with the string itself.
+```js
+const setting = "wow"
+const value = true;
+
+wowFunc`This function will take ${setting} and ${value} as arguments.`;
+```
+The full prototype of `wowFunc` is `templateStrings, ...substitutions`.
+The first is an Array with the text fragments that aren't interpolations. The second are the substitutions themselves, so the values of the variables passed.
+## 24 - Symbols
+### 24.1 - Symbols are primitive values with unique identities
+Symbols are created with the **factory function `Symbol()`**.
+```js
+const mySymbol = Symbol('mySymbol');
+```
+The parameter is optional and is here if you want to add a description to your symbol. Useful for debugging purposes.
+Symbols are **primitive values**, and as such can be used as property keys in objects, for example.
+All symbols have **unique identities** and aren't compared by value, two symbols, even if they have the same description, won't be equal, even deeply.
+### 24.2 - The description of symbols
+Descriptions can be accessed using the `.toString()` method or, if using ES2019 or later, the `.description` property.
+### 24.3 - Use cases for symbols
+The main use cases for symbols are **values for constants, or unique property keys**.
+Think preprocessor macros in C. You can use them to easily have **unique constants**:
+```js
+const COLOR_RED = Symbol('Red');
+const COLOR_GREEN = Symbol('Green');
+const COLOR_BLUE = Symbol('Blue');
+```
+## 25 - Control flow statements
+### 25.1 - Controlling loops with `break` and `continue`
+`break` works as you'd expects, and since there's labelled statements (and blocks), you can easily break off of a given block.
+`continue` also works as usual, but doesn't support labelled statements. You can't continue a loop of your choice, for example.
+### 25.4 - Switch statements
+Just like in C, **don't forget to break or continue in `case`s of switch statements!** Otherwise you'll keep going through all labels.
+### 25.11 - Recommendations for looping
+- If you want to loop over an [asynchronous iterable](https://exploringjs.com/js/book/ch_async-iteration.html#ch_async-iteration) (in ES2018+), you must use `for-await-of`.
+- For looping over any synchronous iterable (incl. Arrays), you must use `for-of`. Available in ES6+.
+- For looping over an Array in ES5+, you can use [the Array method `.forEach()`](https://exploringjs.com/js/book/ch_arrays.html#qref-Array.prototype.forEach).
+- Before ES5, you can use a plain `for` loop to loop over an Array.
+- Don’t use `for-in` to loop over an Array.
+## 26 - Exception handling
+### 26.1 - Throwing and catching
+When an error can occur and you want the caller of a function you're building to be able to handle it, you can throw it back to the caller.
+When you throw an error, JavaScript unrolls the stack by going back all the blocks that led to the throw call, until it finds a `try` statement.
+### 26.2 - `throw`
+You can throw basically any value you want in JavaScript, but it's better to use instances of `Error` or a subclass of it.
+This is because they support useful features like stack traces and error chaining.
+Either you throw `new Error('Your error message')`, or a subclass of `Error` like `TypeError` or `RangeError`.
+### 26.3 - `try`
+You execute your actual code in a `try` statement.
+The `catch` is here to rightfully "catch" thrown errors that could occur inside of the `try` code.
+You give an argument to `catch` when you want to use the value that is thrown, like printing the error message.
+Code inside of a `finally` clause will always be executed at the end of a `try` statement, even if an error is thrown and caught.
+## 27 - Callable values
+### 27.1 - Kinds of functions
+There are **two categories of function** in JavaScript:
+- Ordinary functions
+- Specialized functions
+### 27.2 - Ordinary functions

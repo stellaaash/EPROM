@@ -31,6 +31,7 @@ The cheasheet motions, commands and actions found below are to be executed in no
 - `^f` : **Go Forward** - Scroll down one page.
 - `^d` : Scroll **Down half a page**.
 - `^u` : Scroll **Up half a page**.
+- `'.` : Jump to **last modification line**.
 ## Vim actions
 - `i` : Enter **insert mode** before the caret.
 - `a` : **Append** : Enter insert mode after the caret.

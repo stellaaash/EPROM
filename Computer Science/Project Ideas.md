@@ -10,10 +10,13 @@ A full desktop application allowing for audio playback on a specific OS (probabl
 Start with a simple audio format like .wav, and work your way up from there.
 # Actress - Video Player
 A later project that would build upon Apricot by implementing a video player.
-# Wasure - Fully fledged ray tracer in Rust
-Basically miniRT and more, written in Rust instead of C.
-Use the `vulkano` crate.
+# ILS (Imaginary Love Story) - Fully fledged ray tracer
+Basically miniRT and more, written in another language instead of C. Rust or Zig?
+Use the `vulkano` crate if the former. Might use the mlx with C interop if the latter.
 ## Ressources for this project
 [Vulkano Tutorial](https://vulkano.rs)
 [Vulkano Examples](https://github.com/vulkano-rs/vulkano/tree/master/examples)
 [Learning Modern 3D Graphics Programming](https://paroj.github.io/gltut/)
+# LagTrain
+Android widget that shows me only my relevant trains, using the CFF api.
+Could be built using Zig to WebAssembly, since it runs on android widgets. Other options include React native.
