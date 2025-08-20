@@ -16,5 +16,5 @@ The object files created by the compiler are then linked by the linker into an e
 # Examples of compilers
 - [[gcc]]
 - [[clang]]
-- The Rust Compiler (?)
+- The Rust Compiler
 - ...

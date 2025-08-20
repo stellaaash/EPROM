@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "66d0503c6d8d3f27",
+        "id": "05cdef44192a1e27",
         "type": "tabs",
         "children": [
           {
-            "id": "b0f49ab57a0479a6",
+            "id": "0f5fc9c1f262827f",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -183,6 +183,7 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "bases:Create new base": false,
       "publish:Publish changes...": false,
       "omnisearch:Omnisearch": false,
       "switcher:Open quick switcher": false,
@@ -194,7 +195,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "b0f49ab57a0479a6",
+  "active": "0f5fc9c1f262827f",
   "lastOpenFiles": [
     "Computer Science/WebAssembly.md",
     "Computer Science/Dynamic Host Configuration Protocol.md",
