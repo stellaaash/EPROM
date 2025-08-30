@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "05cdef44192a1e27",
+        "id": "0e96ce74413f811e",
         "type": "tabs",
         "children": [
           {
-            "id": "0f5fc9c1f262827f",
+            "id": "bec1be56b30e5950",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -195,8 +195,10 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "0f5fc9c1f262827f",
+  "active": "bec1be56b30e5950",
   "lastOpenFiles": [
+    "Pipe.md",
+    "Computer Science/InterProcess Communication.md",
     "Public-key Cryptography.md",
     "Computer Science/Transport Layer Security.md",
     "Computer Science/Secure Sockets Layer.md",
@@ -221,8 +223,6 @@
     "Computer Science/Tutorials/Learning Modern 3D Graphics Programming.md",
     "Computer Science/Tutorials/Nand to Tetris.md",
     "Web Server.md",
-    "nginx.md",
-    "jobs.md",
     "Computer Science/Code projects/Philosophers.canvas",
     "Computer Science/Tutorials",
     "Computer Science/Books/2013 Stroustrup - The C++ Programming Language 4th Edition.pdf",

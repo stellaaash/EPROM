@@ -1,37 +1,22 @@
 {
   "collapse-filter": true,
   "search": "",
-  "showTags": true,
-  "showAttachments": true,
+  "showTags": false,
+  "showAttachments": false,
   "hideUnresolved": false,
   "showOrphans": true,
   "collapse-color-groups": false,
-  "colorGroups": [
-    {
-      "query": "path:\"Computer Science\"  ",
-      "color": {
-        "a": 1,
-        "rgb": 12357556
-      }
-    },
-    {
-      "query": "path:Math  ",
-      "color": {
-        "a": 1,
-        "rgb": 12152430
-      }
-    }
-  ],
-  "collapse-display": true,
-  "showArrow": true,
+  "colorGroups": [],
+  "collapse-display": false,
+  "showArrow": false,
   "textFadeMultiplier": 0,
-  "nodeSizeMultiplier": 1,
+  "nodeSizeMultiplier": 1.14273356401384,
   "lineSizeMultiplier": 1,
-  "collapse-forces": true,
-  "centerStrength": 0.498697916666667,
-  "repelStrength": 9.86979166666667,
+  "collapse-forces": false,
+  "centerStrength": 0.518713248970312,
+  "repelStrength": 10,
   "linkStrength": 1,
-  "linkDistance": 100,
-  "scale": 0.09261462911683375,
+  "linkDistance": 179,
+  "scale": 0.10752218349665525,
   "close": true
 }
