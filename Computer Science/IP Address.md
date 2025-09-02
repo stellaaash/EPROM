@@ -8,11 +8,11 @@ IP addresses are "divided" into two parts, one identifies the network of the hos
 In TCP/IP ([[Transmission Control Protocol]] over [[Internet Protocol]]), this is called the subnet mask.
 The CIDR determines the number of 1-bits found in the subnet mask, and thus its size.
 By using the CIDR, you can determine the number of subnets found in a network.
-These are small independant networks; hosts need to be in the same subnet to communicate directly.
+These are small independent networks; hosts need to be in the same subnet to communicate directly.
 
 | CIDR | Dot-decimal     | IP-addresses per subnet | Usable IP-addresses per subnet | Number of subnets |
 | ---- | --------------- | ----------------------- | ------------------------------ | ----------------- |
-| /32  | 255.255.255.255 | 1                       | 0                              | 258               |
+| /32  | 255.255.255.255 | 1                       | 0                              | 256               |
 | /31  | 255.255.255.254 | 2                       | 0                              | 128               |
 | /30  | 255.255.255.252 | 4                       | 2                              | 64                |
 | /29  | 255.255.255.248 | 8                       | 6                              | 32                |

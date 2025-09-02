@@ -4,17 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "0e96ce74413f811e",
+        "id": "aa7721986c395026",
         "type": "tabs",
         "children": [
           {
-            "id": "bec1be56b30e5950",
+            "id": "c79cd1455611f714",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "Computer Science/IP Address.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "IP Address"
             }
           }
         ]
@@ -195,8 +199,13 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "bec1be56b30e5950",
+  "active": "c79cd1455611f714",
   "lastOpenFiles": [
+    "Things to Learn.md",
+    "Computer Science/Routing Table.md",
+    "Computer Science/IP Address.md",
+    "Computer Science/Tutorials/Cisco Net Academy.md",
+    "Computer Science/Code projects/miniRT.canvas",
     "Pipe.md",
     "Computer Science/InterProcess Communication.md",
     "Public-key Cryptography.md",
@@ -219,15 +228,10 @@
     "Computer Science/Domain Name.md",
     "Computer Science/bg.md",
     "Computer Science/Tutorials/Ray Tracing in One Weekend.md",
-    "Computer Science/Tutorials/learncpp.com.md",
-    "Computer Science/Tutorials/Learning Modern 3D Graphics Programming.md",
-    "Computer Science/Tutorials/Nand to Tetris.md",
-    "Web Server.md",
     "Computer Science/Code projects/Philosophers.canvas",
     "Computer Science/Tutorials",
     "Computer Science/Books/2013 Stroustrup - The C++ Programming Language 4th Edition.pdf",
     "Computer Science/Books",
-    "Computer Science/Code projects/miniRT.canvas",
     "Computer Science/Code projects/Minishell.canvas",
     "Computer Science/Code projects",
     "Computer Science",

@@ -6,7 +6,7 @@ A data table stored in a [[Router]] or other network host.
 It contains information about the topology of the network directly around it.
 # How it works
 A routing table is a bit like a recipe, but in packet distribution.
-It tells you for each destination you want to go to, **which target to send your package next**.
+It tells you for each destination subnet you want to go to, **which target to send your package next**.
 If the node cannot directly connect to the final destination of the packet, it has to send it via other nodes along a given route.
 Each node along the way needs to keep track of which way to deliver packages of data.
 For that, it uses a routing table.
