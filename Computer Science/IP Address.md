@@ -30,9 +30,9 @@ Example : `192.168.1.1`
 
 # Reserved networks
 Some networks are usually only used in cases of a private, internal network (your home wifi for example).
-- `10.0.0.0` - `10.255.255.255`
-- `172.16.0.0` - `172.31.255.255`
-- `192.168.0.0` - `192.168.255.255`
+- `10.0.0.0` - `10.255.255.255` (`10.0.0.0/8`)
+- `172.16.0.0` - `172.31.255.255` (`172.16.0.0/20)
+- `192.168.0.0` - `192.168.255.255` (`192.168.0.0/24`)
 They provide enough distinct addresses to be used without problems inside of a single, private network.
 # Loopback addresses
 There's a range of IP addresses specifically reserved for internal testing and communications within a single device.

@@ -11,6 +11,8 @@ This makes it a **very good drop-in replacement to MySQL**.
 -- Rename a user (or change its host)
 > RENAME USER 'username'@'localhost' TO 'username'@'%'';
 ```
+
+[Learn SQL in Y Minutes](https://learnxinyminutes.com/sql/)
 # Installation
 Install both `mariadb-server` and `mariadb-client` packages for both running the database and connecting to it.
 Don't forget to **secure the installation** by running `mariadb-secure-installation` afterwards!
