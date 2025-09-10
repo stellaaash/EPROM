@@ -1647,6 +1647,8 @@ This makes the management of ressources for each instance clear and precise, and
 ___
 Be wary that `std::exit()` doesn't call any destructor on being called. Leaks are to be expected.
 ## 20 - Functions \[WIP]
+### 20.1 - Function pointers
+
 ## 21 - Operator Overloading \[WIP]
 ### 21.1 - Introduction
 Since operators in C++ are just functions, you can overload them just like any other function out there.

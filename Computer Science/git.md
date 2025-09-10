@@ -1,13 +1,15 @@
 ---
 tags:
-  - git
   - cheatsheet
 ---
-
 based version control system
-
 # Useful commands
-## git pull --rebase
-in case you created some [[commit]]s before pulling new work from the remote, you should probably pull using the rebase flags so it recreates the history, adding the new commits before yours.
+```sh
+git pull --rebase
+# In case you created some commits before pulling new work from the remote.
+# This will recreate the commit history, adding the new commits before yours.
+git clean
+# Removes all untracked files from the working tree.
+```
 ## git clean
 Remove all untracked files from the working tree.

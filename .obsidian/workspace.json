@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Computer Science/IP Address.md",
+                "file": "Computer Science/git.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "IP Address"
+              "title": "git"
             }
           }
         ]
@@ -199,15 +199,16 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "c79cd1455611f714",
+  "active": "68068e575d50463f",
   "lastOpenFiles": [
+    "Computer Science/git.md",
+    "Computer Science/IP Address.md",
     "Computer Science/Search Domain.md",
     "Computer Science/Public-key Cryptography.md",
     "Computer Science/Pipe.md",
     "Computer Science/Things to Learn.md",
     "Things to Learn.md",
     "Computer Science/Routing Table.md",
-    "Computer Science/IP Address.md",
     "Computer Science/Tutorials/Cisco Net Academy.md",
     "Computer Science/Code projects/miniRT.canvas",
     "Pipe.md",
@@ -227,7 +228,6 @@
     "Computer Science/nginx.md",
     "Computer Science/Linux.md",
     "Computer Science/jobs.md",
-    "Computer Science/fg.md",
     "Computer Science/Code projects/Philosophers.canvas",
     "Computer Science/Tutorials",
     "Computer Science/Books/2013 Stroustrup - The C++ Programming Language 4th Edition.pdf",
