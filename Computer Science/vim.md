@@ -18,8 +18,10 @@ In this mode, you are directly editing the document like you would be if you ope
 ## Visual mode
 In this mode, you are selecting parts of the document to be modified, copied etc...
 You can move around using vim motions and do actions just like you would in normal mode, but your actions are performed on the selected text instead of a single character.
-# Cheatsheet
-The cheasheet motions, commands and actions found below are to be executed in normal mode.
+## Ex mode
+Used to input commands using the `:` shortcut.
+# Cheat sheet
+The cheet sheet motions, commands and actions found below are to be executed in normal mode.
 ## Vim motions
 - `hjkl` : **Move one character** left, down, up and right respectively.
 - `w`: Go to the **beginning of the word**.
@@ -41,6 +43,7 @@ The cheasheet motions, commands and actions found below are to be executed in no
 - `v` : Enter **visual mode** (selection mode).
 - `V` : Enter **visual line mode** (visual mode with all whole line selected).
 - `y` : **Yank**, or **copy** selection into the clipboard.
+- `yy` : **Yank** the current line.
 - `x` : **Cut** the selection into the clipboard.
 - `p` : **Puts** or **paste after** the caret.
 - `P` : **Puts before** the caret.
@@ -52,7 +55,9 @@ The cheasheet motions, commands and actions found below are to be executed in no
 - `C` : **Change** from the caret to **the end of the line**.
 - `u` : **Undo** last change.
 - `^r` : **Redo** next change.
-- `/<query>` : **Search** query in current file.
+- `/<query>` : **Search** query from cursor onwards.
+- `?<query>` : **Search** query before cursor.
+- `.`: **Repeat** last action.
 ## Vim commands
 - `:h` : Shows the **help menu**.
 - `:w` : **Write**, or **save** the current file.

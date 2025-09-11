@@ -11,5 +11,3 @@ git pull --rebase
 git clean
 # Removes all untracked files from the working tree.
 ```
-## git clean
-Remove all untracked files from the working tree.
