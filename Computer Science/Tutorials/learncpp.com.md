@@ -2210,3 +2210,18 @@ This happens by simply redefining them in your derived class.
 When you override a function or data member, its access specifier isn't inherited, you have to redefine it yourself.
 A function that was private in the base class can be public or protected in the derived class.
 ___
+
+## 28 - Input and Output
+### 28.1 - I/O streams
+IO capability is not part of the language itself, but is provided by the standard library.
+As such, it resides in the `std` namespace.
+**Streams are sequences of bytes**; there are input and output streams, both used to represent files, input methods such as keyboards, networks, a terminal to output to, and many, many more abstractions.
+Primary classes for input and output streams are `istream` and `ostream`, respectively.
+`iostream` can handle both input and output, allowing for bidirectional IO.
+There are standard streams that all programs are created with: `cin`, `cout`, `cerr` and `clog`.
+The latter isn't really used that much.
+### 28.2 - Input with istream
+
+### 28.6 - Basic file I/O
+Files have classes derived from the main three: `ifstream`, `ofstream` and `fstream`.
+To open a file, it's quite easy: **just create a new instance of the class** by passing it the filename you want to open or create.

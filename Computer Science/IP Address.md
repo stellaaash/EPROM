@@ -22,9 +22,10 @@ These are small independent networks; hosts need to be in the same subnet to com
 | /25  | 255.255.255.128 | 128                     | 126                            | 2                 |
 | /24  | 255.255.255.0   | 256                     | 254                            | 1                 |
 # IPv4
-A 32-bit number divided into 4 blocks that go from 0 to 255.
+A 32-bit number divided into 4 octets that go from 0 to 255.
 Example : `192.168.1.1`
 # IPv6
+IPv6 was born from the need to have a range much wider than the one available through IPv4.
 
 > [!NOTE] Research to be done!
 
@@ -42,3 +43,4 @@ The `127.0.0.1` is referred to as `localhost`, and represents the device itself.
 Private adresses are used on private networks like wifis and other home networks that aren't directly accessible from outside.
 They are usually **assigned by the router**.
 Public adresses, on the other hand, are **assigned by the ISP**, and provide a way to refer to a device on the entirety of the internet combined.
+You very often **pay for the public IP address of your home network**- that's your bill (or a part of it, anyway)!

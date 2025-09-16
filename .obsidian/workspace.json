@@ -13,30 +13,44 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Computer Science/vim.md",
+                "file": "Computer Science/IP Address.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "vim"
+              "title": "IP Address"
             }
           },
           {
-            "id": "3ab2de7ac7b0df22",
+            "id": "624e287668443196",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Computer Science/Cyber Security/dirb.md",
+                "file": "Computer Science/MAC Address.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "dirb"
+              "title": "MAC Address"
+            }
+          },
+          {
+            "id": "2b1fed32675bb1a5",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Internet Control Message Protocol.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Internet Control Message Protocol"
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -214,15 +228,20 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "407d7f91a45acf99",
+  "active": "2b1fed32675bb1a5",
   "lastOpenFiles": [
-    "Computer Science/Cyber Security",
+    "Computer Science/MAC Address.md",
+    "Internet Control Message Protocol.md",
+    "Computer Science/IP Address.md",
     "Computer Science/vim.md",
+    "Computer Science/Code projects/miniRT.canvas",
+    "Computer Science/netplan.md",
+    "Math/Cosine.md",
     "Computer Science/Cyber Security/dirb.md",
+    "Computer Science/Cyber Security",
     "Computer Science/vimium.md",
     "Computer Science/nvim.md",
     "Computer Science/git.md",
-    "Computer Science/IP Address.md",
     "Computer Science/Search Domain.md",
     "Computer Science/Public-key Cryptography.md",
     "Computer Science/Pipe.md",
@@ -230,7 +249,6 @@
     "Things to Learn.md",
     "Computer Science/Routing Table.md",
     "Computer Science/Tutorials/Cisco Net Academy.md",
-    "Computer Science/Code projects/miniRT.canvas",
     "Pipe.md",
     "Computer Science/InterProcess Communication.md",
     "Public-key Cryptography.md",
@@ -240,9 +258,6 @@
     "Computer Science/WebAssembly.md",
     "Computer Science/Dynamic Host Configuration Protocol.md",
     "Computer Science/Bubble Sort.md",
-    "Computer Science/Tutorials/AI Fluency.md",
-    "Computer Science/Pre-Shared Key.md",
-    "Bubble Sort.md",
     "Computer Science/Code projects/Philosophers.canvas",
     "Computer Science/Tutorials",
     "Computer Science/Books/2013 Stroustrup - The C++ Programming Language 4th Edition.pdf",
@@ -255,7 +270,6 @@
     "Code projects/miniRT.canvas",
     "en.wikipedia.org/wiki",
     "en.wikipedia.org",
-    "Tutorials",
     "Pasted image 20250528102848.png",
     "Pasted image 20250528102811.png",
     "Code projects/Philosophers.canvas",
