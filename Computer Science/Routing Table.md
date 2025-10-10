@@ -13,7 +13,7 @@ For that, it uses a routing table.
 ## Hop-by-hop
 By using hop-by-hop routing, where you give a packet to the next node in line for a destination,
 it can effectively go from anywhere to anywhere else, so long as each node contains an entry for that destination.
-Hop-by-hop is the fundamental characteristic of the [[Internet Protocol]] (IP) Internet Layer and the [[OSI]] Network Layer.
+Hop-by-hop is the fundamental characteristic of the [[Internet Protocol]] (IP) Internet Layer and the [[OSI Model]] Network Layer.
 ## Attached networks
 When a [[Router]] interface is configured with an [[IP Address]] and [[Subnet]] Mask, the interface becomes a host on that attached network.
 A directly connected network is a network that is directly attached to one of the router interfaces.
