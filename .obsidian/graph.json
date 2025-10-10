@@ -1,5 +1,5 @@
 {
-  "collapse-filter": false,
+  "collapse-filter": true,
   "search": "",
   "showTags": true,
   "showAttachments": true,
@@ -11,14 +11,14 @@
       "query": "path:\"Computer Science\"  ",
       "color": {
         "a": 1,
-        "rgb": 16032767
+        "rgb": 10646014
       }
     },
     {
       "query": "path:Math  ",
       "color": {
         "a": 1,
-        "rgb": 16753576
+        "rgb": 16675192
       }
     }
   ],
@@ -26,7 +26,7 @@
   "showArrow": false,
   "textFadeMultiplier": 0,
   "nodeSizeMultiplier": 1.14273356401384,
-  "lineSizeMultiplier": 1.38880208333333,
+  "lineSizeMultiplier": 1,
   "collapse-forces": false,
   "centerStrength": 0.518713248970312,
   "repelStrength": 10,

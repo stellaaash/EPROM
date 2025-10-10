@@ -1,71 +1,57 @@
 {
   "main": {
-    "id": "9d05bde53f5bb498",
+    "id": "068a5e652b6e6eeb",
     "type": "split",
     "children": [
       {
-        "id": "aa7721986c395026",
+        "id": "eb2733b3f1c1abec",
         "type": "tabs",
         "children": [
           {
-            "id": "c79cd1455611f714",
+            "id": "d6f81972fa1ed7b2",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Computer Science/IP Address.md",
+                "file": "Signal.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "IP Address"
+              "title": "Signal"
             }
           },
           {
-            "id": "624e287668443196",
+            "id": "3f744b8dc388729d",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Computer Science/MAC Address.md",
+                "file": "Computer Science/New Technology File System.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "MAC Address"
-            }
-          },
-          {
-            "id": "2b1fed32675bb1a5",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Internet Control Message Protocol.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Internet Control Message Protocol"
+              "title": "New Technology File System"
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
   },
   "left": {
-    "id": "fee10bef14627914",
+    "id": "856cc677c6d05b3e",
     "type": "split",
     "children": [
       {
-        "id": "a10290a45f0b7cfa",
+        "id": "7314ae3322c1ade6",
         "type": "tabs",
-        "dimension": 59.530791788856305,
+        "dimension": 61.105318039624606,
         "children": [
           {
-            "id": "407d7f91a45acf99",
+            "id": "5afbc682b8960c44",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -78,12 +64,12 @@
             }
           },
           {
-            "id": "46ba1cbd90f96870",
+            "id": "37d2af73783672b3",
             "type": "leaf",
             "state": {
               "type": "search",
               "state": {
-                "query": "[\"status\":]",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -95,7 +81,7 @@
             }
           },
           {
-            "id": "aae98b5883304a49",
+            "id": "32667eb4ed2ca688",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -107,18 +93,16 @@
         ]
       },
       {
-        "id": "0a6e8af355e46c4a",
+        "id": "b3405bf85693d9b7",
         "type": "tabs",
-        "dimension": 40.469208211143695,
+        "dimension": 38.89468196037539,
         "children": [
           {
-            "id": "68068e575d50463f",
+            "id": "2aa113e46b2d22b9",
             "type": "leaf",
-            "pinned": true,
             "state": {
               "type": "graph",
               "state": {},
-              "pinned": true,
               "icon": "lucide-git-fork",
               "title": "Graph view"
             }
@@ -127,22 +111,23 @@
       }
     ],
     "direction": "horizontal",
-    "width": 381.5
+    "width": 300
   },
   "right": {
-    "id": "24624721f3175a81",
+    "id": "94bfcc952b51a9a3",
     "type": "split",
     "children": [
       {
-        "id": "d52dc0435d9e39e1",
+        "id": "3ab454d888b9370f",
         "type": "tabs",
         "children": [
           {
-            "id": "b216faffe4b7e639",
+            "id": "6b6592cc3977f544",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Computer Science/New Technology File System.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -152,11 +137,11 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks"
+              "title": "Backlinks for New Technology File System"
             }
           },
           {
-            "id": "49d69c020cddbe10",
+            "id": "7669a489eef4c560",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
@@ -169,7 +154,7 @@
             }
           },
           {
-            "id": "71cdace78105f044",
+            "id": "7fab731c95c112de",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -184,7 +169,7 @@
             }
           },
           {
-            "id": "33f87a44ed43109d",
+            "id": "75875c64b0cc9641",
             "type": "leaf",
             "state": {
               "type": "outline",
@@ -198,7 +183,7 @@
             }
           },
           {
-            "id": "dfd645a214613ceb",
+            "id": "bc852d9c449dd058",
             "type": "leaf",
             "state": {
               "type": "git-view",
@@ -216,48 +201,48 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "bases:Create new base": false,
       "publish:Publish changes...": false,
-      "omnisearch:Omnisearch": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
       "canvas:Create new canvas": false,
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
+      "bases:Create new base": false,
+      "omnisearch:Omnisearch": false,
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "2b1fed32675bb1a5",
+  "active": "3f744b8dc388729d",
   "lastOpenFiles": [
-    "Computer Science/MAC Address.md",
-    "Internet Control Message Protocol.md",
-    "Computer Science/IP Address.md",
-    "Computer Science/vim.md",
-    "Computer Science/Code projects/miniRT.canvas",
-    "Computer Science/netplan.md",
-    "Math/Cosine.md",
-    "Computer Science/Cyber Security/dirb.md",
-    "Computer Science/Cyber Security",
-    "Computer Science/vimium.md",
-    "Computer Science/nvim.md",
-    "Computer Science/git.md",
-    "Computer Science/Search Domain.md",
-    "Computer Science/Public-key Cryptography.md",
-    "Computer Science/Pipe.md",
-    "Computer Science/Things to Learn.md",
-    "Things to Learn.md",
-    "Computer Science/Routing Table.md",
-    "Computer Science/Tutorials/Cisco Net Academy.md",
-    "Pipe.md",
+    "Computer Science/Signal.md",
+    "Computer Science/New Technology File System.md",
     "Computer Science/InterProcess Communication.md",
-    "Public-key Cryptography.md",
-    "Computer Science/Transport Layer Security.md",
-    "Computer Science/Secure Sockets Layer.md",
-    "Search Domain.md",
-    "Computer Science/WebAssembly.md",
-    "Computer Science/Dynamic Host Configuration Protocol.md",
+    "Computer Science/fg.md",
+    "Computer Science/systemctl.md",
+    "Computer Science/Linux.md",
+    "Computer Science/top.md",
+    "Computer Science/ps.md",
+    "Computer Science/scp.md",
+    "Computer Science/wget.md",
+    "Computer Science/nano.md",
+    "Computer Science/bash.md",
+    "Computer Science/Insertion Sort.md",
+    "Computer Science/Things to Learn.md",
+    "Computer Science/Selection Sort.md",
+    "Computer Science/Binary Search 1.md",
+    "Selection Sort.md",
+    "Binary Search.md",
+    "Computer Science/grep.md",
+    "Computer Science/Uniform Resource Locator.md",
+    "Things to Learn.md",
+    "Things to Learn.md",
+    "Computer Science/find.md",
+    "Computer Science/whoami.md",
+    "Computer Science/Web Server.md",
     "Computer Science/Bubble Sort.md",
+    "Computer Science/Cyber Security",
+    "Computer Science/Code projects/miniRT.canvas",
     "Computer Science/Code projects/Philosophers.canvas",
     "Computer Science/Tutorials",
     "Computer Science/Books/2013 Stroustrup - The C++ Programming Language 4th Edition.pdf",
@@ -265,14 +250,6 @@
     "Computer Science/Code projects/Minishell.canvas",
     "Computer Science/Code projects",
     "Computer Science",
-    "Math",
-    "Books/2013 Stroustrup - The C++ Programming Language 4th Edition.pdf",
-    "Code projects/miniRT.canvas",
-    "en.wikipedia.org/wiki",
-    "en.wikipedia.org",
-    "Pasted image 20250528102848.png",
-    "Pasted image 20250528102811.png",
-    "Code projects/Philosophers.canvas",
-    "Code projects/Minishell.canvas"
+    "Math"
   ]
 }
