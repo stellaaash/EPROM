@@ -1,5 +1,6 @@
 ---
 tags:
+  - encoding
 ---
 Unicode is a **standard for representing and managing text in most of the world's writing systems**.
 Almost all modern software that works with text, works with that text in Unicode.

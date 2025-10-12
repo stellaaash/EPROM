@@ -4,39 +4,20 @@
     "type": "split",
     "children": [
       {
-        "id": "eb2733b3f1c1abec",
+        "id": "f2cfa1d73b09f3ee",
         "type": "tabs",
         "children": [
           {
-            "id": "d6f81972fa1ed7b2",
+            "id": "d9cd680f746bac57",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Signal.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "Signal"
-            }
-          },
-          {
-            "id": "3f744b8dc388729d",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Computer Science/New Technology File System.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "New Technology File System"
+              "title": "New tab"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -215,13 +196,14 @@
   },
   "active": "5afbc682b8960c44",
   "lastOpenFiles": [
+    "Computer Science/Abstract Data Type 1.md",
+    "Computer Science/New Technology File System.md",
     "Computer Science/Abstract Data Type.md",
     "Computer Science/Stack.md",
     "Computer Science/Code projects/webserv.canvas",
     "Computer Science/Active Directory.md",
     "Computer Science/Search Engines.md",
     "Computer Science/Signal.md",
-    "Computer Science/New Technology File System.md",
     "Computer Science/InterProcess Communication.md",
     "Computer Science/fg.md",
     "Computer Science/systemctl.md",
@@ -240,7 +222,6 @@
     "Binary Search.md",
     "Computer Science/grep.md",
     "Computer Science/Uniform Resource Locator.md",
-    "Things to Learn.md",
     "Things to Learn.md",
     "Computer Science/Cyber Security",
     "Computer Science/Code projects/miniRT.canvas",
