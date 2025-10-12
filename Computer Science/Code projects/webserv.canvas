@@ -1,0 +1,6 @@
+{
+	"nodes":[
+		{"id":"35ddfc883af3428e","x":-760,"y":-520,"width":553,"height":473,"type":"text","text":"# Resources\n- [A Simple HTTP Server from Scratch](https://trungams.github.io/2020-08-23-a-simple-http-server-from-scratch/) - Example of a basic web server using sockets and c++ 98\n- [Beej's guide to Network Programming](https://beej.us/guide/bgnet/) - Learning sockets\n- "}
+	],
+	"edges":[]
+}
