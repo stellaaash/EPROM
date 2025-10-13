@@ -4,17 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "f2cfa1d73b09f3ee",
+        "id": "77c632e1cef75b27",
         "type": "tabs",
         "children": [
           {
-            "id": "d9cd680f746bac57",
+            "id": "b4c3a1b737fed85b",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "Computer Science/Active Directory.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "Active Directory"
             }
           }
         ]
@@ -155,12 +159,13 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "Computer Science/Active Directory.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline"
+              "title": "Outline of Active Directory"
             }
           },
           {
@@ -194,14 +199,19 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "5afbc682b8960c44",
+  "active": "b4c3a1b737fed85b",
   "lastOpenFiles": [
+    "Computer Science/NetNTLM.md",
+    "Computer Science/Active Directory.md",
+    "Computer Science/Kerberos.md",
+    "Computer Science/Data structures.md",
+    "Computer Science/Valgrind.md",
+    "Computer Science/IPC.md",
     "Computer Science/Abstract Data Type 1.md",
     "Computer Science/New Technology File System.md",
     "Computer Science/Abstract Data Type.md",
     "Computer Science/Stack.md",
     "Computer Science/Code projects/webserv.canvas",
-    "Computer Science/Active Directory.md",
     "Computer Science/Search Engines.md",
     "Computer Science/Signal.md",
     "Computer Science/InterProcess Communication.md",
@@ -218,11 +228,6 @@
     "Computer Science/Things to Learn.md",
     "Computer Science/Selection Sort.md",
     "Computer Science/Binary Search 1.md",
-    "Selection Sort.md",
-    "Binary Search.md",
-    "Computer Science/grep.md",
-    "Computer Science/Uniform Resource Locator.md",
-    "Things to Learn.md",
     "Computer Science/Cyber Security",
     "Computer Science/Code projects/miniRT.canvas",
     "Computer Science/Code projects/Philosophers.canvas",

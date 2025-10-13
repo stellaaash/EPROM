@@ -33,3 +33,19 @@ They mimic the actual organizational structure of the company.
 Security Groups are used for **applying permissions over ressources**, while OUs are used to **apply policies** to users and computers.
 # Group Policy Objects
 Group Policy Objects or GPOs are **collections of settings that can be applied to Organizational Units**.
+They are editable using the *Group Policy Management* utility on Windows.
+## GPO Distribution
+GPOs are distributed to the network via a network share called `SYSVOL`, which is stored in the Domain Controller.
+Of course, all users need to have access to this share to be able to sync their GPOs.
+# Authentication Methods
+Windows Domains have two major authentication protocols, though one of them is kept for legacy purposes and shouldn't be used, it is still active on most domains.
+- [[Kerberos]]
+- [[NetNTLM]] (legacy)
+
+# Trees and Subdomains
+Instead of having a single domain for huge corporations, you can actually **split AD domains in a tree-like structure**, allowing for subdomains to be defined and used.
+This way, you could have, for example, different policies for subdomains in the uk or the us, both of them being under the main domain of the global company.
+![](https://tryhackme-images.s3.amazonaws.com/user-uploads/5ed5961c6276df568891c3ea/room-content/abea24b7979676a1dcc0c568054544c8.png)
+As such, when two companies merge, for example, you might have two domains trees linked together.
+This becomes an AD *forest*.
+You can join multiple domains of trees and forests using *trust relationships*, allowing some users to access resources on another domain.

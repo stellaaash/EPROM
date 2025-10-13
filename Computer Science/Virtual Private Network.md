@@ -17,7 +17,7 @@ Using a VPN has multiple benefits:
 # VPN technologies
 ## PPP
 This is used by PPTP to allow for authentication and provide encryption of data.
-VPNs work by using a private key and public certificate, a bit like ssh (see [[Public-key Cryptography]]).
+VPNs work by using a private key and public certificate, a bit like ssh (see [[Public-key Cryptography 1]]).
 This technology is not capable of leaving a network by itself (non-routable).
 ## PPTP
 The **Point-to-Point Tunneling Protocol or PPTP** is the technology that allows the data from PPP to **travel and leave a network**.
