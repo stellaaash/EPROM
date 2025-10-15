@@ -8,7 +8,7 @@ Data structures are ways to store data in a specific organization and format, al
 Most data structures are built on smaller, [[Primitive Type]]s.
 # Implementation
 While a given data structure keeps the same concept across languages, their implementation can very wildly, or not be present at all.
-For example, [[Set]]s are present in python, C++ and many other languages, and might be implemented using a [[Hash Table]] ([[Hash Set]]) or some other way.
+For example, [[Computer Science/Set]]s are present in python, C++ and many other languages, and might be implemented using a [[Hash Table]] ([[Hash Set]]) or some other way.
 In other languages, like C, sets are not present at all.
 # Examples
 - [[Array]]
@@ -17,7 +17,7 @@ In other languages, like C, sets are not present at all.
 - [[Hash Table]]
 - [[Graph]]
 ## Sets
-- [[Set]]
+- [[Computer Science/Set]]
 - [[Hash Set]]
 ## Trees
 - [[Tree]]

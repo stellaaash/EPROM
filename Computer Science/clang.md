@@ -10,6 +10,9 @@ Another notable difference is that clang is more user friendly and can easily cr
 # Common options
 ## Sanitizers
 With the `fsanitize=<>` flag, you can provide runtime checks that are to be added at compilation. Here are some of the most useful ones:
+
+
+o be added at compilation. Here are some of the most useful ones:
 - `address`: Checks for buffer overflows, use-after-frees and memory leaks to a lesser extent
 - `leak`: Checks for memory leaks
 - `memory`: Checks for uninitialized reads
