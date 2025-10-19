@@ -15,9 +15,9 @@ On this layer, you find the individual electrical signals representing the 1s an
 Supporting media can be standard ethernet cables, or wireless waves, or light signals in fiber optics, among others.
 ## 2. Data link
 The Data link layer focuses on the **physical addressing of the transmission**.
-When it receives a packet from the Network layer, it adds in the [[MAC Address]] of the receiving host.
+When it receives a packet from the Network layer, it adds in the [[MAC Address]] of the receiving host to create a *frame*.
 In all network-enable devices, there is a **Network Interface Card or NIC** that comes with a unique MAC address identifying it among all others.
-When information is sent accross a network, it is **actually primarly the MAC address that identifies the destination host**.
+When information is sent across a network, it is **actually primarily the MAC address that identifies the destination host**.
 ## 3. Network
 Here, **routing and re-assembly of data** both take place.
 It is at this layer that [[IP Address]]es enter the picture, and are used to route packets.

@@ -8,12 +8,7 @@ A protocol which directly complements the [[Internet Protocol]] by providing **r
 Those applications run on an IP network.
 A connection between the sender and receiver is established through a **three-way handshake** before any relevant data is transmitted.
 # The wish OSI model
-TCP, like the [[OSI Model]], **provides layers** through which data is processed. These are basically the OSI model but simpler:
-- Application
-- Transport
-- Internet
-- Network Interface
-Just like with OSI, information is added to each layer of the model as the piece of data traverses it (**encapsulation**).
+TCP, like the [[OSI Model]], **provides layers** through which data is processed. See [[TCP IP Model]].
 # Structure of TCP packets
 Packets using TCP contain a variety of headers. The most important ones to recall are listed below.
 - **Source Port**: Specifies the port that the packet has been sent from originally (usually random).

@@ -9,6 +9,6 @@ tags:
 - [[Merge Sort]]
 - [[Radix Sort]]
 - [[Bogo Sort]]
-- [[quicksort]]
+- [[Quicksort]]
 - [[Shell Sort]]
 - ...

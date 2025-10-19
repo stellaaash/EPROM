@@ -32,13 +32,17 @@ IPv6 was born from the need to have a range much wider than the one available th
 # Reserved networks
 Some networks are usually only used in cases of a private, internal network (your home wifi for example).
 - `10.0.0.0` - `10.255.255.255` (`10.0.0.0/8`)
-- `172.16.0.0` - `172.31.255.255` (`172.16.0.0/20)
-- `192.168.0.0` - `192.168.255.255` (`192.168.0.0/24`)
+- `172.16.0.0` - `172.31.255.255` (`172.16.0.0/12)
+- `192.168.0.0` - `192.168.255.255` (`192.168.0.0/16`)
 They provide enough distinct addresses to be used without problems inside of a single, private network.
+These addresses cannot interact directly with the global network that is the internet, they have to go through a [[Router]] first to give it a public IP address.
 # Loopback addresses
 There's a range of IP addresses specifically reserved for internal testing and communications within a single device.
 This range is `127.0.0.0` - `127.255.255.255`.
 The `127.0.0.1` is referred to as `localhost`, and represents the device itself.
+# Broadcast address
+In order to send a message to the entire network, you make your packet's target either the `255.255.255.255` address for an IPv4 network, or the **highest address of the subnet (all host bits set to 1)** for a subnet.
+IPv6 does **not use broadcast addresses**. Instead, it uses *multicast addresses*.
 # Private vs Public adresses
 Private adresses are used on private networks like wifis and other home networks that aren't directly accessible from outside.
 They are usually **assigned by the router**.

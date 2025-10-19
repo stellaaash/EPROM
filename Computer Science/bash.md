@@ -1,6 +1,5 @@
 ---
 tags:
-  - programming_language
   - Linux
 ---
 The Bourne Again SHell `bash`, the GNU [[Shell]] that's usable on basically all unix systems.
