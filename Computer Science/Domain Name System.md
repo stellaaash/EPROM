@@ -1,6 +1,7 @@
 ---
 tags:
   - networking
+port: "53"
 ---
 The Domain Name System or DNS is the mechanism by which **[[Domain Name]]s get translated to raw [[IP Address]]es** you can directly connect to.
 # How it works

@@ -8,49 +8,31 @@
         "type": "tabs",
         "children": [
           {
-            "id": "ea3786ff08ea9e7a",
+            "id": "868b0e3769096dfd",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Computer Science/OSI Model.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "OSI Model"
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "Graph view"
             }
           },
           {
-            "id": "59ab4b61f7ee9422",
+            "id": "3fbf6dc9bcbae29e",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Computer Science/Routing Protocols.md",
+                "file": "Computer Science/Quicksort.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Routing Protocols"
-            }
-          },
-          {
-            "id": "2b300c512dc6d61e",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Computer Science/Domain Name System.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Domain Name System"
+              "title": "Quicksort"
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -125,7 +107,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "94bfcc952b51a9a3",
@@ -188,13 +171,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Computer Science/Domain Name System.md",
+                "file": "Computer Science/Quicksort.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Domain Name System"
+              "title": "Outline of Quicksort"
             }
           },
           {
@@ -228,34 +211,34 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "2b300c512dc6d61e",
+  "active": "bc852d9c449dd058",
   "lastOpenFiles": [
+    "Quickselect.md",
+    "Computer Science/Virtual Private Network.md",
+    "Computer Science/File Transfer Protocol.md",
+    "Computer Science/Secure SHell.md",
+    "Math/Cosine.md",
+    "Computer Science/Active Directory.md",
+    "Computer Science/Tutorials/learncpp.com.md",
+    "Computer Science/HTTPS.md",
+    "Computer Science/Transport Layer Security.md",
+    "Computer Science/Secure Sockets Layer.md",
+    "Computer Science/Internet Message Access Protocol.md",
+    "Computer Science/Post Office Protocol.md",
+    "Computer Science/Mail Transfer Agent.md",
+    "Computer Science/Simple Mail Transfer Protocol.md",
+    "Computer Science/HyperText Transfer Protocol.md",
+    "Remote Desktop Services.md",
+    "Computer Science/Domain Name System.md",
+    "Computer Science/telnet.md",
+    "Computer Science/OSI Model.md",
     "Computer Science/Dynamic Host Configuration Protocol.md",
     "Computer Science/Network Address Translation.md",
     "Computer Science/Routing Protocols.md",
-    "Computer Science/OSI Model.md",
     "Computer Science/Router.md",
     "Computer Science/Internet Control Message Protocol.md",
     "Computer Science/bash.md",
     "Computer Science/TCP IP Model.md",
-    "TCP IP Model.md",
-    "Computer Science/Quicksort.md",
-    "Quicksort.md",
-    "Computer Science/PowerShell.md",
-    "Computer Science/Windows Commands.md",
-    "Computer Science/cmd.exe.md",
-    "cmd.exe.md",
-    "Computer Science/Queue.md",
-    "Computer Science/Active Directory.md",
-    "Queue.md",
-    "Computer Science/NetNTLM.md",
-    "Computer Science/Kerberos.md",
-    "Computer Science/Data structures.md",
-    "Computer Science/Valgrind.md",
-    "Computer Science/IPC.md",
-    "Computer Science/Abstract Data Type 1.md",
-    "Computer Science/New Technology File System.md",
-    "Computer Science/Abstract Data Type.md",
     "Computer Science/Code projects/webserv.canvas",
     "Computer Science/Cyber Security",
     "Computer Science/Code projects/miniRT.canvas",

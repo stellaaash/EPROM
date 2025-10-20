@@ -1,6 +1,7 @@
 ---
 tags:
   - networking
+port: "23"
 ---
 Telnet is a client-server application protocol that provides access to virtual terminals or remote systems on local networks or the Internet.
 It is a protocol for **bidirectional 8-bit communications**.

@@ -1,10 +1,10 @@
 ---
 tags:
   - networking
+port: "80"
 ---
 Hyper Text Transfer Protocol or HTTP powers the world wide web.
 Exists in secure form as [[HTTPS]].
-Uses port 80.
 # How it works
 ## Making requests
 You can make a simple request with a single line: `GET / HTTP/1.1`.
@@ -56,8 +56,9 @@ And then is followed by the actual content of the resource.
 Used for getting information from a web server.
 ### POST Request
 Used to submit information to the web server and potentially create new entries in a database.
+Examples include submitting a form or uploading a file.
 ### PUT Request
-Used to update information on the server.
+Used to create a resource or update information on the server.
 ### DELETE Request
 Used to remove information or database records on the server.
 ## HTTP Status Codes
