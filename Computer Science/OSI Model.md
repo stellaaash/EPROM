@@ -32,6 +32,7 @@ Multiple factors are taken into account when routing, such as:
 Also see [[Routing Table]].
 ## 4. Transport
 This layer, while more abstract, plays an essential role in the overall transmission of data over a network.
+The *port* that the connection or packet uses is specified here.
 When data is sent between devices, it follows one of two protocols: [[Transmission Control Protocol]] or [[User Datagram Protocol]].
 Here is a brief comparison of both:
 

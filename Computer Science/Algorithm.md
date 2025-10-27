@@ -7,6 +7,6 @@ There are loooots of types of algorithms, and you can invent one for pretty much
 # Common algorithms
 - [[Sorting Algorithms]]
 - [[Binary Search]]
-- [[Binary Tree]] traversal
+- [[Binary Tree 1]] traversal
 - [[Breadth-First Search]]
 - [[Depth-First Search]]

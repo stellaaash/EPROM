@@ -21,6 +21,6 @@ In other languages, like C, sets are not present at all.
 - [[Hash Set]]
 ## Trees
 - [[Tree]]
-- [[Binary Tree]]
+- [[Binary Tree 1]]
 - [[AVL Tree]]
 - [[B-Tree]]
