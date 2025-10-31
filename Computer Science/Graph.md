@@ -15,5 +15,10 @@ There are multiple [[Algorithm]]s for accessing the data within a graph, includi
 In fact, trees are just graphs that respect a few rules:
 1. They must not have *cycles* (nodes that reference each other circularly)
 2. All nodes must be connected
+# Searching
+Searching a graph refers to checking all connected nodes, starting on a given node.
+There are two main approchaes to searching a graph: 
+- [[Depth-First Search]]
+- [[Breadth-First Search]]
 # Resources
 [Wikipedia](https://en.wikipedia.org/wiki/Graph_(abstract_data_type))

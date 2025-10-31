@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Computer Science/Graph.md",
+                "file": "Nmap.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Graph"
+              "title": "Nmap"
             }
           }
         ]
@@ -202,8 +202,15 @@
   },
   "active": "243b0fd5f9142257",
   "lastOpenFiles": [
-    "Computer Science/Node.js.md",
+    "Computer Science/Transmission Control Protocol.md",
+    "Nmap.md",
+    "tcpdump.md",
+    "Breadth-First Search.md",
+    "Depth-First Search.md",
+    "Computer Science/Domain Name System.md",
     "Computer Science/Graph.md",
+    "Network Time Protocol.md",
+    "Computer Science/Node.js.md",
     "Computer Science/Red-Black Tree.md",
     "Computer Science/Wireshark.md",
     "Computer Science/Record.md",
@@ -221,13 +228,6 @@
     "Computer Science/Quicksort.md",
     "Computer Science/Quickselect.md",
     "Wireshark.md",
-    "Quickselect.md",
-    "Computer Science/Virtual Private Network.md",
-    "Computer Science/File Transfer Protocol.md",
-    "Computer Science/Secure SHell.md",
-    "Math/Cosine.md",
-    "Computer Science/Active Directory.md",
-    "Computer Science/Tutorials/learncpp.com.md",
     "Computer Science/Code projects/webserv.canvas",
     "Computer Science/Cyber Security",
     "Computer Science/Code projects/miniRT.canvas",
