@@ -1,6 +1,6 @@
 ---
 tags:
-  - cryptography
+  - hashing
 ---
 A Hash or *hash value* is **a fixed-size string that is computed by a hash function**.
 A *hash function* is **a pure function that takes input of an arbitrary size and returns an output of fixed length**.
@@ -19,6 +19,11 @@ You can **add salt (a randomly generated value unique to each hash)** to mitigat
 ## Passwords
 When a server keeps a password, **it doesn't keep it in plaintext**. It uses a known hashing function to hash it, then keeps the resulting hash in its database.
 When a user tries to log in, it compares the stored hash with the hash of the password given by the user (the server uses the same hashing function). **If the two hashes match, then it has to be the same password** (assuming a good hashing function).
+When storing passwords, hashes usually have the structure `$prefix$options$salt$hash`.
+## Integrity Checking
+Hashes can also be used **to ensure that files haven't been changed**.
+Since when you put the same data in, a hashing function always result in the same output, if you store the hash of a file and compare the file against it, it should give you the same result.
+Otherwise, it means the file has been tampered with.
 # Hashing Algorithms Examples
 - [[Message-Digest 5]] or MD5
 - [[Secure-Hash Algorithm]] or SHA1/SHA256/SHA512
