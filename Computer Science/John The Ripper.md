@@ -1,5 +1,6 @@
 ---
 tags:
+  - cryptography
 ---
 A password-recovery utility perfect for cracking hashes.
 # Single Crack Mode
@@ -25,7 +26,7 @@ Utilises the following:
 - `[0-9]`: A number in the range 0-9
 - `[!$%@]`: The password is followed by one of these symbols
 ### Resources
-[Wiki](https://www.openwall.com/john/doc/RULES.shtml)
+[Openwall Wiki](https://www.openwall.com/john/doc/RULES.shtml)
 # Cheat Sheet
 ```bash
 john [options] [file path]
