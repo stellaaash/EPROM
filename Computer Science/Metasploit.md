@@ -24,6 +24,24 @@ msf6> info [path to module] # Show information for a given module
 
 msf6> show [module type]  # List modules of a given type
 msf6> show options  # Show options related to the current context (exploit, payload etc)
+
+# Setting options
+msf6> set RHOSTS 10.0.0.1  # Set an option for this module only
+msf6> setg RHOSTS 10.0.0.1  # Set an option globally (all modules will be affected)
+msf6> unset RHOSTS
+msf6> unset all
+msf6> unsetg RHOSTS
+msf6> check  # Some modules support preliminary checks
+
+# Run the exploit
+msf6> exploit
+msf6> run
+msf6> run -z  # Immediately background the session once created
+
+# Post-exploit
+meterpreter> background  # Background the current session. Ctrl Z also works
+msf6> sessions  # Show all current sessions
+msf6> sessions -i 2  # Bring session 2 to the foreground
 ```
 ## Modules
 *Modules* are small components within the Metasplit Framework that are built to **perform a specific task**, such as exploiting a vulnerability, scanning a target or brute-forcing.
