@@ -64,6 +64,28 @@ Metasploit has a subtle way to help you identify single (also called “inline�
 Both are reverse Windows shells. The former is an inline (or single) payload, as indicated by the `_` between “shell” and “reverse”. While the latter is a staged payload, as indicated by the `/` between “shell” and “reverse”.
 ## Tools
 Stand-alone tools that help with vulnerability research, assessment or penetration testing.
-- [[msfvenom]]
-- [[pattern_create]]
-- [[pattern_offset]]
+- msfvenom
+- pattern_create
+- pattern_offset
+## Database
+Metasploit can use a [[PostgreSQL]] database to help manage multiple targets and collect intel.
+Use `msfdb init` in the shell if you have a fresh install of metasploit to initialize the database.
+```sh
+msf6> db_status
+msf6> help  # Using the help command when connected to a db displays specific commands
+
+# Workspaces allow you to isolate different projects
+msf6> workspace  # List created workspaces
+msf6> workspace -a [workspace name]  # Create a new workspace
+msf6> workspace -d [workspace name]  # Delete a workspace
+msf6> workspace [workspace name]  # Switch workspaces
+
+# Having a database allows you to store enumeration results
+msf6> db_nmap 10.0.0.1  # Executes nmap and stores the results
+
+# You can then recover saved information
+msf6> hosts
+msf6> hosts -R  # Uses stored hosts to set the options for the current module (notably RHOSTS)
+msf6> services
+msf6> services -S [service name]  # Search for a given service already stored in the database
+```
