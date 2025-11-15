@@ -198,7 +198,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -217,9 +218,10 @@
   },
   "active": "cbac803b8f4bac64",
   "lastOpenFiles": [
-    "Computer Science/Server Message Block.md",
-    "Computer Science/Metasploit.md",
+    "Computer Science/PowerShell.md",
     "Computer Science/Nmap.md",
+    "Computer Science/Metasploit.md",
+    "Computer Science/Server Message Block.md",
     "Computer Science/Dijkstra's Algorithm.md",
     "NetBIOS.md",
     "Computer Science/John The Ripper.md",

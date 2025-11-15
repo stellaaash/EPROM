@@ -59,11 +59,13 @@ msf6> sessions -i 2  # Bring session 2 to the foreground
 ### Payloads vs Exploits  
 While exploits leverage a vulnerability, you need a payload to actually do anything with them.
 Examples can range from getting a [[Shell]], loading a malware of backdoor to the target, running a command, etc...
-### Inline vs Stages Payloads
+### Inline vs Staged Payloads
 Metasploit has a subtle way to help you identify single (also called “inline”) payloads and staged payloads.
 - generic/shell_reverse_tcp
 - windows/x64/shell/reverse_tcp
 Both are reverse Windows shells. The former is an inline (or single) payload, as indicated by the `_` between “shell” and “reverse”. While the latter is a staged payload, as indicated by the `/` between “shell” and “reverse”.
+**Staged payloads are sent to the target in two steps**. An initial part is installed (the stager), which then requests the rest of the payload. This allows for a **smaller initial payload size**.
+**Inline payloads, on the other hand, are sent in a single step**.
 ## Tools
 Stand-alone tools that help with vulnerability research, assessment or penetration testing.
 - msfvenom
@@ -113,3 +115,27 @@ It has different versions tailored to different operating systems. It runs entir
 It uses encrypted communication to evade network-level protections that might read incoming data.
 Still, meterpreter is **well-known by major antivirus software**.
 ### Meterpreter Flavors
+You will choose a different meterpreter payload based on a number of factors:
+- The target operating system (Is the target operating system Linux or Windows? Is it a Mac device? Is it an Android phone? etc.)
+- Components available on the target system (Is Python installed? Is this a PHP website? etc.)
+- Network connection types you can have with the target system (Do they allow raw TCP connections? Can you only have an HTTPS reverse connection? Are IPv6 addresses not as closely monitored as IPv4 addresses? etc.) 
+### Meterpreter Commands
+```sh
+meterpreter > help  # Display commands for this meterpreter version
+
+meterpreter > getuid  # Display the current user
+meterpreter > ps  # Display running processes
+
+# Migrating to another process makes meterpreter directly interface with it
+# it can help have a more stable meterpreter session, or directly exploit the process like using a keylogger on a word processor running on the target
+# Careful not to lose your user privileges by migrating to a process launched by a user with less rights
+meterpreter > migrate [pid]  
+
+meterpreter > hashdump  # Dumps hashes on the SAM of windows systems
+meterpreter > search -f [file name]  # Searches for files
+
+meterpreter > shell  # Get a regular OS shell
+
+meterpreter > load python  # Load the python language; new commands will be added to the help menu
+meterpreter > python_execute "print 'wow'"  # Execute python code on the target
+```
