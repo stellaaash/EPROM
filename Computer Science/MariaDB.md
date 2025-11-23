@@ -9,7 +9,7 @@ This makes it a **very good drop-in replacement to MySQL**.
 # Cheatsheet
 ```SQL
 -- Rename a user (or change its host)
-> RENAME USER 'username'@'localhost' TO 'username'@'%'';
+> RENAME USER 'username'@'localhost' TO 'username'@'newhost';
 ```
 
 [Learn SQL in Y Minutes](https://learnxinyminutes.com/sql/)

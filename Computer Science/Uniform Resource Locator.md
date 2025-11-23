@@ -4,6 +4,7 @@ tags:
 ---
 A Uniform Resource Locator or URL is **an instruction on how to access a resource on the internet**.
 # Structure
+![](https://tryhackme-images.s3.amazonaws.com/user-uploads/5c549500924ec576f953d9fc/room-content/34ad66d8b90aaaa35f9536d3b152ea97.png)
 `http://user:password@google.com:80/query?text=wow#french`
 This totally made up URL will help us show off the different parts it is composed of:
 1. **Scheme**: This instructs on what *protocol* to use for accessing the resource. This can range from [[HyperText Transfer Protocol]], [[HTTPS]] or [[File Descriptor]], for example.
