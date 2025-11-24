@@ -24,6 +24,6 @@ ___
 There are also email certificates, establishing **message integrity and encrypting said messages**.
 ## Self-signed certificates, or how to DIY the thing
 A self-signed certificate is a certificate that has a subject matching its issuer, effectively the issuer certifying itself.
-Of course, these are worthless to attest that someone is trustworthy (we have examined ourselves and found no fault or our own), especially in remote communications.
+Of course, these are worthless to attest that someone is trustworthy (we have examined ourselves and found no fault of our own), especially in remote communications.
 # Resources
 [Public key certificate - Wikipedia](https://en.wikipedia.org/wiki/Public_key_certificate)
