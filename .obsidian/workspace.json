@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Open Web Application Security Project.md",
+                "file": "Insecure Direct Object Reference.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Open Web Application Security Project"
+              "title": "Insecure Direct Object Reference"
             }
           },
           {
@@ -217,8 +217,9 @@
   },
   "active": "cbac803b8f4bac64",
   "lastOpenFiles": [
-    "Computer Science/MySQL.md",
     "Open Web Application Security Project.md",
+    "Insecure Direct Object Reference.md",
+    "Computer Science/MySQL.md",
     "Burp Suite.md",
     "Computer Science/Metasploit.md",
     "Database.md",
@@ -242,7 +243,6 @@
     "Computer Science/Public-key Cryptography.md",
     "Computer Science/tcpdump.md",
     "Computer Science/Private-Key Cryptography.md",
-    "Computer Science/Breadth-First Search.md",
     "Computer Science/Code projects/webserv.canvas",
     "Computer Science/Cyber Security",
     "Computer Science/Code projects/miniRT.canvas",
