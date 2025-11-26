@@ -5,3 +5,14 @@ Accessing web pages standard users aren't supposed to access is still the most w
 Simply put, **you bypass authorization** to access resources you aren't supposed to.
 ### Examples
 [[Insecure Direct Object Reference]]
+## 2. Cryptographic Failures
+A misuse or lack of use of cryptographic algorithms for protecting sensitive information.
+Those failures can occur both at rest (on disk) and on the wire.
+### Examples
+[[Man in The Middle Attack]]
+## 3. Injection
+Injections occur when an application interprets user input as commands or parameters, allowing for unwanted code execution based on user input.
+### Examples
+[[SQL Injection]]
+[[Command Injection]]
+## 4. 
