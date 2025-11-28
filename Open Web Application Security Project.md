@@ -15,4 +15,14 @@ Injections occur when an application interprets user input as commands or parame
 ### Examples
 [[SQL Injection]]
 [[Command Injection]]
-## 4. 
+## 4. Insecure Design
+These are vulnerabilities **inherent to the application's architecture**. The design itself, not the implementation, is flawed in its logic.
+These can range from shortcuts in security left behind from testing stages, to just not thinking of all possible cases.
+For example, in the case of a password reset 6-digit code sent by SMS, you could try to mitigate brute-forcing by rate-limiting [[IP Address]]es, but what if multiple addresses try to crack the same code and you haven't put securities in place for multiple hosts targeting the same code?
+These are tough to fix once introduced, as they often result of oversight on the part of the designers, most often before the code was even written.
+The best approach is to **perform threat modelling early on in the design lifecycle**.
+## 5. Security Misconfiguration
+These occur when **security could have properly configured, but was not**.
+These can be very varied, but examples include keeping debugging interfaces up, not enabling some crucial security features, default passwords or default accounts, and many, many more.
+## 6. Vulnerable and Outdated Components
+## 7. 
