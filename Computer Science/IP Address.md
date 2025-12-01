@@ -26,9 +26,18 @@ A 32-bit number divided into 4 octets that go from 0 to 255.
 Example : `192.168.1.1`
 # IPv6
 IPv6 was born from the need to have a range much wider than the one available through IPv4.
-
-> [!NOTE] Research to be done!
-
+It is **the latest version of the [[Internet Protocol]]**, and provides a **128-bit address space** ($3.4 \times 10^{38}$).
+## Format
+IPv6 addresses are 128 bits long and **are formatted as eight groups of 16 bits or 4 hexadecimal digits**.
+The groups are separated by colons `:`. For example: `2001:0db8:85a3:0000:0000:8a2e:0370:7334`.
+Each group is called a *quartet* and can **omit zeros within the group**. For example, `0042` becomes `42`.
+Consecutive groups of 0s can be compressed and replaced by a double colon `::`, but **this can only be used once per address to avoid ambiguity.**
+As such, `2001:0db8:0000:0000:0000:0000:0000:0001` becomes `2001:db8::1`.
+The prefix length is written after the address using a slash like `/64`, which is similar to IPv4's CIDR notation.
+## Main features
+IPv6 simplifies packet headers for faster router processing, eliminates the need for IP fragmentation by hosts, and standardizes subnets at $2^{64}$ addresses for efficient routing.
+It supports unicast, anycast and multicast transmission. Multicast **replaces IPv4's broadcast**.
+As for security, built-in [[IPsec]] and improved mobility without triangular routing as well as [[Neighbor Discovery Protocol]] using [[Internet Control Message Protocol]] version 6 for address resolution instead of [[Address Resolution Protocol]].
 # Reserved networks
 Some networks are usually only used in cases of a private, internal network (your home wifi for example).
 - `10.0.0.0` - `10.255.255.255` (`10.0.0.0/8`)

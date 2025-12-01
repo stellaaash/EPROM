@@ -4,8 +4,9 @@ tags:
 ---
 The OSI model (Open Systems Interconnection Model) is an **essential model used in networking**.
 It **provides a framework dictating how all networked devices will communicate**.
-It exists primarely to allow devices to have different functions and designs, and setting a standard for how devices will talk to each other on a network.
+It exists primarily to allow devices to have different functions and designs, and setting a standard for how devices will talk to each other on a network.
 It has seven layers, each of which has a different **set of responsibilities** and is arranged from Layer 7 to Layer 1.
+You start at level 7 with your application, and **wrap each layer in a new one as you go up the layers until the physical media**.
 # Layers, or how the internet really is just an onion
 The Layers of the OSI model allow for **encapsulation of the processes happening at different levels of network communications**.
 For example, it helps define the limit between the physical communications happening (the actual electricity), and the more software-defined protocols in place.

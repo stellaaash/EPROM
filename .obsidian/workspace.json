@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "b249afbe1ccda7c5",
+        "id": "d7cadfa5a9948ae0",
         "type": "tabs",
         "children": [
           {
-            "id": "cbac803b8f4bac64",
+            "id": "eca9bc28b540aa20",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Open Web Application Security Project.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "Open Web Application Security Project"
+              "title": "New tab"
             }
           }
         ]
@@ -201,10 +197,17 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "cbac803b8f4bac64",
+  "active": "eca9bc28b540aa20",
   "lastOpenFiles": [
-    "Command Injection.md",
+    "Computer Science/SSLVPN.md",
+    "Computer Science/Simple Network Management Protocol.md",
+    "Computer Science/Open Web Application Security Project.md",
     "Open Web Application Security Project.md",
+    "Computer Science/Insecure Direct Object Reference.md",
+    "Computer Science/Database.md",
+    "Computer Science/Command Injection.md",
+    "Computer Science/Burp Suite.md",
+    "Command Injection.md",
     "Insecure Direct Object Reference.md",
     "Computer Science/MySQL.md",
     "Burp Suite.md",
@@ -222,13 +225,6 @@
     "Computer Science/bash.md",
     "Computer Science/Things to Learn.md",
     "Computer Science/Hash.md",
-    "Computer Science/Diffie-Hellman.md",
-    "Computer Science/Certificates.md",
-    "Computer Science/Pretty Good Privacy.md",
-    "Computer Science/Rivest-Shamir-Adleman.md",
-    "Rivest-Shamir-Adleman.md",
-    "Computer Science/Public-key Cryptography.md",
-    "Computer Science/tcpdump.md",
     "Computer Science/Code projects/webserv.canvas",
     "Computer Science/Cyber Security",
     "Computer Science/Code projects/miniRT.canvas",
