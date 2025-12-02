@@ -32,3 +32,6 @@ You can mitigate those weaknesses by ensuring strong password policies to evade 
 - Brute force attacks
 - Use of weak credentials
 - Weak Session Cookies
+## 8. Software and Data Integrity Failures
+Integrity means **being certain that a piece of data wasn't tampered with**. It is essential to maintain important data free from unwanted or malicious modifications.
+You ensure integrity in part using [[Hash]]es.

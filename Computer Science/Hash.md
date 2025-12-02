@@ -27,3 +27,6 @@ Otherwise, it means the file has been tampered with.
 # Hashing Algorithms Examples
 - [[Message-Digest 5]] or MD5
 - [[Secure-Hash Algorithm]] or SHA1/SHA256/SHA512
+# SRI Hash
+SRI or *SubResource Integrity* Hashes are used to **guarantee that the code that is going to be executed has correct integrity**.
+It is commonly used when pulling external code from libraries to make sure the code itself hasn't been tampered with to inject malicious instructions in webapps, for example.
