@@ -40,3 +40,10 @@ Secure Socket Tunneling Protocol uses SSL/TLS over port 443 to bypass firewall a
 Mainly used on Windows boxes.
 ## [[SSLVPN]]
 This one uses plain SSL/TLS as the encryption layer for the VPN connection.
+# Split vs Full Tunnelling
+The difference between split tunnel and full tunnel in SSLVPN is how network traffic from the remote user is routed through the VPN:
+- Full tunnel **routes all of the user's traffic, including local network access and internet browsing through the VPN**.
+  This means that all data is encrypted.
+  This provides maximum security and privacy, at the cost of latency and slower speeds on all tasks, since everything goes through the VPN.
+- Split tunnel, on the other hand, **only routes traffic of specified apps or services through the VPN**.
+  This improves speed and latency and reduces load on the VPN, but lowers privacy and security for the internet traffic that doesn't go through the tunnel.

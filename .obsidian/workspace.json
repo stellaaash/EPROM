@@ -199,8 +199,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -217,8 +216,9 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "16d1e8ad1680aef5",
+  "active": "bc852d9c449dd058",
   "lastOpenFiles": [
+    "Solid State Array.md",
     "Computer Science/Open Web Application Security Project.md",
     "Splunk.md",
     "Docker.md",
@@ -245,7 +245,6 @@
     "Computer Science/Server Message Block.md",
     "Computer Science/Dijkstra's Algorithm.md",
     "NetBIOS.md",
-    "Computer Science/John The Ripper.md",
     "Computer Science/Code projects/webserv.canvas",
     "Computer Science/Cyber Security",
     "Computer Science/Code projects/miniRT.canvas",
