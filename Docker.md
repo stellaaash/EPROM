@@ -25,8 +25,17 @@ Since the image contains the sheer filesystem of a container, **it must contain 
 - Libraries
 - etc...
 The image also contains **other configuration for the container, such as environment variables, a default command to run, and other metadata**.
+### Layers
+Each layer of an image is **a diff of changes from the last layer**. Essentially, each layer adds more data on top of the stack of layers, creating the Docker image.
+Since **each instruction in a Dockerfile creates a new layer**, it is important to structure your instructions from least volatile to most.
+This is because **if a layer gets modified, all layers ontop of it have to be rebuilt as well.**
+So, you should always put the least likely to be modified layers (like base OS and packages) at the start of the Dockerfile, and the most volatile instructions at the end (like configuration).
+### Tags
+Tags are a way to differenciate **between images with the same name**, for example between image versions.
+The `latest` tag is available for all images on Docker Hub, and is the default tag when `pull`ing.
 ## Dockerfiles
 Dockerfiles are **text-based scripts of instructions to create a container image**.
+Each instruction corresponds to a layer on the finished image.
 # Multi-Container Apps
 Ideally when running multiple services in an app, **each container should run only one service, and do it well**.
 This makes it way easier to scale individual services as demand rises (only up the database and not the actual website's resources).
@@ -42,6 +51,18 @@ The big advantage of this is that **you can just give a Compose file to someone 
 # Cheatsheet
 ## Commands
 ```bash
+# Download an image
+docker pull image_name
+
+# Build an image based on a Dockerfile in the current directory
+docker build .
+docker build -t tag-name .
+
+# List all images installed on the system
+docker image list
+# Remove unused images
+docker image prune
+
 # List currently running containers
 docker ps
 docker ps -a  # Also include not-running containers
@@ -64,6 +85,8 @@ docker run -d -p 80:80 path/to/image sh -c "command -arguments"
 docker run -d -p 80:80 path/to/image --network network_name --network-alias alias
 # Run a container with an environment variable
 docker run -d -p 80:80 path/to/image -e KEY=value
+# Run a container interactively
+docker run -i -p 80:80 path/to/image
 
 # Run a command inside of a container
 docker exec container_id command arguments
@@ -79,12 +102,17 @@ docker logs -f container_id
 # Create a new network
 docker network create network-name
 
+# Build a docker compose app
+docker compose build
 # Build and run a docker compose app
 docker compose up
 docker compose up -d  # In detached mode
-
-# Stop a docker compose app
+# Run a docker compose app
+docker compose start
+# Stop and delete a docker compose app and all its containers
 docker compose down
+# Stop a docker compose app
+docker compose stop
 
 # See all logs of docker compose services running in real time
 docker compose logs -f
@@ -103,4 +131,29 @@ WORKDIR /app
 COPY . .
 RUN yarn install --production
 CMD ["node", "/app/src/index.js"]
+```
+## Docker Compose
+### Example one - Rough multi-container app
+```yml
+version: '3.3'
+services:
+  web:
+    build: ./web
+    networks:
+      - ecommerce
+    ports:
+      - '80:80'
+
+
+  database:
+    image: mysql:latest
+    networks:
+      - ecommerce
+    environment:
+      - MYSQL_DATABASE=ecommerce
+      - MYSQL_USERNAME=root
+      - MYSQL_ROOT_PASSWORD=helloword
+    
+networks:
+  ecommerce:
 ```
