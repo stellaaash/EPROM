@@ -2,6 +2,8 @@
 tags:
   - programming_concept
 ---
+Backtracking involves [[Recursion]], but after the recursion is done, **you effectively "go back" a step to go down a different route**.
+This allows you to explore all possible combinations of different values or "paths".
 # Example code
 Here's an example of the concept of [[Recursion]] and backtracking, implemented in the form of the rip problem of an exam at 42 school.
 The idea is to remove all unclosed parenthesis in a string by replacing them with spaces. Of course, there are usually multiple solutions to each problem.

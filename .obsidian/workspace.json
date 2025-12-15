@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "d7cadfa5a9948ae0",
+        "id": "92870bb661e18ffc",
         "type": "tabs",
         "children": [
           {
-            "id": "16d1e8ad1680aef5",
+            "id": "381a0c73459b8d64",
             "type": "leaf",
             "state": {
-              "type": "split-diff-view",
+              "type": "markdown",
               "state": {
-                "aFile": "Docker.md",
-                "bFile": "Docker.md",
-                "aRef": ""
+                "file": "Computer Science/HyperText Transfer Protocol.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "diff",
-              "title": "Diff: Docker"
+              "icon": "lucide-file",
+              "title": "HyperText Transfer Protocol"
             }
           }
         ]
@@ -201,8 +201,16 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "16d1e8ad1680aef5",
+  "active": "381a0c73459b8d64",
   "lastOpenFiles": [
+    "Computer Science/Linux Commands.md",
+    "Computer Science/Books/The Rust Book.md",
+    "Computer Science/Tutorials/Scratch a Pixel.md",
+    "Computer Science/Tutorials/The Vulkan Tutorial.md",
+    "Computer Science/Splunk.md",
+    "Computer Science/Solid State Array.md",
+    "Computer Science/JSON Web Tokens.md",
+    "Computer Science/Docker.md",
     "Docker.md",
     "Splunk.md",
     "Solid State Array.md",
@@ -222,14 +230,6 @@
     "Insecure Direct Object Reference.md",
     "Computer Science/MySQL.md",
     "Burp Suite.md",
-    "Computer Science/Metasploit.md",
-    "Database.md",
-    "Computer Science/NetBIOS.md",
-    "Computer Science/PowerShell.md",
-    "Computer Science/Nmap.md",
-    "Computer Science/Server Message Block.md",
-    "Computer Science/Dijkstra's Algorithm.md",
-    "NetBIOS.md",
     "Computer Science/Code projects/webserv.canvas",
     "Computer Science/Cyber Security",
     "Computer Science/Code projects/miniRT.canvas",

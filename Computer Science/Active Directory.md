@@ -1,10 +1,13 @@
 ---
 tags:
   - Windows
+  - adminsys
 ---
-A Windows Domain is a **group of hosts under the administration of a given business**.
-The idea of a domain is to facilitate administration of multiple hosts under a single hat called the *Active Directory*.
-The server that runs the Active Directory services is called the *Domain Controller*.
+Active Directory is a **service for identity management of users, groups, computers and general authentication**.
+# Terminology
+- Active Directory operates under a *Windows Domain*, which is a **group of hosts under the administration of a given business**.
+- The idea of a domain is to facilitate administration of multiple hosts under a single hat called the *Active Directory*.
+- The server that runs the Active Directory services is called the *Domain Controller*.
 # Advantages
 - Centralized management of users
 - Easy management of security policies for users and computers

@@ -4,6 +4,7 @@ tags:
 ---
 Also called **ELF**, the Executable and Linkable Format is a standard often used for compiled executables, [[Object File]]s, libraries and [[Core Dump]]s.
 It was first created for the Unix family of systems.
+You can read these using tools such as [[objdump]] or [[readelf]].
 # Composition
 Each ELF file contains an ELF header, followed by the actual file data.
 There are generally several key segments inside an ELF:

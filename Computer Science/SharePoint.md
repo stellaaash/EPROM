@@ -4,8 +4,9 @@ tags:
   - adminsys
 ---
 A bundle of enterprise content management and knowledge management provided by Microsoft.
+It uses [[Active Directory]] for authentication purposes.
 # Configuration
-It is primarly configured through a web browser.
+It is primarily configured through a web browser.
 # File Hosting
 SharePoint can be used to host OneDrive for Business, which allows storage and sync of someone's personal work documents, as well as public or private file sharing of those same documents.
 # Resources
