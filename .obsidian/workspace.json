@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Computer Science/HyperText Transfer Protocol.md",
+                "file": "Computer Science/Docker.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "HyperText Transfer Protocol"
+              "title": "Docker"
             }
           }
         ]
@@ -54,7 +54,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "tag:#programming_concept",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -203,6 +203,18 @@
   },
   "active": "381a0c73459b8d64",
   "lastOpenFiles": [
+    "Computer Science/PowerShell.md",
+    "Computer Science/NTHash.md",
+    "Computer Science/Heap.md",
+    "Computer Science/Domain Name System.md",
+    "Computer Science/Compiler.md",
+    "Computer Science/Core Dump.md",
+    "Computer Science/Books/Exploring JavaScript.md",
+    "Computer Science/Data structures.md",
+    "Computer Science/bash.md",
+    "Computer Science/Memory.md",
+    "Computer Science/HyperText Transfer Protocol.md",
+    "Computer Science/Cross-Site Scripting.md",
     "Computer Science/Linux Commands.md",
     "Computer Science/Books/The Rust Book.md",
     "Computer Science/Tutorials/Scratch a Pixel.md",
@@ -218,18 +230,6 @@
     "JSON Web Tokens.md",
     "![[Pasted.md",
     "Pasted image 20251202195510.png",
-    "Computer Science/Hash.md",
-    "Computer Science/SSLVPN.md",
-    "Computer Science/Simple Network Management Protocol.md",
-    "Open Web Application Security Project.md",
-    "Computer Science/Insecure Direct Object Reference.md",
-    "Computer Science/Database.md",
-    "Computer Science/Command Injection.md",
-    "Computer Science/Burp Suite.md",
-    "Command Injection.md",
-    "Insecure Direct Object Reference.md",
-    "Computer Science/MySQL.md",
-    "Burp Suite.md",
     "Computer Science/Code projects/webserv.canvas",
     "Computer Science/Cyber Security",
     "Computer Science/Code projects/miniRT.canvas",
