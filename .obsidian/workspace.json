@@ -20,8 +20,23 @@
               "icon": "lucide-file",
               "title": "Docker"
             }
+          },
+          {
+            "id": "afdba22aea46c5e0",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Windows.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Windows"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -201,8 +216,13 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "381a0c73459b8d64",
+  "active": "bc852d9c449dd058",
   "lastOpenFiles": [
+    "Computer Science/Docker.md",
+    "Windows.md",
+    "Computer Science/Memory.md",
+    "Computer Science/Transport Layer Security.md",
+    "Computer Science/HTTPS.md",
     "Computer Science/PowerShell.md",
     "Computer Science/NTHash.md",
     "Computer Science/Heap.md",
@@ -212,7 +232,6 @@
     "Computer Science/Books/Exploring JavaScript.md",
     "Computer Science/Data structures.md",
     "Computer Science/bash.md",
-    "Computer Science/Memory.md",
     "Computer Science/HyperText Transfer Protocol.md",
     "Computer Science/Cross-Site Scripting.md",
     "Computer Science/Linux Commands.md",
@@ -222,13 +241,9 @@
     "Computer Science/Splunk.md",
     "Computer Science/Solid State Array.md",
     "Computer Science/JSON Web Tokens.md",
-    "Computer Science/Docker.md",
     "Docker.md",
     "Splunk.md",
     "Solid State Array.md",
-    "Computer Science/Open Web Application Security Project.md",
-    "JSON Web Tokens.md",
-    "![[Pasted.md",
     "Pasted image 20251202195510.png",
     "Computer Science/Code projects/webserv.canvas",
     "Computer Science/Cyber Security",

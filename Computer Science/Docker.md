@@ -73,6 +73,9 @@ docker container list -a
 # Stop a container
 docker stop container_id
 
+# Get info about a container
+docker inspect container_id
+
 # Runs an image in detached mode and maps port 80 of the host to port 80 in the container
 docker run -d -p 80:80 path/to/image
 # Runs an image in detached mode over port 3000, and maps the volume todo-db to /etc/todos
