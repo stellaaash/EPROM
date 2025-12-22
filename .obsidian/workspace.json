@@ -4,53 +4,20 @@
     "type": "split",
     "children": [
       {
-        "id": "92870bb661e18ffc",
+        "id": "da4a933af353d2db",
         "type": "tabs",
         "children": [
           {
-            "id": "381a0c73459b8d64",
+            "id": "7feca41541b5091e",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Computer Science/Docker.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "Docker"
-            }
-          },
-          {
-            "id": "afdba22aea46c5e0",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Windows.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Windows"
-            }
-          },
-          {
-            "id": "4e80fdb2d2fe509e",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "SCADA.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "SCADA"
+              "title": "New tab"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -230,11 +197,12 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "4e80fdb2d2fe509e",
+  "active": "7feca41541b5091e",
   "lastOpenFiles": [
+    "Computer Science/Docker.md",
     "Windows.md",
     "SCADA.md",
-    "Computer Science/Docker.md",
+    "Modbus.md",
     "Computer Science/Memory.md",
     "Computer Science/Transport Layer Security.md",
     "Computer Science/HTTPS.md",
@@ -257,7 +225,6 @@
     "Computer Science/Solid State Array.md",
     "Computer Science/JSON Web Tokens.md",
     "Docker.md",
-    "Splunk.md",
     "Pasted image 20251202195510.png",
     "Computer Science/Code projects/webserv.canvas",
     "Computer Science/Cyber Security",
