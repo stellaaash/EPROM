@@ -11,11 +11,16 @@ Volumes allow to connect specific filesystem paths of the container back to the 
 Thus, if you mount that same directory across container restarts, you'll have persistent storage.
 There are **two types** of docker volumes: *named volumes* and *bind mounts*.
 ### Named Volumes
-Named volumes are **great at just storing data**, without worrying about where the data is actually stored.
+Named volumes are **great at just storing data**, without worrying about whereContents the data is actually stored.
+They are useful for **sharing data between containers**, as a named volume can be accessed by multiple containers at a time.
 ### Bind Mounts
 With bind mounts, **you control the exact mountpoint on the host**.
 When working on an application, you can use a bind mount to mount the source code into the container to let it see the code changes, and update the app directly for us to see the changes as we save.
 Many languages provide tool to watch for changes and reload the application dynamically.
+
+> [!ERROR]
+> Note that binding a folder to one on the host machine will **overwrite everything that you had at that location**. 
+> This means that if you create files in a config directory, but then later in the Dockerfile bind that directory to a location on your host machine, everything in it will be **cleared** and be replaced by the host directory's contents.
 ## Images
 When running a container, **it uses an isolated filesystem**. This custom filesystem **is provided by a container image**.
 Since the image contains the sheer filesystem of a container, **it must contain everything needed to run an application**:

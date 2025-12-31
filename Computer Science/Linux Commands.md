@@ -49,6 +49,14 @@ chown user[:group] [files]
 chown user:group file1 file2 file3
 chown -R user:group file1 file2 file3  # Change owners/groups recursively
 ```
+## mkdir
+Creates a directory.
+### Usage
+```sh
+mkdir directory...
+
+mkdir -p path/to/directory  # Create all layers of directories as needed
+```
 # Process Management
 ## ps
 Allows to **see running processes in the current user session**.

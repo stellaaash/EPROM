@@ -11,13 +11,32 @@
             "id": "7feca41541b5091e",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "Computer Science/base64.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "base64"
+            }
+          },
+          {
+            "id": "70a6b517db63b51c",
+            "type": "leaf",
+            "state": {
+              "type": "split-diff-view",
+              "state": {
+                "aFile": "Gobuster.md",
+                "bFile": "Gobuster.md",
+                "aRef": ""
+              },
+              "icon": "diff",
+              "title": "Diff: Gobuster"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -197,8 +216,11 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "7feca41541b5091e",
+  "active": "70a6b517db63b51c",
   "lastOpenFiles": [
+    "Hydra.md",
+    "Gobuster.md",
+    "Computer Science/base64.md",
     "Computer Science/Docker.md",
     "Windows.md",
     "SCADA.md",
@@ -222,9 +244,6 @@
     "Computer Science/Tutorials/Scratch a Pixel.md",
     "Computer Science/Tutorials/The Vulkan Tutorial.md",
     "Computer Science/Splunk.md",
-    "Computer Science/Solid State Array.md",
-    "Computer Science/JSON Web Tokens.md",
-    "Docker.md",
     "Pasted image 20251202195510.png",
     "Computer Science/Code projects/webserv.canvas",
     "Computer Science/Cyber Security",
