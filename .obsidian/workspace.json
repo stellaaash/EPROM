@@ -11,14 +11,14 @@
             "id": "7feca41541b5091e",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "split-diff-view",
               "state": {
-                "file": "Computer Science/Cyber Security/Gobuster.md",
-                "mode": "source",
-                "source": false
+                "aFile": "Computer Science/Cyber Security/Gobuster.md",
+                "bFile": "Computer Science/Cyber Security/Gobuster.md",
+                "aRef": ""
               },
-              "icon": "lucide-file",
-              "title": "Gobuster"
+              "icon": "diff",
+              "title": "Diff: Gobuster"
             }
           }
         ]
@@ -200,10 +200,10 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "5afbc682b8960c44",
+  "active": "7feca41541b5091e",
   "lastOpenFiles": [
-    "Computer Science/dnsmasq.md",
     "Computer Science/Cyber Security/Gobuster.md",
+    "Computer Science/dnsmasq.md",
     "Computer Science/Hydra.md",
     "Computer Science/base64.md",
     "Computer Science/Docker.md",
