@@ -4,24 +4,53 @@
     "type": "split",
     "children": [
       {
-        "id": "da4a933af353d2db",
+        "id": "0d01d546b5cb609e",
         "type": "tabs",
         "children": [
           {
-            "id": "7feca41541b5091e",
+            "id": "f2365818506182d3",
             "type": "leaf",
             "state": {
-              "type": "split-diff-view",
+              "type": "markdown",
               "state": {
-                "aFile": "Computer Science/Cyber Security/Gobuster.md",
-                "bFile": "Computer Science/Cyber Security/Gobuster.md",
-                "aRef": ""
+                "file": "Computer Science/Metasploit.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "diff",
-              "title": "Diff: Gobuster"
+              "icon": "lucide-file",
+              "title": "Metasploit"
+            }
+          },
+          {
+            "id": "eb9deb0bab22222b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Reverse Shell.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Reverse Shell"
+            }
+          },
+          {
+            "id": "f18d707a8c7a7f56",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Bind Shell.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Bind Shell"
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -200,8 +229,12 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "7feca41541b5091e",
+  "active": "f18d707a8c7a7f56",
   "lastOpenFiles": [
+    "Reverse Shell.md",
+    "Bind Shell.md",
+    "Computer Science/Metasploit.md",
+    "Computer Science/Shell.md",
     "Computer Science/Cyber Security/Gobuster.md",
     "Computer Science/dnsmasq.md",
     "Computer Science/Hydra.md",
@@ -224,10 +257,6 @@
     "Computer Science/bash.md",
     "Computer Science/HyperText Transfer Protocol.md",
     "Computer Science/Cyber Security/Cross-Site Scripting.md",
-    "Computer Science/Linux Commands.md",
-    "Computer Science/Books/The Rust Book.md",
-    "Computer Science/Tutorials/Scratch a Pixel.md",
-    "Computer Science/Tutorials/The Vulkan Tutorial.md",
     "Pasted image 20251202195510.png",
     "Computer Science/Code projects/webserv.canvas",
     "Computer Science/Cyber Security",

