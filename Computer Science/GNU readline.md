@@ -16,7 +16,7 @@ The `ctrl` key is stylized as a `^`.
 - `^d` : Sends an EOF character which makes the `readline()` function return NULL. In [[bash]], for example, closes the shell.
   Also technically removes the next character if not at the end of the line.
 - `^e` : Moves caret to end of line.
-- `^l` : Clears the screen contents (equivalent to [[clear]]).
+- `^l` : Clears the screen contents (equivalent to the `clear` command).
 - `^n` : Moves down the history, towards the more recent commands. Like pressing `↓`.
 - `^p` : Moves up the history, towards the older commands. Like pressing `↓`.
 - `^t` : Transposes (or swaps) the two previous characters.
@@ -27,5 +27,5 @@ The `ctrl` key is stylized as a `^`.
 - `Alt+b` : Brings back the caret by one word.
 - `Alt+f` : Advances the caret by one word.
 # Resources
-`man 3 readline` on a [[Linux]] that has the `readline` library installed.
+`man 3 readline` on a [[Linux]] box that has the `readline` library installed.
 [Wikipedia Article](https://en.wikipedia.org/wiki/GNU_Readline)

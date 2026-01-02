@@ -74,7 +74,7 @@ You install the Zabbix Agent 2 on Debian/Ubuntu systems by **adding the repo's k
 Configuration file located at `/etc/zabbix/zabbix_agent2.conf`.
 You'll want to set the Zabbix server [[IP Address]], [[Hostname]] directive matching the host config in the server, and [[ListenPort]] directive specifying the agent listening port.
 Enable and start the agent service using systemctl commands, then check proper operation by checking service status and reviewing log files at `/var/log/zabbix/`.
-You can check network connectivity using [[telnet]] and [[nc]] commands to verify that the agent can talk to the Zabbix server.
+You can check network connectivity using [[telnet]] and [[Netcat]] commands to verify that the agent can talk to the Zabbix server.
 #### Windows
 Download the appropriate installer **from the official website**.
 Run the installer **with admin privileges** and follow the installation.
