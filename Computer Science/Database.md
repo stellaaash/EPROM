@@ -22,7 +22,7 @@ These store data in a **non-tabular format**. This can range from key-value pair
 Non-Relational Databases are well-suited for data that can vary greately in its format.
 A good example of this is user-generated content of social media.
 # DataBase Management Systems
-DBMS are systems that serve as **interfaces betwen the end user and the database.**
+DBMS are systems that serve as **interfaces between the end user and the database.**
 It allows you to retrieve, update and manage the data being stored.
 ## Examples of DBMS
 - [[MySQL]]

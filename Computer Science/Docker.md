@@ -78,7 +78,7 @@ docker container list -a
 # Stop a container
 docker stop container_id
 
-# Get info about a container
+# Get info about a container, including env, volumes and networking information
 docker inspect container_id
 
 # Runs an image in detached mode and maps port 80 of the host to port 80 in the container
