@@ -14,3 +14,6 @@ You can infer that if we used a single `'` inside of the password, we might be a
 ```sql
 SELECT * FROM users WHERE username = 'John' AND password = 'abc' OR 1=1;-- -';
 ```
+# Tools
+There are tools available to **carry out automated SQL injections**:
+- [[SQLMap]]

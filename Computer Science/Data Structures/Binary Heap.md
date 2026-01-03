@@ -2,7 +2,7 @@
 tags:
   - data_structure
 ---
-Binary Heaps are [[Heap]]s that are also a kind of [[Computer Science/Binary Tree|Binary Tree]] with these two main conditions:
+Binary Heaps are [[Heap]]s that are also a kind of [[Binary Tree|Binary Tree]] with these two main conditions:
 - Its heap condition is that the value of each node must be greater than each of its descendant nodes.
 - The tree must be complete, which means that **all nodes must be present on all tree levels, except for the last level which can have missing nodes towards the right**.
 # Underlying Implementation
