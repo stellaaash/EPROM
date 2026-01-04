@@ -20,8 +20,37 @@
               "icon": "lucide-file",
               "title": "Wireshark"
             }
+          },
+          {
+            "id": "b2d26424104bbebb",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Computer Science/Amazon S3.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Amazon S3"
+            }
+          },
+          {
+            "id": "89e80e9e0b504cd7",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Computer Science/Cyber Security/Security Operations Center.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Security Operations Center"
+            }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -33,7 +62,7 @@
       {
         "id": "7314ae3322c1ade6",
         "type": "tabs",
-        "dimension": 61.105318039624606,
+        "dimension": 69.8639942734431,
         "children": [
           {
             "id": "5afbc682b8960c44",
@@ -54,7 +83,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#data_structure",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -75,13 +104,12 @@
               "title": "Bookmarks"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       },
       {
         "id": "b3405bf85693d9b7",
         "type": "tabs",
-        "dimension": 38.89468196037539,
+        "dimension": 30.13600572655691,
         "children": [
           {
             "id": "2aa113e46b2d22b9",
@@ -201,15 +229,20 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "37d2af73783672b3",
+  "active": "89e80e9e0b504cd7",
   "lastOpenFiles": [
+    "Computer Science/Networking/Firewall.md",
+    "Computer Science/Cyber Security/Security Operations Center.md",
+    "Computer Science/Cyber Security/Security Information and Event Management.md",
+    "Endpoint Detection and Response.md",
+    "Computer Science/Amazon S3.md",
+    "Computer Science/Networking/Wireshark.md",
     "Computer Science/Data Structures/Red-Black Tree.md",
     "Computer Science/Data Structures/Record.md",
     "Computer Science/Data Structures/Priority Queue.md",
     "Computer Science/Data Structures/Graph.md",
     "Computer Science/Dijkstra's Algorithm.md",
     "Computer Science/Algorithms/Dijkstra's Algorithm.md",
-    "Computer Science/Networking/Wireshark.md",
     "Computer Science/Data Structures/Hash Set.md",
     "Computer Science/Data Structures/Hash Table.md",
     "Computer Science/Data Structures/Heap.md",
@@ -226,11 +259,6 @@
     "Computer Science/Algorithms",
     "Computer Science/Data Structures/Abstract Data Type.md",
     "Computer Science/Data Structures",
-    "Computer Science/Active Directory.md",
-    "Computer Science/Cyber Security/SQLMap.md",
-    "Computer Science/tcpdump.md",
-    "Computer Science/socat.md",
-    "Computer Science/Cyber Security/SQL Injection.md",
     "Computer Science/Networking",
     "Pasted image 20251202195510.png",
     "Computer Science/Code projects/webserv.canvas",
