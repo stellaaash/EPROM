@@ -1,8 +1,8 @@
 ---
 tags:
   - rust
-  - Tutorial
-Status: IN PROGRESS
+  - book
+Status: PAUSED
 Website: https://doc.rust-lang.org/book/
 ---
 The official rust tutorial and also a form of documentation.

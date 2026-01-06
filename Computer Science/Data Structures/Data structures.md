@@ -1,7 +1,6 @@
 ---
 tags:
   - programming_concept
-  - cheatsheet
 ---
 Data structures are ways to store data in a specific organization and format, allowing for efficient access to that data.
 Most data structures are built on smaller, [[Primitive Type]]s.

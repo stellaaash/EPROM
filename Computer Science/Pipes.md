@@ -1,6 +1,5 @@
 ---
 tags:
-  - Linux
 ---
 Two [[File Descriptor]]s representing both ends of a "pipe", one is the writing end and the other the reading end.
 

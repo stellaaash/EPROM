@@ -1,6 +1,7 @@
 ---
 tags:
   - algorithm
+  - sorting
 ---
 A simple **sorting algorithm** whose concept is just stepping through the list element by element, comparing the current element with the next one, and **swapping** the two if needed.
 Bubble sort has an efficiency of **O(n^2)**

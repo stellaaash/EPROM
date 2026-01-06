@@ -2,7 +2,7 @@
 tags:
   - Windows
 ---
-The NTFS is the file system primarely used on modern windows systems.
+The NTFS is the file system primarily used on modern Windows systems.
 It provides journaling, which allows for restoration of damage to the file system when needed.
 # Permissions
 On Windows, visible under `Properties -> Security`.

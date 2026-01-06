@@ -1,6 +1,5 @@
 ---
 tags:
-  - Linux
 ---
 Signals are ways for **processes to communicate between each other**.
 # Types of Signals

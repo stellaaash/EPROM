@@ -2,8 +2,6 @@
 tags:
   - programming_concept
   - C
-  - POSIX
-  - Linux
 ---
 **Threading is the concept of splitting the load of a particular [[Process]] across multiple [[Processor]] cores.** You can have more threads than cores on most [[Operating System]]s, it's usually the OS itself that will balance the threads between the cores.
 # How it works

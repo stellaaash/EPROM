@@ -1,9 +1,7 @@
 ---
 tags:
+  - Windows
 ---
-
-
-# Windows Registry
 The Windows Registry is a **database containing all kinds of variables** that determine how Windows and applications run.
 It is structured in *hives*, which are really just **binary files containing registry keys**.
 ## List of Hives

@@ -1,6 +1,5 @@
 ---
 tags:
-  - program
   - javascript
 ---
 The [[Node.js]] **Read Eval Print Loop** or REPL is an interactive shell a bit like the Python interpreter.

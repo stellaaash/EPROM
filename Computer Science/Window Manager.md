@@ -1,8 +1,7 @@
 ---
 tags:
-  - Linux
 ---
-System that manages windows in a desktop environment (or just a GUI). Usually is discussed on [[Unix]] systems, as it's harder to customize on [[Windows]] and even [[macOS]] systems.
+System that manages windows in a desktop environment (or just a GUI). Usually is discussed on [[Unix]] systems, as it's harder to customize on Windows and even macOS systems.
 
 
 [[Tiling Manager]]

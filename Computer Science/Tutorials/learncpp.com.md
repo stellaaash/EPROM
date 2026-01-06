@@ -2,7 +2,7 @@
 tags:
   - Tutorial
   - cpp
-Status: IN PROGRESS
+Status: DONE
 Website: https://www.learncpp.com/
 ---
 C++ tutorials and learning materials.

@@ -3,7 +3,7 @@ tags:
   - llm
   - Tutorial
 web: https://www.anthropic.com/ai-fluency
-Status: IN PROGRESS
+Status: PAUSED
 ---
 A course about learning to interact with [[Large Language Model]]s (referenced as "AI" in this course) in meaningful ways, proning efficient and productive collaboration.
 # 01 - Introduction

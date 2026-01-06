@@ -4,7 +4,7 @@ tags:
   - cpp
   - computer_graphics
 Authors: Peter Shirley, Trevor David Black, Steve Hollasch
-Status: IN PROGRESS
+Status: TODO
 Website: https://raytracing.github.io/books/RayTracingInOneWeekend.html
 ---
 Tutorial to ray-tracing in C++.

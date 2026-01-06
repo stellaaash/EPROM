@@ -1,6 +1,5 @@
 ---
 tags:
-  - cheatsheet
 ---
 based version control system
 # Useful commands

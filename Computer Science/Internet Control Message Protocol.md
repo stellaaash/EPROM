@@ -1,6 +1,7 @@
 ---
 tags:
   - networking
+  - protocol
 ---
 Internet Control Message Protocol or ICMP is **used to determine the performance of a connection between devices**.
 It is able to check if the connection exists, and if it is reliable.

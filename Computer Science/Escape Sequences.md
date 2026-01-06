@@ -2,7 +2,6 @@
 tags:
   - C
   - cpp
-  - cheatsheet
 ---
 In C and C++, you have things called escape sequences for unprintable characters that you might still want to use in your code in string literals, for example.
 

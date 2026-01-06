@@ -1,8 +1,6 @@
 ---
 tags:
-  - program
-  - cheatsheet
-  - Linux
+  - low_level
 ---
 Based utility allowing in depth analysis of a program's resource utilization. Very powerful, very versatile.
 

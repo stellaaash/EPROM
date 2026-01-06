@@ -1,7 +1,7 @@
 ---
 tags:
   - book
-Status: IN PROGRESS
+Status: TODO
 Website: https://exploringjs.com/js/book/index.html
 Author: Axel Rauschmayer
 ---

@@ -67,7 +67,7 @@ Here are the listed enhancements:
 - Function as a replacement for Zabbix agent, supporting all previous features.
 ___
 The Zabbix Agent 2 also **supports passive and active checking**.
-It runs as a daemon on [[Unix]]-likes, but as a standalone process on [[Windows]] (though it can also be run as a [[Service]] if wanted).
+It runs as a daemon on [[Unix]]-likes, but as a standalone process on [[Windows Registry]] (though it can also be run as a [[Service]] if wanted).
 ### Installing and configuring
 #### Linux
 You install the Zabbix Agent 2 on Debian/Ubuntu systems by **adding the repo's key and source**.

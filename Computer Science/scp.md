@@ -1,6 +1,5 @@
 ---
 tags:
-  - command
 ---
 Allows for **secure copying of files over [[Secure Shell Protocol]]**.
 

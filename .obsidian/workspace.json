@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Computer Science/Cyber Security/Security Operations Center.md",
+                "file": "Computer Science/Rivest-Shamir-Adleman.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Security Operations Center"
+              "title": "Rivest-Shamir-Adleman"
             }
           }
         ],
@@ -231,10 +231,12 @@
   },
   "active": "89e80e9e0b504cd7",
   "lastOpenFiles": [
-    "Computer Science/Networking/Firewall.md",
+    "Computer Science/Windows Registry.md",
+    "Computer Science/Digital Forensics.md",
     "Computer Science/Cyber Security/Security Operations Center.md",
+    "Computer Science/Networking/Firewall.md",
     "Computer Science/Cyber Security/Security Information and Event Management.md",
-    "Endpoint Detection and Response.md",
+    "Computer Science/Cyber Security/Endpoint Detection and Response.md",
     "Computer Science/Amazon S3.md",
     "Computer Science/Networking/Wireshark.md",
     "Computer Science/Data Structures/Red-Black Tree.md",
@@ -255,9 +257,7 @@
     "Computer Science/Data Structures/Queue.md",
     "Computer Science/Algorithms/Quicksort.md",
     "Computer Science/Algorithms/Quickselect.md",
-    "Computer Science/Algorithms/Depth-First Search.md",
     "Computer Science/Algorithms",
-    "Computer Science/Data Structures/Abstract Data Type.md",
     "Computer Science/Data Structures",
     "Computer Science/Networking",
     "Pasted image 20251202195510.png",

@@ -1,6 +1,7 @@
 ---
 tags:
   - networking
+  - protocol
 ---
 Dynamic Host Configuration Protocol or DHCP is a network protocol for configuring [[Internet Protocol]] hosts with [[IP Address]]es, IP prefixes and other networking configuration data.
 It aims to solve the problem of every device taking a random IP, leading to overlaps and conflicts of addresses on larger networks.

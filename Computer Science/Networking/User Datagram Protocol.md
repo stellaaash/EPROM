@@ -1,6 +1,7 @@
 ---
 tags:
   - networking
+  - protocol
 ---
 The User Datagram Protocol or UDP is a *connectionless* Network layer protocol that is used to **communicate data between devices**.
 Contrary to its brother [[Transmission Control Protocol]], UDP is **stateless**, which means that it **doesn't require a constant connection between two devices for data to be sent**.
