@@ -1,9 +1,12 @@
 {
 	"nodes":[
 		{"id":"175aa85f3cca83bc","type":"group","x":-780,"y":-1400,"width":3400,"height":1373,"color":"#0426ae","label":"Learning"},
+		{"id":"efd21f79c3f18df3","x":1520,"y":-2440,"width":1160,"height":920,"type":"group","label":"Important functions"},
 		{"id":"35ddfc883af3428e","type":"text","text":"# Other Resources\n- [A Simple HTTP Server from Scratch](https://trungams.github.io/2020-08-23-a-simple-http-server-from-scratch/) - Example of a basic web server using sockets and c++ 98","x":-760,"y":-520,"width":553,"height":473},
 		{"id":"c7af402d3436168f","type":"text","text":"# Sockets\n\n## Resources\n- [Beej's guide to Network Programming](https://beej.us/guide/bgnet/) - Learning sockets","x":20,"y":-1380,"width":1115,"height":1320},
-		{"id":"9872725281bd92d2","x":1160,"y":-1380,"width":900,"height":1320,"type":"text","text":"# HTTP/1.1\n\n## Resources\n- RFC [7230](https://www.rfc-editor.org/rfc/rfc7230) - Focuses on the **syntax and message form** of HTTP/1.1.\n  Covers how [[HyperText Transfer Protocol]] messages (requests and responses) are structured and transmitted between clients and servers.\n- RFC [7231](https://www.rfc-editor.org/rfc/rfc7231) - Focuses on **the semantics of HTTP methods, status codes and header fields**.\n  Covers all methods, status codes and header semantics.\n  As such, provides both *meaning and behavior* for HTTP requests and responses."}
+		{"id":"9872725281bd92d2","type":"text","text":"# HTTP/1.1\n\n## Resources\n- RFC [7230](https://www.rfc-editor.org/rfc/rfc7230) - Focuses on the **syntax and message form** of HTTP/1.1.\n  Covers how [[HyperText Transfer Protocol]] messages (requests and responses) are structured and transmitted between clients and servers.\n- RFC [7231](https://www.rfc-editor.org/rfc/rfc7231) - Focuses on **the semantics of HTTP methods, status codes and header fields**.\n  Covers all methods, status codes and header semantics.\n  As such, provides both *meaning and behavior* for HTTP requests and responses.","x":1160,"y":-1380,"width":900,"height":1320},
+		{"id":"81487e0a075e8dcf","x":1775,"y":-2287,"width":250,"height":60,"type":"text","text":"``"},
+		{"id":"26d337a6c3ac2719","x":480,"y":-2360,"width":874,"height":624,"type":"text","text":"# Subject PDF notes\n- The requirement about not checking `errno` after read/write operations probably relates to the fact that `-1` as a return value **doesn't always mean an error** if errno is `EAGAIN` or `EWOULDBLOCK`.\n- `poll` or equivalent means: `poll`, `epoll`, `select`\n- Obviously we only have to use non-blocking IO in the case of network stuff, local read/writes are exempt\n- "}
 	],
 	"edges":[]
 }

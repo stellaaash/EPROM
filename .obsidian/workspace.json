@@ -8,49 +8,23 @@
         "type": "tabs",
         "children": [
           {
-            "id": "b8521a36a5169c2d",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Computer Science/Networking/Wireshark.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Wireshark"
-            }
-          },
-          {
-            "id": "b2d26424104bbebb",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Computer Science/Amazon S3.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Amazon S3"
-            }
-          },
-          {
             "id": "89e80e9e0b504cd7",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "canvas",
               "state": {
-                "file": "Computer Science/Rivest-Shamir-Adleman.md",
-                "mode": "source",
-                "source": false
+                "file": "Computer Science/Code projects/webserv.canvas",
+                "viewState": {
+                  "x": 934.1622719247052,
+                  "y": -2026.6763462807746,
+                  "zoom": 0.052639807781625414
+                }
               },
-              "icon": "lucide-file",
-              "title": "Rivest-Shamir-Adleman"
+              "icon": "lucide-layout-dashboard",
+              "title": "webserv"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -231,6 +205,7 @@
   },
   "active": "89e80e9e0b504cd7",
   "lastOpenFiles": [
+    "Computer Science/Rivest-Shamir-Adleman.md",
     "Computer Science/Windows Registry.md",
     "Computer Science/Digital Forensics.md",
     "Computer Science/Cyber Security/Security Operations Center.md",
@@ -256,7 +231,6 @@
     "Computer Science/Algorithms/Insertion Sort.md",
     "Computer Science/Data Structures/Queue.md",
     "Computer Science/Algorithms/Quicksort.md",
-    "Computer Science/Algorithms/Quickselect.md",
     "Computer Science/Algorithms",
     "Computer Science/Data Structures",
     "Computer Science/Networking",
