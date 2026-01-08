@@ -203,8 +203,9 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "89e80e9e0b504cd7",
+  "active": "5afbc682b8960c44",
   "lastOpenFiles": [
+    "Computer Science/QEMU.md",
     "Computer Science/Rivest-Shamir-Adleman.md",
     "Computer Science/Windows Registry.md",
     "Computer Science/Digital Forensics.md",
@@ -230,7 +231,6 @@
     "Computer Science/Data Structures/Linked List.md",
     "Computer Science/Algorithms/Insertion Sort.md",
     "Computer Science/Data Structures/Queue.md",
-    "Computer Science/Algorithms/Quicksort.md",
     "Computer Science/Algorithms",
     "Computer Science/Data Structures",
     "Computer Science/Networking",
