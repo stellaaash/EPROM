@@ -1,6 +1,5 @@
 ---
 tags:
-  - low_level
 ---
 Bitwise operations are operations that operate directly on the bits of a binary string.
 On some [[Processor]]s, bitwise operations can actually be faster than conventional operations like division and multiplication.

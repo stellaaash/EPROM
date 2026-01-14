@@ -27,7 +27,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "PHP-FPM.md",
+                "file": "Computer Science/PHP-FPM.md",
                 "mode": "source",
                 "source": false
               },
@@ -215,9 +215,12 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "2aa113e46b2d22b9",
+  "active": "d818f86b59bb30da",
   "lastOpenFiles": [
-    "PHP-FPM.md",
+    "Computer Science/PHP-FPM 1.md",
+    "Computer Science/PHP-FPM.md",
+    "Computer Science/Cyber Security/Hydra.md",
+    "google.ch.md",
     "Computer Science/Docker.md",
     "Computer Science/cmd.exe.md",
     "Computer Science/Code projects/webserv.canvas",
@@ -241,9 +244,6 @@
     "Computer Science/Data Structures/Hash Table.md",
     "Computer Science/Data Structures/Heap.md",
     "Computer Science/Algorithms/Heapsort.md",
-    "Computer Science/Data Structures/Trie.md",
-    "Computer Science/Books/The Raytracing Challenge.md",
-    "Computer Science/Data Structures/Stack.md",
     "Computer Science/Algorithms",
     "Computer Science/Data Structures",
     "Computer Science/Networking",

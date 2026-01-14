@@ -1,6 +1,5 @@
 ---
 tags:
-  - programming_concept
 ---
 A program which reads compiled languages source files and translates them into another programming language (often directly machine code to be executed).
 Usually starts by preprocessing, followed by compilation and then linking of [[Object File]]s.
