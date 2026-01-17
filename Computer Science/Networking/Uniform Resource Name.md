@@ -1,0 +1,1 @@
+Contrary to [[Uniform Resource Locator]]s, URNs define a resource's name but **don't provide a way to reach it**, like a protocol or adress.

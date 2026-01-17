@@ -41,6 +41,8 @@ The `latest` tag is available for all images on Docker Hub, and is the default t
 ## Dockerfiles
 Dockerfiles are **text-based scripts of instructions to create a container image**.
 Each instruction corresponds to a layer on the finished image.
+## Docker Secrets
+Docker Secrets are **a way to give containers access to relevant information securely**, without having to rely on environment variables or direct copying of files in images.
 # Multi-Container Apps
 Ideally when running multiple services in an app, **each container should run only one service, and do it well**.
 This makes it way easier to scale individual services as demand rises (only up the database and not the actual website's resources).

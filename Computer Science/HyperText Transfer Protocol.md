@@ -5,6 +5,7 @@ port: "80"
 Hyper Text Transfer Protocol or HTTP powers the world wide web.
 Exists in secure form as [[HTTPS]].
 # How it works
+HTTP works in a *transaction* model: **a client *requests* a resource, and a server than *responds* with that resource**.
 Every HTTP message starts with a *start line* which specifies the type of message being sent.
 After the headers, there's always an empty line to specify that the body is coming next.
 ## Making requests
