@@ -37,5 +37,3 @@ Semi-trusted buffer network for public-facing servers, for example web, email, f
 Isolated from the LAN to limit breach impact.
 ### [[Virtual Private Network]] - VPN
 A special zone for remote users. Usually directly connected to the LAN to allow for access to local resources from remote locations.
-# Examples of firewalls
-- [[Snort]]
