@@ -39,6 +39,9 @@
 /**** Implementation ****/
 
 :root body:where(.theme-dark, .theme-light) {
+    /** Custom font - Stellaaa.sh **/
+    --font-text-theme: Serif;
+
     /** Miscellaneous **/
 
     --checkbox-size: calc(var(--font-text-size) - 2px);
