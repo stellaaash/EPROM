@@ -1,6 +1,7 @@
 ---
 tags:
   - cryptography
+  - algorithm
 ---
 Diffie-Hellman is a **key-exchange algorithm leveraging [[Public-key Cryptography]] to safely exchange a secret between two parties**.
 This secret is very often a symmetric key to be used for secure communications.

@@ -2,6 +2,7 @@
 tags:
   - networking
   - protocol
+  - dns
 port: "53"
 ---
 The Domain Name System or DNS is the mechanism by which **[[Domain Name]]s get translated to raw [[IP Address]]es** you can directly connect to.
@@ -31,3 +32,8 @@ DNS records also come with a *Time To Live (TTL)* value so that they aren't cach
 - **NS record**: Indicates which nameservers are authoritative for a domain
 - **TXT record**: Stores text information (often used for verification)
 - ...
+# Anycast DNS
+Anycast DNS means that **any one of a number of DNS servers can respond to DNS queries**.
+As in any anycast configuration, **the closest one geographically (with the least amount of hops) will be used**.
+This reduces latency and improves uptime for the DNS resolving service.
+It also provides **protection against DNS flood DDoS attacks**.

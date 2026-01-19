@@ -24,5 +24,6 @@ Target all the nodes in the network scope defined in the packet header. Usually 
 Mostly like broadcast but targets only a subset of the nodes in a network instead of all of them.
 ## Anycast
 Same as multicast, but only sends the packet to the closest node of the subset.
+Usually, anycast is used when multiple servers have the same [[IP Address]]; that way, the closest is used.
 # Resources
 [Wikipedia](https://en.wikipedia.org/wiki/Internet_Protocol)
