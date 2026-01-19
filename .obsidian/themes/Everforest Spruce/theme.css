@@ -19,9 +19,6 @@
     --everforest-grey0: #7A8478;
     --everforest-grey1: #859289;
     --everforest-grey2: #9DA9A0;
-
-    /* Utils */
-    --darken-ratio: 25%;
 }
 
 .theme-dark {
@@ -132,6 +129,11 @@
     /* Green text color accents */
     --nav-item-color-active: var(--everforest-green);
     --tab-text-color-focused-active-current: var(--everforest-green);
+}
+
+body {
+    /* Custom font - Stellaaa.sh */
+    --font-text-theme: Serif;
 }
 
 blockquote strong {
