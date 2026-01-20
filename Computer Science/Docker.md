@@ -167,3 +167,8 @@ services:
 networks:
   ecommerce:
 ```
+# Best Practices
+- **Keep the folders for each service small.**
+  If you have a folder with a Dockerfile for each service in a multi-container app, keep each folder containing a Dockerfile small: at build time, the entire folder will be sent to the Docker daemon (as a tarball).
+  Thus, the bigger the folder, the harder it has to work to send all those files to the daemon. As such, remove all files unnecessary for building the image from the image's folder structure.
+## Dockerfiles
