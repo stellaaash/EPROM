@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "8944ebf46760fc85",
+        "id": "92b2a5782de89656",
         "type": "tabs",
         "children": [
           {
-            "id": "ade5a12f35f8cb7c",
+            "id": "cef98a83913c6bda",
             "type": "leaf",
             "state": {
               "type": "split-diff-view",
               "state": {
-                "aFile": "Computer Science/Docker.md",
-                "bFile": "Computer Science/Docker.md",
+                "aFile": "Computer Science/HyperText Transfer Protocol.md",
+                "bFile": "Computer Science/HyperText Transfer Protocol.md",
                 "aRef": ""
               },
               "icon": "diff",
-              "title": "Diff: Docker"
+              "title": "Diff: HyperText Transfer Protocol"
             }
           }
         ]
@@ -159,13 +159,12 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Computer Science/Quicksort.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Quicksort"
+              "title": "Outline"
             }
           },
           {
@@ -200,8 +199,10 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "ade5a12f35f8cb7c",
+  "active": "cef98a83913c6bda",
   "lastOpenFiles": [
+    "Computer Science/HyperText Transfer Protocol.md",
+    "Computer Science/Networking/HTTPS.md",
     "Computer Science/Active Directory.md",
     "Computer Science/Networking/IP Address.md",
     "Computer Science/Cyber Security/Intrusion Detection System.md",
@@ -224,10 +225,8 @@
     "Computer Science/Networking/Uniform Resource Identifier.md",
     "Computer Science/Networking/Netfilter.md",
     "Computer Science/Networking/ufw.md",
-    "Computer Science/HyperText Transfer Protocol.md",
     "Computer Science/Docker.md",
     "Computer Science/Assembly.md",
-    "Computer Science/Linux Commands.md",
     "Computer Science/Code projects/webserv.canvas",
     "Computer Science/Algorithms",
     "Computer Science/Data Structures",

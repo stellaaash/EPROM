@@ -1,6 +1,7 @@
 ---
 tags: []
 port: "80"
+abbreviation: HTTP
 ---
 Hyper Text Transfer Protocol or HTTP powers the world wide web.
 Exists in secure form as [[HTTPS]].
@@ -117,3 +118,4 @@ HTTP Security Headers **help improve the overall security of a web page by provi
 Cookies are saved when the server gives you a **Set-Cookie header** with your response.
 This essentially asks your browser to save a piece of data and send it back to the server with its requests, so that the server can identify you among other users, for example.
 Your browser then uses the **Cookie header** to send it back to the server in its requests.
+# HTTP Messages Structure
