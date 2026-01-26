@@ -10,7 +10,10 @@ Its main historical goal was to connect terminal devices and terminal-oriented p
 ```sh
 telnet [options ...] [host [port]]
 
-> <interesting options and examples here>
+# Try to initiate a connection to my.machine on port 80
+telnet my.machine 80
+# Chat directly with google's webserver, through text!
+telnet google.com 80
 ```
 # Security
 Telnet transmits all communications, including usernames and passwords, in plain text.

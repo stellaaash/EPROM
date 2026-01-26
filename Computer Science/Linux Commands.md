@@ -86,7 +86,7 @@ grep [OPTION...] PATTERNS [FILE...]
 grep "pattern" file_to_search.txt  # Search the pattern "pattern" in file_to_search.txt
 cat file.txt | grep "pattern"  # You can also pipe stuff
 ```
-## systemctl
+## [[systemctl]]
 Allows to **interact with the [[systemd]] process/daemon**.
 ### Usage
 ```sh

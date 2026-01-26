@@ -27,6 +27,13 @@
         "a": 1,
         "rgb": 11657298
       }
+    },
+    {
+      "query": "path:Odoo  ",
+      "color": {
+        "a": 1,
+        "rgb": 6761852
+      }
     }
   ],
   "collapse-display": true,

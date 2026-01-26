@@ -4,9 +4,9 @@ tags:
   - networking
   - protocol
 ---
-Responsible for relaying packets across networks, routing data between different machines.
+**The main routing protocol used on the Internet.** 
+It is responsible for relaying packets across networks, routing data between different machines.
 It looks at a packet's header to know which host to target it towards.
-Part of the [[Internet Protocol Suite]].
 # Datagrams
 Datagrams is basically another word for network packet.
 A datagram is composed of two sections: a header and a payload.

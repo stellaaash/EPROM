@@ -2,7 +2,7 @@
 # Important concepts
 ## Containers
 Simply put, a container is **another process on your machine that has been isolated from all other processes on the host machine**.
-That isolation leverages [[Kernel]] namespaces and [[cgroup]]s, both features of [[Linux]].
+That isolation leverages [[Kernel]] namespaces and cgroups, both features of [[Linux]].
 **Containers have a fixed filesystem by default**, your changes won't stick over to the next time you launch them, and two identical containers don't share filesystems.
 For having persistent data stay even after shutting down a container instance, **you need volumes**.
 ## Volumes

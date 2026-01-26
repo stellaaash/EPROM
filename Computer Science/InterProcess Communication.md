@@ -9,7 +9,7 @@ InterProcess Communication, or IPC, is the art of transmitting data from a proce
 [[Signal]]
 [[Pipe]]
 [[FIFO]]
-[[Semaphore]]
+Semaphore ([[System V#Inter-Process Communications]])
 [[Unix Socket]]
 
 # Resources

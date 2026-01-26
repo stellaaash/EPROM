@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "92b2a5782de89656",
+        "id": "4c50643636ae0273",
         "type": "tabs",
         "children": [
           {
-            "id": "cef98a83913c6bda",
+            "id": "f35c5d694763c1e2",
             "type": "leaf",
             "state": {
-              "type": "split-diff-view",
+              "type": "markdown",
               "state": {
-                "aFile": "Computer Science/HyperText Transfer Protocol.md",
-                "bFile": "Computer Science/HyperText Transfer Protocol.md",
-                "aRef": ""
+                "file": "Things to Learn.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "diff",
-              "title": "Diff: HyperText Transfer Protocol"
+              "icon": "lucide-file",
+              "title": "Things to Learn"
             }
           }
         ]
@@ -199,8 +199,15 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "cef98a83913c6bda",
+  "active": "5afbc682b8960c44",
   "lastOpenFiles": [
+    "Odoo",
+    "Computer Science/Networking/IPsec.md",
+    "Computer Science/udev.md",
+    "Computer Science/systemctl.md",
+    "Computer Science/System V.md",
+    "Computer Science/Display Manager.md",
+    "Computer Science/chroot.md",
     "Computer Science/HyperText Transfer Protocol.md",
     "Computer Science/Networking/HTTPS.md",
     "Computer Science/Active Directory.md",
@@ -220,13 +227,6 @@
     "Computer Science/Cyber Security/Common Vulnerabilities and Exposures.md",
     "Computer Science/Networking/Firewall.md",
     "Computer Science/MIME.md",
-    "Computer Science/PHP-FPM.md",
-    "Computer Science/Networking/Uniform Resource Name.md",
-    "Computer Science/Networking/Uniform Resource Identifier.md",
-    "Computer Science/Networking/Netfilter.md",
-    "Computer Science/Networking/ufw.md",
-    "Computer Science/Docker.md",
-    "Computer Science/Assembly.md",
     "Computer Science/Code projects/webserv.canvas",
     "Computer Science/Algorithms",
     "Computer Science/Data Structures",
