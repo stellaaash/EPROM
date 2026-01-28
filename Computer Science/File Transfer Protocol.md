@@ -4,8 +4,8 @@ port: "21"
 abbreviation: FTP
 ---
 This protocol **helps transfer files from clients to servers**.
-Its secure cousin, SFTP, runs over [[Secure SHell]].
-# How it works
+Its secure cousin, SFTP, runs over [[Secure shell]].
+# How It Works
 ## Commands
 - `USER`: Used to input the username
 - `PASS`: Used to input the password
