@@ -1,6 +1,7 @@
 ---
-tags:
+tags: 
 port: "21"
+abbreviation: FTP
 ---
 This protocol **helps transfer files from clients to servers**.
 Its secure cousin, SFTP, runs over [[Secure SHell]].

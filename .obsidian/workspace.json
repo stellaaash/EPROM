@@ -11,10 +11,14 @@
             "id": "d6d1bade5bcaf560",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "Computer Science/File Transfer Protocol.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "File Transfer Protocol"
             }
           }
         ]
