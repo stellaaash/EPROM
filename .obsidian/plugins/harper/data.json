@@ -557,7 +557,9 @@
     "WroughtIron": null
   },
   "userDictionary": [
-    "SFTP"
+    "SFTP",
+    "UNIX",
+    "base64"
   ],
   "dialect": 0,
   "delay": -1,
