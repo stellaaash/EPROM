@@ -1,24 +1,31 @@
 
-# Important concepts
+# Important Concepts
 ## Containers
 Simply put, a container is **another process on your machine that has been isolated from all other processes on the host machine**.
 That isolation leverages [[Kernel]] namespaces and cgroups, both features of [[Linux]].
 **Containers have a fixed filesystem by default**, your changes won't stick over to the next time you launch them, and two identical containers don't share filesystems.
 For having persistent data stay even after shutting down a container instance, **you need volumes**.
 ## Volumes
-Volumes allow to connect specific filesystem paths of the container back to the host machine.
+Volumes allow you to connect specific filesystem paths of the container back to the host machine.
+This helps with **making data persistent**, as writing on the writable layer of Docker containers will all be discarded when the container stops.
 **If a directory in the container is mounted, changes in that directory are also seen on the host machine.**
 Thus, if you mount that same directory across container restarts, you'll have persistent storage.
-There are **two types** of docker volumes: *named volumes* and *bind mounts*.
+When mounting a volume to a path in a container, **all parent directories are created**, if missing.
+There are **two types** of Docker volumes: *named volumes* and *bind mounts*.
 ### Named Volumes
-Named volumes are **great at just storing data**, without worrying about whereContents the data is actually stored.
+Named volumes are **great at just storing data**, without worrying about where the data is actually stored.
 They are useful for **sharing data between containers**, as a named volume can be accessed by multiple containers at a time.
+
+> [!IMPORTANT] First Mount Quirks
+> When a volume is first created by a container's mount point, **all files contained at that mount point *in the image* will be copied inside of the volume**.
+> **Be careful to only have one container that mounts the volume with initial files.** Use `depends_on` directives to reflect which container should get to create the volume.
+> If you don't, the first container that successfully starts will get to create the volume and copy its own files.**
 ### Bind Mounts
-With bind mounts, **you control the exact mountpoint on the host**.
+With bind mounts, **you control the exact mount point on the host**.
 When working on an application, you can use a bind mount to mount the source code into the container to let it see the code changes, and update the app directly for us to see the changes as we save.
 Many languages provide tool to watch for changes and reload the application dynamically.
 
-> [!ERROR]
+> [!ERROR] The danger of binding
 > Note that binding a folder to one on the host machine will **overwrite everything that you had at that location**. 
 > This means that if you create files in a config directory, but then later in the Dockerfile bind that directory to a location on your host machine, everything in it will be **cleared** and be replaced by the host directory's contents.
 ## Images
@@ -33,10 +40,10 @@ The image also contains **other configuration for the container, such as environ
 ### Layers
 Each layer of an image is **a diff of changes from the last layer**. Essentially, each layer adds more data on top of the stack of layers, creating the Docker image.
 Since **each instruction in a Dockerfile creates a new layer**, it is important to structure your instructions from least volatile to most.
-This is because **if a layer gets modified, all layers ontop of it have to be rebuilt as well.**
+This is because **if a layer gets modified, all layers on top of it have to be rebuilt as well.**
 So, you should always put the least likely to be modified layers (like base OS and packages) at the start of the Dockerfile, and the most volatile instructions at the end (like configuration).
 ### Tags
-Tags are a way to differenciate **between images with the same name**, for example between image versions.
+Tags are a way to differentiate **between images with the same name**, for example between image versions.
 The `latest` tag is available for all images on Docker Hub, and is the default tag when `pull`ing.
 ## Dockerfiles
 Dockerfiles are **text-based scripts of instructions to create a container image**.

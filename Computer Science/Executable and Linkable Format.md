@@ -3,7 +3,7 @@ tags:
   - file_format
 ---
 Also called **ELF**, the Executable and Linkable Format is a standard often used for compiled executables, [[Object File]]s, libraries and [[Core Dump]]s.
-It was first created for the Unix family of systems.
+It was first created for the UNIX family of systems.
 You can read these using tools such as [[objdump]] or [[readelf]].
 # Composition
 Each ELF file contains an ELF header, followed by the actual file data.
@@ -17,7 +17,7 @@ There are generally several key segments inside an ELF:
 - `.got`
 - `.plt`
 - `.init`: Initialization code to be executed before the `main()` function.
-- `.fini`: Cleanup code to be executed after the `main()` returns.
+- `.fini`: Clean up code to be executed after the `main()` returns.
 - `.comment`: Version control information or other metadata.
 - `.note`: Various notes, such as build information or other metadata.
 - `.symtab`: Symbol table with information about symbols (variables, functions) used in the program.
