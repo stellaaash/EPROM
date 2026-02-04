@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "9df101d9ba47d95f",
+        "id": "189b581109af260d",
         "type": "tabs",
         "children": [
           {
-            "id": "75d71f8acac02d19",
+            "id": "2651e5be788627c4",
             "type": "leaf",
             "state": {
               "type": "split-diff-view",
               "state": {
-                "aFile": ".obsidian/workspace.json",
-                "bFile": ".obsidian/workspace.json",
+                "aFile": ".gitignore",
+                "bFile": ".gitignore",
                 "aRef": ""
               },
               "icon": "diff",
-              "title": "Diff: workspace.json  (Working Tree)"
+              "title": "Diff: .gitignore  (Working Tree)"
             }
           }
         ]
@@ -186,6 +186,7 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "bases:Create new base": false,
       "markdown-importer:Open format converter": false,
       "publish:Publish changes...": false,
       "switcher:Open quick switcher": false,
@@ -194,12 +195,11 @@
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
-      "bases:Create new base": false,
       "omnisearch:Omnisearch": false,
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "75d71f8acac02d19",
+  "active": "2651e5be788627c4",
   "lastOpenFiles": [
     "Computer Science/Code projects/webserv.canvas",
     "Computer Science/Cyber Security/Cross-Site Request Forgery.md",
