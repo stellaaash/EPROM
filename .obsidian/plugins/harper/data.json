@@ -1,5 +1,5 @@
 {
-  "ignoredLints": "{\"context_hashes\":[]}",
+  "ignoredLints": "{\"context_hashes\":[4700640778556295096,11995012380381806070]}",
   "useWebWorker": true,
   "lintSettings": {
     "ACoupleMore": null,
@@ -557,6 +557,13 @@
     "WroughtIron": null
   },
   "userDictionary": [
+    "Bourne",
+    "GPOs",
+    "Kerberos",
+    "NetNTLM",
+    "OU",
+    "OUs",
+    "S3",
     "SFTP",
     "UNIX",
     "base64"

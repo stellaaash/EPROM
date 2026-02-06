@@ -3,7 +3,7 @@ tags:
   - Windows
   - adminsys
 ---
-Active Directory is a **service for identity management of users, groups, computers and general authentication**.
+Active Directory is a **service for identity management of users, groups, computers, and general authentication**.
 # Terminology
 - Active Directory operates under a *Windows Domain*, which is a **group of hosts under the administration of a given business**.
 - The idea of a domain is to facilitate administration of multiple hosts under a single hat called the *Active Directory*.
@@ -15,7 +15,7 @@ Active Directory is a **service for identity management of users, groups, comput
 # Domain Controller
 The Domain Controller **enforces the users and hosts under the domain**.
 It populates user and security policies and takes care of authentication: when you try to log in as an Active Directory user, the host queries the Domain Controller to check for credentials.
-*Policies* allow to restrict what access each type of user has (settings, windows updates and more).
+*Policies* allow you to restrict what access each type of user has (settings, windows updates and more).
 # Objects
 The Active Directory Domain Service or ADDS stores all objects of the AD domain it manages.
 These contain:
@@ -33,7 +33,7 @@ In Windows Domains, objects are often organized using *organizational units or O
 These often represent individual departments in a business, or even physical locations.
 They mimic the actual organizational structure of the company.
 **Each user can only be part of one OU at a time**.
-Security Groups are used for **applying permissions over ressources**, while OUs are used to **apply policies** to users and computers.
+Security Groups are used for **applying permissions over resources**, while OUs are used to **apply policies** to users and computers.
 # Group Policy Objects
 Group Policy Objects or GPOs are **collections of settings that can be applied to Organizational Units**.
 They are editable using the *Group Policy Management* utility on Windows.

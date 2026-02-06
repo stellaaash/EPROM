@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "189b581109af260d",
+        "id": "a72210b2fa62766a",
         "type": "tabs",
         "children": [
           {
-            "id": "2651e5be788627c4",
+            "id": "dc61fa7887bf0e2b",
             "type": "leaf",
             "state": {
-              "type": "split-diff-view",
+              "type": "markdown",
               "state": {
-                "aFile": ".obsidian/core-plugins.json",
-                "bFile": ".obsidian/core-plugins.json",
-                "aRef": ""
+                "file": "Computer Science/bash.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "diff",
-              "title": "Diff: core-plugins.json  (Working Tree)"
+              "icon": "lucide-file",
+              "title": "bash"
             }
           }
         ]
@@ -199,9 +199,15 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "2651e5be788627c4",
+  "active": "dc61fa7887bf0e2b",
   "lastOpenFiles": [
+    "Computer Science/base64.md",
+    "Computer Science/Apache.md",
+    "Computer Science/Active Directory.md",
+    "Computer Science/Amazon S3.md",
+    "Things to Learn.md",
     "Computer Science/Code projects/webserv.canvas",
+    "Computer Science/Tutorials/learncpp.com.md",
     "Computer Science/Cyber Security/Cross-Site Request Forgery.md",
     "Computer Science/Process.md",
     "Computer Science/MIME Type.md",
@@ -210,9 +216,6 @@
     "Computer Science/Database.md",
     "Computer Science/Current Working Directory.md",
     "Computer Science/Core Dump.md",
-    "Computer Science/base64.md",
-    "Computer Science/Apache.md",
-    "Things to Learn.md",
     "Computer Science/File Transfer Protocol.md",
     "Odoo",
     "Computer Science/Networking/IPsec.md",
@@ -223,11 +226,9 @@
     "Computer Science/chroot.md",
     "Computer Science/HyperText Transfer Protocol.md",
     "Computer Science/Networking/HTTPS.md",
-    "Computer Science/Active Directory.md",
     "Computer Science/Networking/IP Address.md",
     "Computer Science/Cyber Security/Intrusion Detection System.md",
     "Computer Science/Cyber Security/Snort.md",
-    "Computer Science/Networking/Content Delivery Network.md",
     "Computer Science/Algorithms",
     "Computer Science/Data Structures",
     "Computer Science/Networking",

@@ -1,13 +1,13 @@
 ---
 tags:
 ---
-The Bourne Again SHell `bash`, the GNU [[Shell]] that's usable on basically all unix systems.
+The Bourne Again SHell `bash`, the GNU [[Shell]] that's usable on basically all [[UNIX]] systems.
 An interactive command interpreter AND a programming language too.
 Initially created for the [[GNU Project]], and still maintained by the [[Free Software Foundation]] to this day.
 It was designed to be a 100% free alternative to the Bourne Shell ([[sh]]).
-# Shell scripts
+# Shell Scripts
 Bash is capable of interpreting `.sh` files containing raw commands usually executed within Bash itself, allowing for complex scripts executing repetitive tasks or automation.
-# Bash operators
+# Bash Operators
 ```bash
 &  # Allows you to run commands in the background of a terminal session
 &&  # Allows you to combine multiple commands together in one line
