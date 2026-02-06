@@ -13,12 +13,12 @@
             "state": {
               "type": "split-diff-view",
               "state": {
-                "aFile": ".gitignore",
-                "bFile": ".gitignore",
+                "aFile": ".obsidian/core-plugins.json",
+                "bFile": ".obsidian/core-plugins.json",
                 "aRef": ""
               },
               "icon": "diff",
-              "title": "Diff: .gitignore  (Working Tree)"
+              "title": "Diff: core-plugins.json  (Working Tree)"
             }
           }
         ]
