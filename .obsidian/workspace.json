@@ -11,14 +11,17 @@
             "id": "dc61fa7887bf0e2b",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "canvas",
               "state": {
-                "file": "Computer Science/bash.md",
-                "mode": "source",
-                "source": false
+                "file": "Computer Science/Code projects/webserv.canvas",
+                "viewState": {
+                  "x": 207.01339802162772,
+                  "y": -3326.6113162964607,
+                  "zoom": -0.3040792152505383
+                }
               },
-              "icon": "lucide-file",
-              "title": "bash"
+              "icon": "lucide-layout-dashboard",
+              "title": "webserv"
             }
           }
         ]
@@ -199,15 +202,16 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "dc61fa7887bf0e2b",
+  "active": "bc852d9c449dd058",
   "lastOpenFiles": [
-    "Computer Science/base64.md",
-    "Computer Science/Apache.md",
-    "Computer Science/Active Directory.md",
-    "Computer Science/Amazon S3.md",
-    "Things to Learn.md",
-    "Computer Science/Code projects/webserv.canvas",
     "Computer Science/Tutorials/learncpp.com.md",
+    "Computer Science/Code projects/webserv.canvas",
+    "Computer Science/Active Directory.md",
+    "Things to Learn.md",
+    "Computer Science/Apache.md",
+    "Computer Science/Amazon S3.md",
+    "Computer Science/base64.md",
+    "Computer Science/bash.md",
     "Computer Science/Cyber Security/Cross-Site Request Forgery.md",
     "Computer Science/Process.md",
     "Computer Science/MIME Type.md",
@@ -227,8 +231,6 @@
     "Computer Science/HyperText Transfer Protocol.md",
     "Computer Science/Networking/HTTPS.md",
     "Computer Science/Networking/IP Address.md",
-    "Computer Science/Cyber Security/Intrusion Detection System.md",
-    "Computer Science/Cyber Security/Snort.md",
     "Computer Science/Algorithms",
     "Computer Science/Data Structures",
     "Computer Science/Networking",
