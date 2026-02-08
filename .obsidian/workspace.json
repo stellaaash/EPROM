@@ -11,17 +11,14 @@
             "id": "dc61fa7887bf0e2b",
             "type": "leaf",
             "state": {
-              "type": "canvas",
+              "type": "markdown",
               "state": {
-                "file": "Computer Science/Code projects/webserv.canvas",
-                "viewState": {
-                  "x": 207.01339802162772,
-                  "y": -3326.6113162964607,
-                  "zoom": -0.3040792152505383
-                }
+                "file": "Music/Chords.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-layout-dashboard",
-              "title": "webserv"
+              "icon": "lucide-file",
+              "title": "Chords"
             }
           }
         ]
@@ -202,10 +199,11 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "bc852d9c449dd058",
+  "active": "dc61fa7887bf0e2b",
   "lastOpenFiles": [
-    "Computer Science/Tutorials/learncpp.com.md",
+    "Music/Chords.md",
     "Computer Science/Code projects/webserv.canvas",
+    "Computer Science/Tutorials/learncpp.com.md",
     "Computer Science/Active Directory.md",
     "Things to Learn.md",
     "Computer Science/Apache.md",
