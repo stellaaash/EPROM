@@ -1,7 +1,5 @@
 ---
 tags:
-  - networking
-  - dns
 ---
 
 dnsmasq is **a lightweight [[Domain Name System]] forwarder and [[Dynamic Host Configuration Protocol]] server**.

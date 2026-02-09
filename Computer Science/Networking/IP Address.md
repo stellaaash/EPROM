@@ -1,9 +1,8 @@
 ---
 tags:
-  - networking
 ---
 Every device using the [[Internet Protocol]] is assigned a unique IP address to distinguish them from others.
-# Subnet mask
+# Subnet Mask
 IP addresses are "divided" into two parts, one identifies the network of the host, the other, the host itself.
 In TCP/IP ([[Transmission Control Protocol]] over [[Internet Protocol]]), this is called the subnet mask.
 The CIDR determines the number of 1-bits found in the subnet mask, and thus its size.
@@ -34,26 +33,26 @@ Each group is called a *quartet* and can **omit zeros within the group**. For ex
 Consecutive groups of 0s can be compressed and replaced by a double colon `::`, but **this can only be used once per address to avoid ambiguity.**
 As such, `2001:0db8:0000:0000:0000:0000:0000:0001` becomes `2001:db8::1`.
 The prefix length is written after the address using a slash like `/64`, which is similar to IPv4's CIDR notation.
-## Main features
+## Main Features
 IPv6 simplifies packet headers for faster router processing, eliminates the need for IP fragmentation by hosts, and standardizes subnets at $2^{64}$ addresses for efficient routing.
 It supports unicast, anycast and multicast transmission. Multicast **replaces IPv4's broadcast**.
 As for security, built-in [[IPsec]] and improved mobility without triangular routing as well as [[Neighbor Discovery Protocol]] using [[Internet Control Message Protocol]] version 6 for address resolution instead of [[Address Resolution Protocol]].
-# Reserved networks
+# Reserved Networks
 Some networks are usually only used in cases of a private, internal network (your home wifi for example).
 - `10.0.0.0` - `10.255.255.255` (`10.0.0.0/8`)
 - `172.16.0.0` - `172.31.255.255` (`172.16.0.0/12)
 - `192.168.0.0` - `192.168.255.255` (`192.168.0.0/16`)
 They provide enough distinct addresses to be used without problems inside of a single, private network.
 These addresses cannot interact directly with the global network that is the internet, they have to go through a [[Router]] first to give it a public IP address.
-# Loopback addresses
+# Loop Back Addresses
 There's a range of IP addresses specifically reserved for internal testing and communications within a single device.
 This range is `127.0.0.0` - `127.255.255.255`.
 The `127.0.0.1` is referred to as `localhost`, and represents the device itself.
-# Broadcast address
+# Broadcast Address
 In order to send a message to the entire network, you make your packet's target either the `255.255.255.255` address for an IPv4 network, or the **highest address of the subnet (all host bits set to 1)** for a subnet.
 IPv6 does **not use broadcast addresses**. Instead, it uses *multicast addresses*.
-# Private vs Public adresses
-Private adresses are used on private networks like wifis and other home networks that aren't directly accessible from outside.
+# Private Vs Public Addresses
+Private addresses are used on private networks like wifis and other home networks that aren't directly accessible from outside.
 They are usually **assigned by the router**.
-Public adresses, on the other hand, are **assigned by the ISP**, and provide a way to refer to a device on the entirety of the internet combined.
+Public addresses, on the other hand, are **assigned by the ISP**, and provide a way to refer to a device on the entirety of the internet combined.
 You very often **pay for the public IP address of your home network**- that's your bill (or a part of it, anyway)!

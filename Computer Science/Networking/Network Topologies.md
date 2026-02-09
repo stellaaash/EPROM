@@ -1,6 +1,5 @@
 ---
 tags:
-  - networking
 ---
 In networking, **topologies refer to the way the network is mapped**, its design and structure.
 There are multiple types of topologies out there. Here are some of the most notable ones:

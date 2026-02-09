@@ -1,6 +1,5 @@
 ---
 tags:
-  - rust
   - book
 Status: PAUSED
 Website: https://doc.rust-lang.org/book/

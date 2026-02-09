@@ -1,6 +1,5 @@
 ---
 tags:
-  - networking
 ---
 Network Address Translation or NAT allows **using one public [[IP Address]] to access many private IP addresses**.
 This addresses IPv4 address depletion by "hiding" entire networks behind a single public IP address.

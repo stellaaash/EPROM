@@ -2,8 +2,6 @@
 tags:
   - book
   - Tutorial
-  - C
-  - cpp
 Status: TODO
 Website: https://paroj.github.io/gltut/
 ---

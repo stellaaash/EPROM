@@ -1,6 +1,5 @@
 ---
 tags:
-  - networking
 ---
 tcpdump and its C/C++ library `libpcap` are widely used to analyze network traffic.
 The library in particular is used in many other software to power their features.

@@ -17,7 +17,7 @@ Foreign keys allow **creating the actual relationships** with other tables. **It
 Relational databases are perfect for **data that is going to be stored in the same format reliably, where accuracy is important**.
 A good example would be users of a service.
 ## Non-Relational Databases
-These store data in a **non-tabular format**. This can range from key-value pairs to arrays to hash tables.
+These store data in a **non-tabular format**. This can range from key-value pairs to arrays to [[Hash Table]]s
 ### Use Cases
 Non-Relational Databases are well-suited for data that can vary greatly in its format.
 A good example of this is user-generated content of social media.

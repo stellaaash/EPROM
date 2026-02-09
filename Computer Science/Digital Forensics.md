@@ -1,6 +1,5 @@
 ---
 tags:
-  - forensics
 ---
 
 Digital Forensics is **the application of methods and procedures to investigate and solve crimes by using digital devices**.

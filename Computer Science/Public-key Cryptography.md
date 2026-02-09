@@ -1,6 +1,5 @@
 ---
 tags:
-  - cryptography
 ---
 Public-key Cryptography is the process of creating a secure communication between two parties using a combination of a public and a private key.
 It is also called **asymmetric encryption**, because it uses a different key for encryption and decryption.

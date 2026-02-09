@@ -1,6 +1,5 @@
 ---
 tags:
-  - networking
 abbreviation: CDN
 ---
 A Content Delivery Network is a **distributed group of servers that caches content close to end users**, in many geographical locations.

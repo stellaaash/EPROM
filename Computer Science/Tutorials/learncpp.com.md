@@ -1,7 +1,6 @@
 ---
 tags:
   - Tutorial
-  - cpp
 Status: DONE
 Website: https://www.learncpp.com/
 ---

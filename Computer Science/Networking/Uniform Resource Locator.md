@@ -1,6 +1,5 @@
 ---
 tags:
-  - networking
 ---
 A Uniform Resource Locator or URL is **an instruction on how to access a resource on the internet**.
 # Structure

@@ -1,6 +1,5 @@
 ---
 tags:
-  - networking
 ---
 Search domains are a [[Domain Name System]] feature that enables **automatic completion of partial domain names**.
 # How it works

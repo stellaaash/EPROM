@@ -32,10 +32,10 @@ Like the OR operation, except that if both bits are 1, the result is 0. So you n
 XOR 0011 (decimal 3)
   = 0110 (decimal 6)
 ```
-# Bit shifts
+# Bit Shifts
 The action of pushing a binary value through a [[Register]]. You can push the bits left or right.
 There are multiple types of bit shifting, changing the way at which new bits are introduced in the empty spaces created by the movement.
-## Arithmetic shift
+## Arithmetic Shift
 In arithmetic bit shifts, the bits pushed over the edge of a register are simply discarded. A new 0 is inserted in place of the blank created by the movement, except in a right shift where the leftmost bit is preserved to keep the sign of the number.
 ```
    00010111 (decimal +23) LEFT-SHIFT
@@ -46,9 +46,9 @@ Preserving the sign:
    10010111 (decimal −105) RIGHT-SHIFT
 =  11001011 (decimal −53)
 ```
-## Logical shift
+## Logical Shift
 Pretty much the same as the arithmetic shift, where 0 is put in place of shifted bits. Any bit pushed out of a register is discarded, including in right-shifts.
-## Circular shift
+## Circular Shift
 
 > [!NOTE] Research to be done
 > I got lazy when I saw there were two kinds of circular shift, it's up to you, future me!

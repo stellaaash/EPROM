@@ -1,6 +1,5 @@
 ---
 tags:
-  - cryptography
   - algorithm
 ---
 The Caesar Cipher is an old algorithm from the first century after JC.

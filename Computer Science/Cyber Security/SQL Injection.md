@@ -1,6 +1,5 @@
 ---
 tags:
-  - SQL
 ---
 When an input in a web app is badly sanitized and you know that it queries the database (like for a login form), it might be vulnerable to SQL injection.
 The process is pretty simple: you inject some SQL code inside of your form answer (the password, for example) in order to run code on the [[Database]].

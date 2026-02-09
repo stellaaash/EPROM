@@ -1,6 +1,5 @@
 ---
 tags:
-  - Windows
 ---
 Here is a list of notable and important commands to use in [[cmd.exe]] and [[PowerShell]] in Windows environments.
 Use the `/?` to display the help page of a command.

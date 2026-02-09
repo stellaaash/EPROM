@@ -2,5 +2,15 @@
   "everforest-enchanted-theme@@vim-curor-animate": true,
   "everforest-enchanted-theme@@highlighted-folders": false,
   "everforest-enchanted-theme@@enable-menu-blur": true,
-  "everforest-enchanted-theme@@centered-tables": true
+  "everforest-enchanted-theme@@centered-tables": true,
+  "catppuccin-theme-settings@@catppuccin-theme-accents": "ctp-full-palette",
+  "catppuccin-icon-styles@@ctp-icon-hide": false,
+  "catppuccin-interface-styles@@ctp-bold-folder-title": true,
+  "catppuccin-pdf@@ctp-pdf-darken": true,
+  "catppuccin-pdf@@ctp-pdf-blend": true,
+  "catppuccin-pdf@@ctp-seamless-pdf": true,
+  "catppuccin-tag-styles@@ctp-tag-pill": true,
+  "catppuccin-theme-settings@@catppuccin-theme-dark": "ctp-macchiato",
+  "catppuccin-font-styles@@ctp-blockquote": "var(--ctp-teal)",
+  "catppuccin-font-styles@@ctp-bold": "var(--ctp-sky)"
 }

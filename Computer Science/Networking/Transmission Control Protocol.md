@@ -1,6 +1,5 @@
 ---
 tags:
-  - networking
   - protocol
 abbreviation: TCP
 ---

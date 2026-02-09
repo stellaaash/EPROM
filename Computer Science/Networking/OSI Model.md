@@ -1,6 +1,5 @@
 ---
 tags:
-  - networking
 ---
 The OSI model (Open Systems Interconnection Model) is an **essential model used in networking**.
 It **provides a framework dictating how all networked devices will communicate**.

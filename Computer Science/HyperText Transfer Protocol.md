@@ -104,16 +104,21 @@ These help the server process the request appropriately.
   This helps the browser process the data accordingly.
 - **Content-Encoding**: What method has been used to compress the data before it was sent.
 ### Security Headers
-HTTP Security Headers **help improve the overall security of a web page by providing mitigations against common attacks** such as Cross-Site Scripting, clickjacking and others.
-[This website](https://securityheaders.io/) helps to analyse the security headers of any website.
+HTTP Security Headers **help improve the overall security of a web page by providing mitigations against common attacks** such as Cross-Site Scripting, clickjacking, and others.
+[This website](https://securityheaders.io/) helps to analyze the security headers of any website.
 - **Content-Security-Policy**: A CSP header helps mitigate against attacks like XSS (Cross-Site Scripting), where malicious code could be hosted on a separate website or domain and injected onto the vulnerable website.
-  The CSP headers **says what domains or sources are considered safe for different types of resources: scripts, stylesheets or the code of the website itself**.
+  The CSP headers **says what domains or sources are considered safe for different types of resources: scripts, stylesheets, or the code of the website itself**.
 - **Strict-Transport-Security**: The HSTS header ensures that **web browser will always connect over [[HTTPS]]**.
-  `max-age` sets the expiryt time in seconds for this setting, `includeSubDomains` also applies it to all subdomains, and `preload` allows the website to be included in preload lists (lists that browsers use to enforce HSTS before even having their first visit to a website).
+  `max-age` sets the expiry time in seconds for this setting.
+  `includeSubDomains` also applies it to all subdomains.
+  `preload` allows the website to be included in preload lists (lists that browsers use to enforce HSTS before even having their first visit to a website).
 - **X-Content-Type-Options**: Can be used to tell the browser **not to guess the [[MIME Type]] format of a resource** and to use the `Content-Type` header instead. You usually use the `nosniff` option of this header for this very purpose.
   It can also be used for other options, look it up.
-- **Referrer-Policy**: Controls the amount of information send to the destination when redirections occur, like when the user clicks a link to another website.
+- **Referrer-Policy**: Controls the amount of information send to the destination when redirection occur, like when the user clicks a link to another website.
   You can choose among options `no-referrer`, `same-origin` (to only send if the website stays the same), `strict-origin` (to only send if the protocol stays the same) and `strict-origin-when-cross-origin`.
+- **SameSite**: Forbid sending cookies via cross-origin requests (an element requesting a [[Uniform Resource Locator]] from another domain).
+  `Strict` only sends the cookie in same-site contexts.
+  `Lax` sends the cookie in same-site requests and when navigating **to** your website.
 ## Cookies
 Cookies are saved when the server gives you a **Set-Cookie header** with your response.
 This essentially asks your browser to save a piece of data and send it back to the server with its requests, so that the server can identify you among other users, for example.

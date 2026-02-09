@@ -1,7 +1,6 @@
 ---
 tags:
   - algorithm
-  - sorting
 ---
 Quicksort is a part of [[Sorting Algorithms]], and involves recursively dividing an array into partitions and sorting these around pivots.
 # How it works

@@ -1,6 +1,5 @@
 ---
 tags:
-  - cryptography
   - algorithm
 ---
 RSA or the Rivest-Shamir-Adlman algorithm is a **[[Public-key Cryptography]] encryption algorithm that enables secure data transmission over insecure channels**.

@@ -1,10 +1,8 @@
 ---
 tags:
   - compiler
-  - C
-  - cpp
 ---
-The GNU Compiler Collection, the linux specific c compiler. It's pretty good, just like [[clang]], but has more restrictive licenses such that you can't implement it into a project without making it open source. Also, [[clang]] is simply more suited for modern projects that don't require direct linux kernel interop.
+The GNU Compiler Collection, the Linux specific C compiler. It's pretty good, just like [[clang]], but has more restrictive licenses such that you can't implement it into a project without making it open source. Also, [[clang]] is simply more suited for modern projects that don't require direct Linux kernel interop.
 
 # Options
 - `-std=<standard>` : Sets the standard for the code to be compiled. By default, for C, this is `gnu18`. For C++, this is `gnu++17`.

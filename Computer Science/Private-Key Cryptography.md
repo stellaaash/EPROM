@@ -1,6 +1,5 @@
 ---
 tags:
-  - cryptography
 ---
 Private-Key Cryptography is the process of encrypting data using the same key that is going to be used for decrypting the data.
 # Challenges

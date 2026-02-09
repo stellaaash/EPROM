@@ -1,6 +1,5 @@
 ---
 tags:
-  - Windows
 ---
 NetNTLM is the legacy authentication protocol used on Windows machines.
 # How it works

@@ -1,6 +1,5 @@
 ---
 tags:
-  - networking
   - hardware
 ---
 A networking device that **connects multiple devices to the same network**.

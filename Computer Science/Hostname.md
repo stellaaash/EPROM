@@ -1,6 +1,5 @@
 ---
 tags:
-  - networking
 ---
 In networking, hostname means **a label that is given to a device connected to a network**.
 It is **used to identify the device** among others, on the Internet but also in other means of communication.

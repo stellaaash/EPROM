@@ -1,8 +1,6 @@
 ---
 tags:
   - programming_concept
-  - cpp
-  - OOP
 ---
 The Orthodox Canonical Form is a set of guidelines for building classes that are easy to use and simple to clean.
 The idea is to always have classes that have :

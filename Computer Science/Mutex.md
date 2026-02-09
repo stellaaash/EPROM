@@ -1,7 +1,6 @@
 ---
 tags:
   - programming_concept
-  - C
 ---
 Mutex, short for "mutual exclusion", is **a kind of "lock" on data that you want to "protect" between [[Thread]]s**.
 Used well, they effectively prevents race conditions : when a thread wants to update a static variable (shared between threads), it locks the associated mutex (that YOU will have set in the code) to tell all other threads to wait if they arrive to that part of the code.

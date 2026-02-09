@@ -13,8 +13,8 @@ Some compilers can also be configured to translate source code into [[Assembly]]
 
 Importantly, compilers are also responsible for syntax checking and error checking, raising appropriate warnings and errors when your code doesn't meet the mark, and aborting the compilation process if needed.
 The object files created by the compiler are then linked by the linker into an executable. It will also link it with any libraries that are used, often including the standard library of the source language.
-# Examples of compilers
-- [[gcc]]
+# Examples of Compilers
+- [[GCC]]
 - [[clang]]
 - The Rust Compiler
 - ...

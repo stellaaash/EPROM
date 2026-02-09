@@ -1,7 +1,6 @@
 ---
 abbreviation: IP
 tags:
-  - networking
   - protocol
 ---
 **The main routing protocol used on the Internet.** 

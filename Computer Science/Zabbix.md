@@ -1,12 +1,11 @@
 ---
 tags:
-  - adminsys
 ---
-**An open-source software allowing extensive monitoring of servers and clients's health and integrity.**
+**An open-source software allowing extensive monitoring of servers and client's health and integrity.**
 Greatly configurable, it can target any device on which a Zabbix agent exists.
 # [Vocabulary](https://www.zabbix.com/documentation/current/en/manual/definitions)
 Click the header for the official list of terms defined in the Zabbix Manual.
-# Structure overview
+# Structure Overview
 ## Server
 The central component receiving reports from the agents and stocking everything in the Database.
 Essentially the central repository where all configuration, statistics and operations are stored.
@@ -14,12 +13,12 @@ It is the entity that is responsible for alerting administrators and sending not
 ## Database
 Contains all the configuration information and the data gathered by Zabbix Agents.
 Usually also on the same machine as the Zabbix server, unless is it very large, in which case it's probably a good idea to give it a discrete rig to run on.
-## Web interface
+## Web Interface
 An easy access to Zabbix in a web app.
 Usually (but not always) part of the Zabbix Server, on the same physical machine as the Server one.
 ## Proxy
 To collect performance and availability data on behalf of the Server.
-This allows to take some load off of it and distribute it over an array of Proxies to reduce the load on a single server.
+This allows you to take some load off of it and distribute it over an array of Proxies to reduce the load on a single server.
 ## Agent
 Zabbix Agents are clients running on the target machines, tasked with collecting the relevant data and sending to it to the Server or a Proxy.
 They are deployed on the monitoring targets directly, running continually in the background.

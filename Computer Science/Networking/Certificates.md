@@ -1,7 +1,5 @@
 ---
 tags:
-  - cryptography
-  - networking
 ---
 Digital Signatures or Certificates are **ways to confirm that data originates from a trusted source**.
 They use asymmetric cryptography ([[Public-key Cryptography]]) to produce a signature using a private key, which can then be verified using a public key.

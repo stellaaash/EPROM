@@ -1,7 +1,6 @@
 ---
 tags:
   - programming_concept
-  - sorting
 ---
 
 # Examples of sorting algorithms

@@ -1,6 +1,5 @@
 ---
 tags:
-  - sorting
   - algorithm
 ---
 Quickselect involves **using [[Quicksort]] to find the value at an unsorted array's sorted index**.

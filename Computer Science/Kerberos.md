@@ -1,6 +1,5 @@
 ---
 tags:
-  - Windows
 ---
 The **default authentication protocol for any recent version of Windows**.
 # How it works

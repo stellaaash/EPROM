@@ -1,7 +1,5 @@
 ---
 tags:
-  - Windows
-  - adminsys
 ---
 A bundle of enterprise content management and knowledge management provided by Microsoft.
 It uses [[Active Directory]] for authentication purposes.

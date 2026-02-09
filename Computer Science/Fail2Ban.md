@@ -1,6 +1,5 @@
 ---
 tags:
-  - adminsys
 ---
 Fail2Ban is an **intrusion prevention software framework**, designed to **prevent brute-force attacks**.
 It can run on any [[POSIX]] system that has a packet-control system or [[Firewall]] installed, like [[iptables]].

@@ -1,7 +1,5 @@
 ---
 tags:
-  - javascript
-  - web_dev
 ---
 
 # Uses

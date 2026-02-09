@@ -1,6 +1,5 @@
 ---
 tags:
-  - networking
   - hardware
 ---
 A router is responsible for connecting multiple networks together.

@@ -1,6 +1,5 @@
 ---
 tags:
-  - networking
   - protocol
 ---
 ARP is a protocol **that allows devices to associate its [[MAC Address]] with an [[IP Address]] on the network**.

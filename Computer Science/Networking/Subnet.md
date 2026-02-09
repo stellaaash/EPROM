@@ -1,11 +1,10 @@
 ---
 tags:
-  - networking
 ---
 Subnetting is the action of **splitting up a network into smaller, miniature networks within itself called subnets**.
 It's a bit like having a network being a big cake. You slice it into smaller parts to share it between different people.
 For a business, you might use it to have different networks for accounting, finance and HR, for example.
-# How it works
+# How It Works
 Subnetting is achieved on the configuration level by **splitting the number of hosts that can fit in a network**.
 You do this using a **subnet mask**. This becomes the section of an [[IP Address]] **that represents the network identifier**.
 Any bits coming after the subnet mask will represent **the specific device connected to that subnet**.

@@ -11,10 +11,14 @@
             "id": "8607e3249991fcd7",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "New tab"
+              "type": "split-diff-view",
+              "state": {
+                "aFile": ".obsidian/app.sync-conflict-20260209-171712-QCRMEGS.json",
+                "bFile": ".obsidian/app.sync-conflict-20260209-171712-QCRMEGS.json",
+                "aRef": ""
+              },
+              "icon": "diff",
+              "title": "Diff: app.sync-conflict-20260209-171712-QCRMEGS.json  (Working Tree)"
             }
           }
         ]
@@ -182,7 +186,6 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "bases:Create new base": false,
       "markdown-importer:Open format converter": false,
       "publish:Publish changes...": false,
       "switcher:Open quick switcher": false,
@@ -192,11 +195,41 @@
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
       "omnisearch:Omnisearch": false,
-      "obsidian-git:Open Git source control": false
+      "obsidian-git:Open Git source control": false,
+      "obsidian-kanban:Create new board": false
     }
   },
   "active": "8607e3249991fcd7",
   "lastOpenFiles": [
+    "Odoo/Projects/stc-location/Tasks.md",
+    "Computer Science/GCC.md",
+    "Odoo/Concepts/Odoo Database.md",
+    "Odoo/Projects/Projects Organization.md",
+    "Odoo/Modules/Rental.md",
+    "Odoo/Projects/stc-location/Meetings/M001 - 09-02-2026 - MVP Requirements.md",
+    "Odoo/Concepts/Stage.md",
+    "EPROM Vault Structure.md",
+    "Odoo/Concepts/Field Type.md",
+    "Untitled.base",
+    "Odoo/Concepts/View.md",
+    "Odoo/Modules/Contacts.md",
+    "Odoo/Projects/stc-location/Scratchboard.canvas",
+    "Odoo/Concepts/Property Field.md",
+    "Odoo/Concepts/Company.md",
+    "Odoo/Concepts/Model.md",
+    "Odoo/Concepts/Activity.md",
+    "Odoo/Modules/eCommerce.md",
+    "Odoo/Modules/eCommerce Rental.md",
+    "Odoo/Modules/eCommerce Rental with Stock Management.md",
+    "Odoo/Modules/Website.md",
+    "Odoo/Modules/eCommerce Rental with Planning.md",
+    "Odoo/Projects/stc-location/Meetings",
+    "Odoo/Projects/stc-location/Deliverables",
+    "Odoo/Projects/stc-location",
+    "Odoo/Projects",
+    "Odoo/Modules",
+    "Odoo/Concepts",
+    "Odoo",
     "Music/Chord.md",
     "Music/Chord Progression.md",
     "Computer Science/Code projects/webserv.canvas",
@@ -204,39 +237,11 @@
     "Computer Science/Active Directory.md",
     "Things to Learn.md",
     "Computer Science/Apache.md",
-    "Computer Science/Amazon S3.md",
-    "Computer Science/base64.md",
-    "Computer Science/bash.md",
-    "Computer Science/Cyber Security/Cross-Site Request Forgery.md",
-    "Computer Science/Process.md",
-    "Computer Science/MIME Type.md",
-    "Computer Science/UNIX Signal.md",
-    "Computer Science/btrfs.md",
-    "Computer Science/Database.md",
-    "Computer Science/Current Working Directory.md",
-    "Computer Science/Core Dump.md",
-    "Computer Science/File Transfer Protocol.md",
-    "Odoo",
-    "Computer Science/Networking/IPsec.md",
-    "Computer Science/udev.md",
-    "Computer Science/systemctl.md",
-    "Computer Science/System V.md",
-    "Computer Science/Display Manager.md",
-    "Computer Science/chroot.md",
-    "Computer Science/HyperText Transfer Protocol.md",
-    "Computer Science/Networking/HTTPS.md",
     "Computer Science/Algorithms",
     "Computer Science/Data Structures",
-    "Computer Science/Networking",
     "Pasted image 20251202195510.png",
-    "Computer Science/Cyber Security",
     "Computer Science/Code projects/miniRT.canvas",
     "Computer Science/Code projects/Philosophers.canvas",
-    "Computer Science/Tutorials",
-    "Computer Science/Books/2013 Stroustrup - The C++ Programming Language 4th Edition.pdf",
-    "Computer Science/Books",
-    "Computer Science/Code projects/Minishell.canvas",
-    "Computer Science/Code projects",
-    "Computer Science"
+    "Computer Science/Code projects/Minishell.canvas"
   ]
 }
