@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "9cde043077ecc060",
+        "id": "655aa06ded71d871",
         "type": "tabs",
         "children": [
           {
-            "id": "e209b8237970a9c8",
+            "id": "73591f2880ba40df",
             "type": "leaf",
             "state": {
               "type": "split-diff-view",
               "state": {
-                "aFile": "Computer Science/gcc.md",
-                "bFile": "Computer Science/gcc.md",
+                "aFile": ".obsidian/core-plugins.sync-conflict-20260209-181257-3O2BWFJ.json",
+                "bFile": ".obsidian/core-plugins.sync-conflict-20260209-181257-3O2BWFJ.json",
                 "aRef": ""
               },
               "icon": "diff",
-              "title": "Diff: gcc  (Working Tree)"
+              "title": "Diff: core-plugins.sync-conflict-20260209-181257-3O2BWFJ.json  (Working Tree)"
             }
           }
         ]
@@ -107,38 +107,6 @@
         "type": "tabs",
         "children": [
           {
-            "id": "6b6592cc3977f544",
-            "type": "leaf",
-            "state": {
-              "type": "backlink",
-              "state": {
-                "file": "Computer Science/New Technology File System.md",
-                "collapseAll": false,
-                "extraContext": false,
-                "sortOrder": "alphabetical",
-                "showSearch": false,
-                "searchQuery": "",
-                "backlinkCollapsed": false,
-                "unlinkedCollapsed": true
-              },
-              "icon": "links-coming-in",
-              "title": "Backlinks for New Technology File System"
-            }
-          },
-          {
-            "id": "7669a489eef4c560",
-            "type": "leaf",
-            "state": {
-              "type": "outgoing-link",
-              "state": {
-                "linksCollapsed": false,
-                "unlinkedCollapsed": true
-              },
-              "icon": "links-going-out",
-              "title": "Outgoing links"
-            }
-          },
-          {
             "id": "7fab731c95c112de",
             "type": "leaf",
             "state": {
@@ -178,7 +146,7 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
@@ -186,13 +154,11 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "obsidian-excalidraw-plugin:New drawing": false,
       "bases:Create new base": false,
-      "markdown-importer:Open format converter": false,
-      "publish:Publish changes...": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
       "canvas:Create new canvas": false,
-      "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
       "omnisearch:Omnisearch": false,
@@ -200,26 +166,29 @@
       "obsidian-kanban:Create new board": false
     }
   },
-  "active": "e209b8237970a9c8",
+  "active": "73591f2880ba40df",
   "lastOpenFiles": [
-    "Computer Science/Data Structures/Record.md",
-    "Odoo/Projects/stc-location/Meetings/M001 - 09-02-2026 - MVP Requirements.md",
-    "Odoo/Projects/stc-location/Tasks.md",
-    "Computer Science/GCC.md",
-    "Odoo/Concepts/Odoo Database.md",
-    "Odoo/Projects/Projects Organization.md",
-    "Odoo/Modules/Rental.md",
-    "Odoo/Concepts/Stage.md",
-    "EPROM Vault Structure.md",
-    "Odoo/Concepts/Field Type.md",
-    "Untitled.base",
-    "Odoo/Concepts/View.md",
-    "Odoo/Modules/Contacts.md",
     "Odoo/Projects/stc-location/Scratchboard.canvas",
-    "Odoo/Concepts/Property Field.md",
-    "Odoo/Concepts/Company.md",
+    "Odoo/Concepts/Drawing 2026-02-09 19.18.57.excalidraw.md",
     "Odoo/Concepts/Model.md",
+    "Odoo/Projects/stc-location/Tasks.md",
+    "Odoo/Projects/stc-location/Meetings/M001 - 09-02-2026 - MVP Requirements.md",
+    "Odoo/Projects/Projects Organization.md",
+    "Odoo/Concepts/View.md",
+    "Odoo/Concepts/Stage.md",
+    "Odoo/Concepts/Odoo Database.md",
+    "Odoo/Concepts/Field Type.md",
+    "Odoo/Concepts/Company.md",
     "Odoo/Concepts/Activity.md",
+    "Things to Learn.md",
+    "EPROM Vault Structure.md",
+    "Untitled.base",
+    "Music/Chord.md",
+    "Computer Science/Data Structures/Record.md",
+    "Computer Science/GCC.md",
+    "Odoo/Modules/Rental.md",
+    "Odoo/Modules/Contacts.md",
+    "Odoo/Concepts/Property Field.md",
     "Odoo/Modules/eCommerce.md",
     "Odoo/Modules/eCommerce Rental.md",
     "Odoo/Modules/eCommerce Rental with Stock Management.md",
@@ -232,12 +201,8 @@
     "Odoo/Modules",
     "Odoo/Concepts",
     "Odoo",
-    "Music/Chord.md",
     "Music/Chord Progression.md",
     "Computer Science/Code projects/webserv.canvas",
-    "Computer Science/Tutorials/learncpp.com.md",
-    "Computer Science/Active Directory.md",
-    "Things to Learn.md",
     "Computer Science/Algorithms",
     "Computer Science/Data Structures",
     "Pasted image 20251202195510.png",

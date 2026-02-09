@@ -2,5 +2,9 @@
   "cssTheme": "Catppuccin",
   "nativeMenus": false,
   "theme": "system",
-  "baseFontSize": 16
+  "baseFontSize": 16,
+  "showViewHeader": true,
+  "showRibbon": true,
+  "baseFontSizeAction": true,
+  "textFontFamily": "Vollkorn"
 }

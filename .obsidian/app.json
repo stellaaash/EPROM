@@ -3,5 +3,13 @@
   "showLineNumber": false,
   "promptDelete": false,
   "alwaysUpdateLinks": true,
-  "readableLineLength": false
+  "readableLineLength": true,
+  "strictLineBreaks": false,
+  "propertiesInDocument": "source",
+  "showIndentGuide": true,
+  "rightToLeft": false,
+  "spellcheck": false,
+  "tabSize": 4,
+  "showUnsupportedFiles": false,
+  "showInlineTitle": true
 }
