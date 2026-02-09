@@ -34,6 +34,13 @@
         "a": 1,
         "rgb": 5146596
       }
+    },
+    {
+      "query": "path:Odoo  ",
+      "color": {
+        "a": 1,
+        "rgb": 10379179
+      }
     }
   ],
   "collapse-display": true,
@@ -46,6 +53,6 @@
   "repelStrength": 10,
   "linkStrength": 1,
   "linkDistance": 150,
-  "scale": 0.06565520177909562,
+  "scale": 0.6826469614116436,
   "close": true
 }

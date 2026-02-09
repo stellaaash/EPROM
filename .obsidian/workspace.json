@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "4288b7f04bfaea74",
+        "id": "9cde043077ecc060",
         "type": "tabs",
         "children": [
           {
-            "id": "8607e3249991fcd7",
+            "id": "e209b8237970a9c8",
             "type": "leaf",
             "state": {
               "type": "split-diff-view",
               "state": {
-                "aFile": ".obsidian/app.sync-conflict-20260209-171712-QCRMEGS.json",
-                "bFile": ".obsidian/app.sync-conflict-20260209-171712-QCRMEGS.json",
+                "aFile": "Computer Science/gcc.md",
+                "bFile": "Computer Science/gcc.md",
                 "aRef": ""
               },
               "icon": "diff",
-              "title": "Diff: app.sync-conflict-20260209-171712-QCRMEGS.json  (Working Tree)"
+              "title": "Diff: gcc  (Working Tree)"
             }
           }
         ]
@@ -186,6 +186,7 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "bases:Create new base": false,
       "markdown-importer:Open format converter": false,
       "publish:Publish changes...": false,
       "switcher:Open quick switcher": false,
@@ -199,14 +200,15 @@
       "obsidian-kanban:Create new board": false
     }
   },
-  "active": "8607e3249991fcd7",
+  "active": "e209b8237970a9c8",
   "lastOpenFiles": [
+    "Computer Science/Data Structures/Record.md",
+    "Odoo/Projects/stc-location/Meetings/M001 - 09-02-2026 - MVP Requirements.md",
     "Odoo/Projects/stc-location/Tasks.md",
     "Computer Science/GCC.md",
     "Odoo/Concepts/Odoo Database.md",
     "Odoo/Projects/Projects Organization.md",
     "Odoo/Modules/Rental.md",
-    "Odoo/Projects/stc-location/Meetings/M001 - 09-02-2026 - MVP Requirements.md",
     "Odoo/Concepts/Stage.md",
     "EPROM Vault Structure.md",
     "Odoo/Concepts/Field Type.md",
@@ -236,7 +238,6 @@
     "Computer Science/Tutorials/learncpp.com.md",
     "Computer Science/Active Directory.md",
     "Things to Learn.md",
-    "Computer Science/Apache.md",
     "Computer Science/Algorithms",
     "Computer Science/Data Structures",
     "Pasted image 20251202195510.png",
