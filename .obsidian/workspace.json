@@ -4,21 +4,31 @@
     "type": "split",
     "children": [
       {
-        "id": "655aa06ded71d871",
+        "id": "112bedadca61c65d",
         "type": "tabs",
         "children": [
           {
-            "id": "73591f2880ba40df",
+            "id": "ae5b940b6c8aa7f8",
             "type": "leaf",
             "state": {
-              "type": "split-diff-view",
+              "type": "markdown",
               "state": {
-                "aFile": ".obsidian/core-plugins.sync-conflict-20260209-181257-3O2BWFJ.json",
-                "bFile": ".obsidian/core-plugins.sync-conflict-20260209-181257-3O2BWFJ.json",
-                "aRef": ""
+                "file": "Computer Science/HyperText Transfer Protocol.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
               },
-              "icon": "diff",
-              "title": "Diff: core-plugins.sync-conflict-20260209-181257-3O2BWFJ.json  (Working Tree)"
+              "icon": "lucide-file",
+              "title": "HyperText Transfer Protocol"
             }
           }
         ]
@@ -96,7 +106,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "94bfcc952b51a9a3",
@@ -144,6 +155,39 @@
               "icon": "git-pull-request",
               "title": "Source Control"
             }
+          },
+          {
+            "id": "b2c79f52e6f581c4",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Odoo/Projects/stc-location/Scratchboard.canvas",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for Scratchboard"
+            }
+          },
+          {
+            "id": "fb146dca994816fc",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Odoo/Projects/stc-location/Scratchboard.canvas",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from Scratchboard"
+            }
           }
         ],
         "currentTab": 2
@@ -154,8 +198,8 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "obsidian-excalidraw-plugin:New drawing": false,
       "bases:Create new base": false,
+      "obsidian-excalidraw-plugin:New drawing": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
       "canvas:Create new canvas": false,
@@ -166,8 +210,14 @@
       "obsidian-kanban:Create new board": false
     }
   },
-  "active": "73591f2880ba40df",
+  "active": "bc852d9c449dd058",
   "lastOpenFiles": [
+    "Computer Science/Code projects/webserv.canvas",
+    "Computer Science/HyperText Transfer Protocol.md",
+    "Computer Science/Networking/Uniform Resource Locator.md",
+    "Computer Science/Networking/Uniform Resource Identifier.md",
+    "Computer Science/Networking/Uniform Resource Name.md",
+    "Computer Science/WebAssembly.md",
     "Odoo/Projects/stc-location/Scratchboard.canvas",
     "Odoo/Concepts/Drawing 2026-02-09 19.18.57.excalidraw.md",
     "Odoo/Concepts/Model.md",
@@ -190,10 +240,6 @@
     "Odoo/Modules/Contacts.md",
     "Odoo/Concepts/Property Field.md",
     "Odoo/Modules/eCommerce.md",
-    "Odoo/Modules/eCommerce Rental.md",
-    "Odoo/Modules/eCommerce Rental with Stock Management.md",
-    "Odoo/Modules/Website.md",
-    "Odoo/Modules/eCommerce Rental with Planning.md",
     "Odoo/Projects/stc-location/Meetings",
     "Odoo/Projects/stc-location/Deliverables",
     "Odoo/Projects/stc-location",
@@ -201,8 +247,6 @@
     "Odoo/Modules",
     "Odoo/Concepts",
     "Odoo",
-    "Music/Chord Progression.md",
-    "Computer Science/Code projects/webserv.canvas",
     "Computer Science/Algorithms",
     "Computer Science/Data Structures",
     "Pasted image 20251202195510.png",

@@ -3,7 +3,7 @@ tags: []
 port: "80"
 abbreviation: HTTP
 ---
-Hyper Text Transfer Protocol or HTTP powers the world wide web.
+HyperText Transfer Protocol or HTTP powers the worldwide web.
 Exists in secure form as [[HTTPS]].
 # How it works
 HTTP works in a *transaction* model: **a client *requests* a resource, and a server than *responds* with that resource**.

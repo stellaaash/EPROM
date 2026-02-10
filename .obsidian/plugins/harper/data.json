@@ -1,5 +1,5 @@
 {
-  "ignoredLints": "{\"context_hashes\":[4700640778556295096,11995012380381806070,11237027582602973978,15504233531237407674,7986221238194121068]}",
+  "ignoredLints": "{\"context_hashes\":[15504233531237407674,4700640778556295096,7986221238194121068,15125791639965528598,9259600987405361470,11995012380381806070,11237027582602973978]}",
   "useWebWorker": true,
   "lintSettings": {
     "ACoupleMore": null,
@@ -376,7 +376,7 @@
     "OpenCompounds": null,
     "OpenTheLight": null,
     "OperatingSystem": null,
-    "OrthographicConsistency": null,
+    "OrthographicConsistency": false,
     "OughtToBe": null,
     "OutOfDate": null,
     "Overall": null,
