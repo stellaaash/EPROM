@@ -29,13 +29,13 @@ Systemd categorizes system resources into *units*, which may be in a number of *
 | reloading    | Unit is active and it is reloading its configuration.                                                                                                                                     |
 | refreshing   | Unit is active and a new mount is being activated in its namespace (see [[Linux#Namespaces]].                                                                                             |
 ### Unit Types
-For each of these types, **there exists an appropriate manual page**: `systemd.service(5)`, `systemd.socket(5)` etc...
+For each of these types, **there exists an appropriate manual page**: `systemd.service(5)`, `systemd.socket(5)` etc.
 1. **Service**: Start and control daemons and the processes they consist of.
 2. **Socket**: Encapsulate local IPC or network sockets in the system.
 3. **Target**: Useful to group units, or provide well-known sync points during boot-up.
 4. **Device**: Expose kernel devices in Systemd.
 5. **Mount**: Control mount points in the filesystem.
-6. **Automount**: Provide auto mount capabilities, for on-demand mounting of filesystems.
+6. **Automount**: Provide automount capabilities, for on-demand mounting of filesystems.
 7. **Timer**: Useful for triggering activation of other units based on timers.
 8. **Swap**: Like mount units, except they encapsulate swap partitions or files in the [[Operating System]].
 9. **Path**: Can be used to activate other services when file system objects change or are modified.

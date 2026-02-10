@@ -5,7 +5,7 @@ tags: []
 [[Window Manager]]
 [[Display Manager]]
 # Common Directories
-- `/`: Root directory, the top level of the file system.
+- `/`: Root directory, the top level of the filesystem.
 - `/home`: User home directories.
 - `/dev`: System devices exposed by [[udev]].
 - `/bin`: Essential binary executables.
@@ -31,7 +31,7 @@ This is how [[Docker]] containers don't have access to other processes: **they h
 > If a process belonging to a `pid` namespace with only itself tries to get the list of PIDs from the kernel, the kernel will tell the process that it is PID 1, the sole process in that namespace.
 > This effectively **creates isolation**, as the process isn't even aware of the existence of others. To it, **it is the first process that was started on the system**.
 
-## List of modern Linux Namespaces
+## List of Modern Linux Namespaces
 - `mnt`: Mount points
 - `pid`: Process ID number space
 - `net`: Network stack (interfaces, routing tables, [[iptables]])

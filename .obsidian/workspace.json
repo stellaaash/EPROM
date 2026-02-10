@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Computer Science/HyperText Transfer Protocol.md",
+                "file": "Computer Science/systemd.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "HyperText Transfer Protocol"
+              "title": "systemd"
             }
           }
         ]
@@ -212,8 +212,13 @@
   },
   "active": "bc852d9c449dd058",
   "lastOpenFiles": [
-    "Computer Science/Code projects/webserv.canvas",
+    "Computer Science/Linux Commands.md",
+    "Computer Science/systemd.md",
+    "Computer Science/Linux.md",
+    "Computer Science/Networking/IP Address.md",
+    "Odoo/Concepts/Stage.md",
     "Computer Science/HyperText Transfer Protocol.md",
+    "Computer Science/Code projects/webserv.canvas",
     "Computer Science/Networking/Uniform Resource Locator.md",
     "Computer Science/Networking/Uniform Resource Identifier.md",
     "Computer Science/Networking/Uniform Resource Name.md",
@@ -225,7 +230,6 @@
     "Odoo/Projects/stc-location/Meetings/M001 - 09-02-2026 - MVP Requirements.md",
     "Odoo/Projects/Projects Organization.md",
     "Odoo/Concepts/View.md",
-    "Odoo/Concepts/Stage.md",
     "Odoo/Concepts/Odoo Database.md",
     "Odoo/Concepts/Field Type.md",
     "Odoo/Concepts/Company.md",
@@ -237,9 +241,6 @@
     "Computer Science/Data Structures/Record.md",
     "Computer Science/GCC.md",
     "Odoo/Modules/Rental.md",
-    "Odoo/Modules/Contacts.md",
-    "Odoo/Concepts/Property Field.md",
-    "Odoo/Modules/eCommerce.md",
     "Odoo/Projects/stc-location/Meetings",
     "Odoo/Projects/stc-location/Deliverables",
     "Odoo/Projects/stc-location",

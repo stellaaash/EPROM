@@ -1,5 +1,5 @@
 {
-  "ignoredLints": "{\"context_hashes\":[15504233531237407674,4700640778556295096,7986221238194121068,15125791639965528598,9259600987405361470,11995012380381806070,11237027582602973978]}",
+  "ignoredLints": "{\"context_hashes\":[7986221238194121068,2052412287115872819,4700640778556295096,5654901937739324380,11995012380381806070,9259600987405361470,11237027582602973978,15125791639965528598,8468111865569405223,15504233531237407674]}",
   "useWebWorker": true,
   "lintSettings": {
     "ACoupleMore": null,
@@ -572,11 +572,13 @@
   "userDictionary": [
     "Bourne",
     "GPOs",
+    "Helpdesk",
     "Kerberos",
     "NetNTLM",
     "OU",
     "OUs",
     "Odoo",
+    "Referer",
     "S3",
     "SFTP",
     "SameSite",
@@ -584,10 +586,14 @@
     "Subnetting",
     "UNIX",
     "Wireshark",
+    "XSS",
     "Zabbix",
     "anycast",
+    "automount",
     "base64",
     "interop",
+    "udev",
+    "wifi",
     "wifis"
   ],
   "dialect": 0,

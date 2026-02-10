@@ -20,7 +20,7 @@ Changes the [[Current Working Directory]].
 **Move (rename)** files.
 ### Usage
 `mv <source file> <new path>`
-This "new path" can either be the same name at a different location in the file system, or just a new name to rename the file and keep it in the [[Current Working Directory]].
+This "new path" can either be the same name at a different location in the filesystem, or just a new name to rename the file and keep it in the [[Current Working Directory]].
 You can also combine both to rename something AND move it to a different location.
 ### Option
 - `-f` / `--force` : Doesn't prompt when overwriting a file at the destination.
@@ -32,7 +32,7 @@ You can also combine both to rename something AND move it to a different locatio
 - `-i` : Prompts before deleting each file.
 - `-v` : Prints what's happening and which files are being deleted.
 ## find
-As the name suggests, **this command can be used to easily find files on a linux filesystem**.
+As the name suggests, **this command can be used to easily find files on a Linux filesystem**.
 ### Usage
 ```sh
 find [-H] [-L] [-P] [-D debugopts] [-0level] [starting-point...] [expression]
@@ -59,7 +59,7 @@ mkdir -p path/to/directory  # Create all layers of directories as needed
 ```
 # Process Management
 ## ps
-Allows to **see running processes in the current user session**.
+Allows you to **see running processes in the current user session**.
 ### Usage
 ```sh
 ps  # See current session's processes
@@ -87,7 +87,7 @@ grep "pattern" file_to_search.txt  # Search the pattern "pattern" in file_to_sea
 cat file.txt | grep "pattern"  # You can also pipe stuff
 ```
 ## [[systemctl]]
-Allows to **interact with the [[systemd]] process/daemon**.
+Allows you to **interact with the [[Systemd]] process/daemon**.
 ### Usage
 ```sh
 systemctl [OPTION] [SERVICE]

@@ -5,11 +5,11 @@ abbreviation: HTTP
 ---
 HyperText Transfer Protocol or HTTP powers the worldwide web.
 Exists in secure form as [[HTTPS]].
-# How it works
+# How It Works
 HTTP works in a *transaction* model: **a client *requests* a resource, and a server than *responds* with that resource**.
 Every HTTP message starts with a *start line* which specifies the type of message being sent.
 After the headers, there's always an empty line to specify that the body is coming next.
-## Making requests
+## Making Requests
 You can make a simple request with a single line: `GET / HTTP/1.1`.
 What happens here is essentially "GET me the resource located at the root `/` using the HTTP protocol version 1.1".
 Usually though, you also send other data to query other resources.
@@ -73,13 +73,13 @@ Tells you **what methods are available for a specific resource**.
 ### TRACE Request
 A bit like the OPTIONS request, but usually used for debugging. As such, most servers disable it for security reasons.
 ### CONNECT Request
-Used to **create a secure connection**, like for [[HTTPS]]. not that common but crucial for encrypted communications.
+Used to **create a secure connection**, like for [[HTTPS]]. Not that common but crucial for encrypted communications.
 ## HTTP Status Codes
 HTTP status codes are three digit numbers indicating the result of a request.
 There are 5 categories of status codes.
 - **100 - Information Response**: Sent to tell the client the request has been accepted and they should send the rest of the request. Aren't really used much these days
 - **200 - Success Response**: The request was successful
-- **300 - Redirection Response**: You are being redirected to another resource (different webpage or website)
+- **300 - Redirection Response**: You are being redirected to another resource (different web page or website)
 - **400 - Client Errors Response**: The request was wrong in some way
 - **500 - Server Errors Response**: The server messed up
 ## HTTP Headers
@@ -89,7 +89,7 @@ These help the server process the request appropriately.
 - **Host**: Can be used to request a specific website when a server hosts multiple ones.
   If the host header isn't present, you'll just receive the default website.
 - **User-Agent**: This specifies with what browser you're trying to connect (software and version number).
-  This helps the server format the website properly, notably for HTML, CSS and JavaScript features that might only work on some browser.
+  This helps the server format the website properly, notably for HTML, CSS, and JavaScript features that might only work on some browser.
 - **Referer**: Indicates the [[Uniform Resource Locator]] from which the request came from.
 - **Content-Length**: When sending data (for the client side, this may be a form), this specifies the length in bytes of the content being sent.
 - **Accept-Encoding**: This specifies what kind of compression the client browser supports so that the data can be smaller when sent over the internet.
@@ -98,9 +98,9 @@ These help the server process the request appropriately.
 ### Common Response Headers
 - **Set-Cookie**: This tells the client to store a cookie to send back to the server with each request.
   You can add the `Secure` flag to your Set-Cookie header to specify that the cookie should only be sent over [[HTTPS]].
-  The `HttpOnly` flag says that cookies shouldn't be accessed via javascript, helping against XSS attacks.
+  The `HttpOnly` flag says that cookies shouldn't be accessed via JavaScript, helping against XSS attacks.
 - **Cache-Control**: Specifies how long to store the content of the response in the browser's cache.
-- **Content-Type**: Specifies what type of data is being returned, for example HTML, CSS, JavaScript, Images, PDF, Video, etc...
+- **Content-Type**: Specifies what type of data is being returned, for example HTML, CSS, JavaScript, Images, PDF, Video, etc.
   This helps the browser process the data accordingly.
 - **Content-Encoding**: What method has been used to compress the data before it was sent.
 ### Security Headers
