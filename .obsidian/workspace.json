@@ -11,24 +11,17 @@
             "id": "ae5b940b6c8aa7f8",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "canvas",
               "state": {
-                "file": "Computer Science/systemd.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
+                "file": "Computer Science/Code projects/webserv.canvas",
+                "viewState": {
+                  "x": -1376,
+                  "y": -1790.5,
+                  "zoom": -0.04524501589794652
                 }
               },
-              "icon": "lucide-file",
-              "title": "systemd"
+              "icon": "lucide-layout-dashboard",
+              "title": "webserv"
             }
           }
         ]
@@ -198,7 +191,6 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "bases:Create new base": false,
       "obsidian-excalidraw-plugin:New drawing": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
@@ -210,10 +202,10 @@
       "obsidian-kanban:Create new board": false
     }
   },
-  "active": "bc852d9c449dd058",
+  "active": "ae5b940b6c8aa7f8",
   "lastOpenFiles": [
-    "Computer Science/Linux Commands.md",
     "Computer Science/systemd.md",
+    "Computer Science/Linux Commands.md",
     "Computer Science/Linux.md",
     "Computer Science/Networking/IP Address.md",
     "Odoo/Concepts/Stage.md",
