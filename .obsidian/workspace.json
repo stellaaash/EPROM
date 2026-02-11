@@ -15,8 +15,8 @@
               "state": {
                 "file": "Computer Science/Code projects/webserv.canvas",
                 "viewState": {
-                  "x": -510,
-                  "y": -1219,
+                  "x": -719.1122594594592,
+                  "y": -2676.776843243246,
                   "zoom": -0.3698877167435442
                 }
               },
@@ -48,8 +48,7 @@
               "title": "Common Gateway Interface"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -227,10 +226,10 @@
       "obsidian-kanban:Create new board": false
     }
   },
-  "active": "5ca71c922b148501",
+  "active": "bc852d9c449dd058",
   "lastOpenFiles": [
-    "Computer Science/Code projects/webserv.canvas",
     "Computer Science/Networking/Common Gateway Interface.md",
+    "Computer Science/Code projects/webserv.canvas",
     "Computer Science/Process.md",
     "Computer Science/systemd.md",
     "Computer Science/Linux Commands.md",
