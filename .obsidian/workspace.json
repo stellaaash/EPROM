@@ -11,17 +11,14 @@
             "id": "ae5b940b6c8aa7f8",
             "type": "leaf",
             "state": {
-              "type": "canvas",
+              "type": "split-diff-view",
               "state": {
-                "file": "Computer Science/Code projects/webserv.canvas",
-                "viewState": {
-                  "x": -1376,
-                  "y": -1710,
-                  "zoom": -0.1759776715645707
-                }
+                "aFile": "Computer Science/Code projects/webserv.canvas",
+                "bFile": "Computer Science/Code projects/webserv.canvas",
+                "aRef": ""
               },
-              "icon": "lucide-layout-dashboard",
-              "title": "webserv"
+              "icon": "diff",
+              "title": "Diff: webserv.canvas  (Working Tree)"
             }
           }
         ]
