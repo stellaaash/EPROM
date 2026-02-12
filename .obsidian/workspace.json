@@ -15,9 +15,9 @@
               "state": {
                 "file": "Computer Science/Code projects/webserv.canvas",
                 "viewState": {
-                  "x": -2554.746756756755,
-                  "y": -4403.45583783784,
-                  "zoom": -0.1759776715645707
+                  "x": -534.7200000000007,
+                  "y": -3747.4099999999976,
+                  "zoom": 0
                 }
               },
               "icon": "lucide-layout-dashboard",
@@ -47,33 +47,8 @@
               "icon": "lucide-file",
               "title": "Common Gateway Interface"
             }
-          },
-          {
-            "id": "f14979321038561c",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "FastCGI.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "FastCGI"
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -251,10 +226,10 @@
       "obsidian-kanban:Create new board": false
     }
   },
-  "active": "5ca71c922b148501",
+  "active": "ae5b940b6c8aa7f8",
   "lastOpenFiles": [
-    "Computer Science/Code projects/webserv.canvas",
     "Computer Science/Networking/Common Gateway Interface.md",
+    "Computer Science/Code projects/webserv.canvas",
     "FastCGI.md",
     "Computer Science/Process.md",
     "Computer Science/systemd.md",
