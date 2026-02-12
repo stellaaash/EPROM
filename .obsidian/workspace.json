@@ -72,7 +72,8 @@
               "title": "FastCGI"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -250,11 +251,11 @@
       "obsidian-kanban:Create new board": false
     }
   },
-  "active": "ae5b940b6c8aa7f8",
+  "active": "5ca71c922b148501",
   "lastOpenFiles": [
+    "Computer Science/Code projects/webserv.canvas",
     "Computer Science/Networking/Common Gateway Interface.md",
     "FastCGI.md",
-    "Computer Science/Code projects/webserv.canvas",
     "Computer Science/Process.md",
     "Computer Science/systemd.md",
     "Computer Science/Linux Commands.md",
@@ -280,7 +281,6 @@
     "Things to Learn.md",
     "EPROM Vault Structure.md",
     "Untitled.base",
-    "Music/Chord.md",
     "Odoo/Projects/stc-location/Meetings",
     "Odoo/Projects/stc-location/Deliverables",
     "Odoo/Projects/stc-location",
