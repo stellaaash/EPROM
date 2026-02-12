@@ -45,7 +45,7 @@ Windows Domains have two major authentication protocols, though one of them is k
 
 # Trees and Subdomains
 Instead of having a single domain for huge corporations, you can actually **split AD domains in a tree-like structure**, allowing for subdomains to be defined and used.
-This way, you could have, for example, different policies for subdomains in the uk or the us, both of them being under the main domain of the global company.
+This way, you could have, for example, different policies for subdomains in the UK or the US, both of them being under the main domain of the global company.
 ![](https://tryhackme-images.s3.amazonaws.com/user-uploads/5ed5961c6276df568891c3ea/room-content/abea24b7979676a1dcc0c568054544c8.png)
 As such, when two companies merge, for example, you might have two domains trees linked together.
 This becomes an AD *forest*.

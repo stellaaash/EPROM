@@ -15,9 +15,9 @@
               "state": {
                 "file": "Computer Science/Code projects/webserv.canvas",
                 "viewState": {
-                  "x": -534.7200000000007,
-                  "y": -3747.4099999999976,
-                  "zoom": 0
+                  "x": -560,
+                  "y": -3580,
+                  "zoom": -0.6221464905146455
                 }
               },
               "icon": "lucide-layout-dashboard",
@@ -47,8 +47,33 @@
               "icon": "lucide-file",
               "title": "Common Gateway Interface"
             }
+          },
+          {
+            "id": "35ac19d0a87d1ac1",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Computer Science/Active Directory.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Active Directory"
+            }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -123,8 +148,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "94bfcc952b51a9a3",
@@ -215,6 +239,7 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "bases:Create new base": false,
       "obsidian-excalidraw-plugin:New drawing": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
@@ -226,11 +251,17 @@
       "obsidian-kanban:Create new board": false
     }
   },
-  "active": "ae5b940b6c8aa7f8",
+  "active": "35ac19d0a87d1ac1",
   "lastOpenFiles": [
+    "Math/Greek Letters.md",
+    "Math/Cosine.md",
+    "Music/Chord Progression.md",
+    "Music/Chord.md",
+    "Computer Science/Networking/Webhook.md",
     "Computer Science/Networking/Common Gateway Interface.md",
+    "Untitled.base",
     "Computer Science/Code projects/webserv.canvas",
-    "FastCGI.md",
+    "Computer Science/FastCGI.md",
     "Computer Science/Process.md",
     "Computer Science/systemd.md",
     "Computer Science/Linux Commands.md",
@@ -251,11 +282,6 @@
     "Odoo/Concepts/View.md",
     "Odoo/Concepts/Odoo Database.md",
     "Odoo/Concepts/Field Type.md",
-    "Odoo/Concepts/Company.md",
-    "Odoo/Concepts/Activity.md",
-    "Things to Learn.md",
-    "EPROM Vault Structure.md",
-    "Untitled.base",
     "Odoo/Projects/stc-location/Meetings",
     "Odoo/Projects/stc-location/Deliverables",
     "Odoo/Projects/stc-location",

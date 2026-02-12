@@ -3,8 +3,8 @@ tags: []
 ---
 The cosine of the angle between two vectors or lines represents the difference in angle between them.
 This provides valuable information indicated whether they are aligned or perpendicular, or somewhere in between.
-Used extensively in computer graphics, physics and engineering.
-# For vectors
+Used extensively in computer graphics, physics, and engineering.
+# For Vectors
 You can use the cosine of the angle between two vectors to determine how similar they are to each other.
 The angle between two vectors $A$ and $B$:
 $$
