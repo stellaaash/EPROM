@@ -19,7 +19,7 @@ They are useful for **sharing data between containers**, as a named volume can b
 > [!IMPORTANT] First Mount Quirks
 > When a volume is first created by a container's mount point, **all files contained at that mount point *in the image* will be copied inside of the volume**.
 > **Be careful to only have one container that mounts the volume with initial files.** Use `depends_on` directives to reflect which container should get to create the volume.
-> If you don't, the first container that successfully starts will get to create the volume and copy its own files.**
+> If you don't, **the first container that successfully starts will get to create the volume and copy its own files.**
 ### Bind Mounts
 With bind mounts, **you control the exact mount point on the host**.
 When working on an application, you can use a bind mount to mount the source code into the container to let it see the code changes, and update the app directly for us to see the changes as we save.

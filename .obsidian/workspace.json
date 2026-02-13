@@ -4,48 +4,24 @@
     "type": "split",
     "children": [
       {
-        "id": "112bedadca61c65d",
+        "id": "8ba1e931f83e608f",
         "type": "tabs",
         "children": [
           {
-            "id": "ae5b940b6c8aa7f8",
+            "id": "49c6c15ff807af79",
             "type": "leaf",
             "state": {
               "type": "canvas",
               "state": {
                 "file": "Computer Science/Code projects/webserv.canvas",
                 "viewState": {
-                  "x": -561.4314220532319,
-                  "y": -3714.553673003801,
-                  "zoom": -0.6221464905146455
+                  "x": 2260,
+                  "y": -3313.5,
+                  "zoom": -2.1134419157740254
                 }
               },
               "icon": "lucide-layout-dashboard",
               "title": "webserv"
-            }
-          },
-          {
-            "id": "5ca71c922b148501",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Computer Science/Networking/Common Gateway Interface.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Common Gateway Interface"
             }
           }
         ]
@@ -226,8 +202,12 @@
       "obsidian-kanban:Create new board": false
     }
   },
-  "active": "ae5b940b6c8aa7f8",
+  "active": "49c6c15ff807af79",
   "lastOpenFiles": [
+    "Computer Science/WebAssembly.md",
+    "Computer Science/Code projects/webserv.canvas",
+    "Computer Science/ncat.md",
+    "Computer Science/Docker.md",
     "Computer Science/Networking/Common Gateway Interface.md",
     "Computer Science/Data Structures/Queue.md",
     "Computer Science/Networking/Content Delivery Network.md",
@@ -244,7 +224,6 @@
     "Computer Science/MIME Type.md",
     "Computer Science/MIME.md",
     "Computer Science/Networking/Webhook.md",
-    "Computer Science/Code projects/webserv.canvas",
     "Computer Science/FastCGI.md",
     "Computer Science/Process.md",
     "Computer Science/systemd.md",
@@ -252,9 +231,6 @@
     "Computer Science/Linux.md",
     "Computer Science/Networking/IP Address.md",
     "Odoo/Concepts/Stage.md",
-    "Computer Science/Networking/HyperText Transfer Protocol.md",
-    "Computer Science/Networking/Uniform Resource Locator.md",
-    "Computer Science/Networking/Uniform Resource Identifier.md",
     "Odoo/Projects/stc-location/Scratchboard.canvas",
     "Untitled.base",
     "Odoo/Projects/stc-location/Meetings",
