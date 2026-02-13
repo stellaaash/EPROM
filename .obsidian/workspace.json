@@ -4,47 +4,31 @@
     "type": "split",
     "children": [
       {
-        "id": "8ba1e931f83e608f",
+        "id": "b6629a4ff7257a02",
         "type": "tabs",
         "children": [
           {
-            "id": "49c6c15ff807af79",
+            "id": "b240a63b32c28098",
             "type": "leaf",
             "state": {
-              "type": "canvas",
+              "type": "markdown",
               "state": {
-                "file": "Computer Science/Code projects/webserv.canvas",
-                "viewState": {
-                  "x": -1516,
-                  "y": -5190,
-                  "zoom": -0.17467853141294698
+                "file": "Math/Vector.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
                 }
               },
-              "icon": "lucide-layout-dashboard",
-              "title": "webserv"
-            }
-          }
-        ]
-      },
-      {
-        "id": "4c97c078ec4feeec",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "8abae0ab3ccb98ee",
-            "type": "leaf",
-            "state": {
-              "type": "canvas",
-              "state": {
-                "file": "Computer Science/Code projects/webserv.canvas",
-                "viewState": {
-                  "x": 4673.572277227722,
-                  "y": -3662.0990099009896,
-                  "zoom": -0.6637166121355679
-                }
-              },
-              "icon": "lucide-layout-dashboard",
-              "title": "webserv"
+              "icon": "lucide-file",
+              "title": "Vector"
             }
           }
         ]
@@ -122,8 +106,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "94bfcc952b51a9a3",
@@ -214,6 +197,7 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "bases:Create new base": false,
       "obsidian-excalidraw-plugin:New drawing": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
@@ -225,8 +209,12 @@
       "obsidian-kanban:Create new board": false
     }
   },
-  "active": "bc852d9c449dd058",
+  "active": "b240a63b32c28098",
   "lastOpenFiles": [
+    "Math/Vector.md",
+    "Computer Science/Project Ideas.md",
+    "Pasted image 20260213154008.png",
+    "Odoo/Projects/stc-location/Meetings/M001 - 09-02-2026 - MVP Requirements.md",
     "Computer Science/Code projects/webserv.canvas",
     "Computer Science/Networking/Web Server.md",
     "Computer Science/WebAssembly.md",
@@ -251,8 +239,6 @@
     "Computer Science/FastCGI.md",
     "Computer Science/Process.md",
     "Computer Science/systemd.md",
-    "Computer Science/Linux Commands.md",
-    "Computer Science/Linux.md",
     "Odoo/Projects/stc-location/Scratchboard.canvas",
     "Untitled.base",
     "Odoo/Projects/stc-location/Meetings",

@@ -20,6 +20,6 @@ Use the `vulkano` crate if the former. Might use the mlx with C interop if the l
 # LagTrain
 Android widget that shows me only my relevant trains, using the CFF api.
 Could be built using Zig to WebAssembly, since it runs on android widgets. Other options include React native.
-# Silly Terror
+# LyntOS
 Hobby Operating System
 Used to learn about kernel stuff and build a small OS!
