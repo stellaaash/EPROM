@@ -15,8 +15,8 @@
               "state": {
                 "file": "Computer Science/Code projects/webserv.canvas",
                 "viewState": {
-                  "x": -560,
-                  "y": -3580,
+                  "x": -561.4314220532319,
+                  "y": -3714.553673003801,
                   "zoom": -0.6221464905146455
                 }
               },
@@ -47,33 +47,8 @@
               "icon": "lucide-file",
               "title": "Common Gateway Interface"
             }
-          },
-          {
-            "id": "35ac19d0a87d1ac1",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Computer Science/Active Directory.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Active Directory"
-            }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -148,7 +123,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "94bfcc952b51a9a3",
@@ -239,7 +215,6 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "bases:Create new base": false,
       "obsidian-excalidraw-plugin:New drawing": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
@@ -251,15 +226,24 @@
       "obsidian-kanban:Create new board": false
     }
   },
-  "active": "35ac19d0a87d1ac1",
+  "active": "ae5b940b6c8aa7f8",
   "lastOpenFiles": [
-    "Math/Greek Letters.md",
-    "Math/Cosine.md",
-    "Music/Chord Progression.md",
-    "Music/Chord.md",
-    "Computer Science/Networking/Webhook.md",
     "Computer Science/Networking/Common Gateway Interface.md",
-    "Untitled.base",
+    "Computer Science/Data Structures/Queue.md",
+    "Computer Science/Networking/Content Delivery Network.md",
+    "Computer Science/Zabbix.md",
+    "Computer Science/Mutex.md",
+    "EPROM Vault Structure.md",
+    "Computer Science/Secure SHell.md",
+    "Computer Science/Secure Shell Protocol.md",
+    "Computer Science/UNIX Signal.md",
+    "Computer Science/Signal.md",
+    "Computer Science/Pipe.md",
+    "Computer Science/Pipes.md",
+    "Computer Science/InterProcess Communication.md",
+    "Computer Science/MIME Type.md",
+    "Computer Science/MIME.md",
+    "Computer Science/Networking/Webhook.md",
     "Computer Science/Code projects/webserv.canvas",
     "Computer Science/FastCGI.md",
     "Computer Science/Process.md",
@@ -271,17 +255,8 @@
     "Computer Science/Networking/HyperText Transfer Protocol.md",
     "Computer Science/Networking/Uniform Resource Locator.md",
     "Computer Science/Networking/Uniform Resource Identifier.md",
-    "Computer Science/Networking/Uniform Resource Name.md",
-    "Computer Science/WebAssembly.md",
     "Odoo/Projects/stc-location/Scratchboard.canvas",
-    "Odoo/Concepts/Drawing 2026-02-09 19.18.57.excalidraw.md",
-    "Odoo/Concepts/Model.md",
-    "Odoo/Projects/stc-location/Tasks.md",
-    "Odoo/Projects/stc-location/Meetings/M001 - 09-02-2026 - MVP Requirements.md",
-    "Odoo/Projects/Projects Organization.md",
-    "Odoo/Concepts/View.md",
-    "Odoo/Concepts/Odoo Database.md",
-    "Odoo/Concepts/Field Type.md",
+    "Untitled.base",
     "Odoo/Projects/stc-location/Meetings",
     "Odoo/Projects/stc-location/Deliverables",
     "Odoo/Projects/stc-location",

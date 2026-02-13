@@ -11,7 +11,7 @@ A properly configured CDN may also help again some attacks, such as [[Distribute
 > This helps in web page delivery performance, but won't replace your web servers and hosting.
 
 # Benefits of CDNs
-## Load times
+## Load Times
 The main benefit is obviously **load time** of websites.
 Think of it a bit like sitting at a banquet. Instead of asking for the spaghetti that's at the other side of the table, and it having to go through the hands of many people, you bring a big plate of spaghetti directly in front of you, so it's easier to get your plate full. Your greed sickens me.
 ## Reliability and Redundancy

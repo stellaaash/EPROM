@@ -89,7 +89,7 @@ You might need to configure the Windows Firewall to allow agent communication.
 Deploying a proxy is optional, but very useful for cases where a lot of Agents have to report to the Server, potentially overwhelming with individual requests.
 Ideally, only Proxies collect the data, before sending it over to the Server, thus letting the Server's load be reserved for processing and notifications.
 **Zabbix Proxies require a separate database.**
-## Java gateway
+## Java Gateway
 
 ## Sender
 Custom data submission.
@@ -97,11 +97,11 @@ Custom data submission.
 
 ## JS
 
-## Web service
+## Web Service
 # Templates
 Templates serve as **blueprints** for monitoring configurations, containing predefined items, triggers, graphs and discovery rules.
 Zabbix 7.0 LTS, for example, contains an extensive library of templates for existing operating systems, applications and network devices.
-## Linking a template with a host
+## Linking a Template with a Host
 You can **link a template** by associating one with a host in the Zabbix web interface, in `Configuration -> Hosts`.
 Select the target host, and use the Templates tab to link appropriate templates.
 The system will automatically create all template items, triggers, and graphs for the host.
@@ -111,7 +111,7 @@ Key parameters include item type, key syntax, update intervals and, data process
 ## Resources
 [Official List of Zabbix Integrations](https://www.zabbix.com/integrations)
 [Community Templates Repository](https://github.com/zabbix/community-templates)
-# Host configuration and management
+# Host Configuration and Management
 On the web interface, it is necessary to configure hosts to be able to receive data collected by the Agents.
 Each host requires proper configuration including network connectivity, associate templates and specific monitoring requirements.
 You can create new hosts in `Configuration -> Hosts` and selecting Create Host.
@@ -120,7 +120,7 @@ Important configuration parameters include:
 - Visible Name - For display purposes
 - Groups - For organizational structure
 - Interfaces - Define communication methods and parameters
-## Interface configuration
+## Interface Configuration
 Interface configuration specifies how the Server communicates with the Host.
 Agent interfaces require IP address and port configuration, while [[Simple Mail Transfer Protocol]] interfaces need community strings or credentials for [[Simple Network Management Protocol]] v3.
 [[Domain Name System]] names can be used instead of IP addresses when appropriate DNS resolution is available.

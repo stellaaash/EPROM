@@ -3,7 +3,7 @@ tags:
   - programming_concept
 ---
 Mutex, short for "mutual exclusion", is **a kind of "lock" on data that you want to "protect" between [[Thread]]s**.
-Used well, they effectively prevents race conditions : when a thread wants to update a static variable (shared between threads), it locks the associated mutex (that YOU will have set in the code) to tell all other threads to wait if they arrive to that part of the code.
+Used well, they effectively prevents race conditions. When a thread wants to update a static variable (shared between threads), it locks the associated mutex (that YOU will have set in the code) to tell all other threads to wait if they arrive to that part of the code.
 # How it works
 Each thread can *acquire* or *release* a mutex (you also say *lock* and *unlock*). When one thread acquires it, any other thread that tries to do so must wait for the first one to release (or unlock) it. In the meantime, it can continue execution freely (and eventually release the mutex).
 While "waiting" for the mutex to unlock, a thread is put to sleep. If multiple threads are waiting on a mutex when it unlocks, a seemingly random thread gets access to it and locks it. Rinse and repeat.
