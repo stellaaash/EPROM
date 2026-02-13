@@ -15,9 +15,32 @@
               "state": {
                 "file": "Computer Science/Code projects/webserv.canvas",
                 "viewState": {
-                  "x": 2260,
-                  "y": -3313.5,
-                  "zoom": -2.1134419157740254
+                  "x": -1516,
+                  "y": -5190,
+                  "zoom": -0.17467853141294698
+                }
+              },
+              "icon": "lucide-layout-dashboard",
+              "title": "webserv"
+            }
+          }
+        ]
+      },
+      {
+        "id": "4c97c078ec4feeec",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "8abae0ab3ccb98ee",
+            "type": "leaf",
+            "state": {
+              "type": "canvas",
+              "state": {
+                "file": "Computer Science/Code projects/webserv.canvas",
+                "viewState": {
+                  "x": 4673.572277227722,
+                  "y": -3662.0990099009896,
+                  "zoom": -0.6637166121355679
                 }
               },
               "icon": "lucide-layout-dashboard",
@@ -202,10 +225,11 @@
       "obsidian-kanban:Create new board": false
     }
   },
-  "active": "49c6c15ff807af79",
+  "active": "bc852d9c449dd058",
   "lastOpenFiles": [
-    "Computer Science/WebAssembly.md",
     "Computer Science/Code projects/webserv.canvas",
+    "Computer Science/Networking/Web Server.md",
+    "Computer Science/WebAssembly.md",
     "Computer Science/ncat.md",
     "Computer Science/Docker.md",
     "Computer Science/Networking/Common Gateway Interface.md",
@@ -229,8 +253,6 @@
     "Computer Science/systemd.md",
     "Computer Science/Linux Commands.md",
     "Computer Science/Linux.md",
-    "Computer Science/Networking/IP Address.md",
-    "Odoo/Concepts/Stage.md",
     "Odoo/Projects/stc-location/Scratchboard.canvas",
     "Untitled.base",
     "Odoo/Projects/stc-location/Meetings",
