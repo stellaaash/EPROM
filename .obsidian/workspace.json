@@ -13,6 +13,54 @@
             "state": {
               "type": "markdown",
               "state": {
+                "file": "Computer Science/WebSockets.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "WebSockets"
+            }
+          },
+          {
+            "id": "6f6c9925a1b2aa8e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Computer Science/Opaque Response Blocking.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Opaque Response Blocking"
+            }
+          },
+          {
+            "id": "8a05acf230fb8b65",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
                 "file": "Odoo/Learning Notes/Getting Started.md",
                 "mode": "source",
                 "source": false,
@@ -31,7 +79,8 @@
               "title": "Getting Started"
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -125,13 +174,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "XML Path Language.md",
+                "file": "Odoo/Learning Notes/Getting Started.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of XML Path Language"
+              "title": "Outline"
             }
           },
           {
@@ -213,15 +262,16 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "32eec4738997bfb1",
+  "active": "f0c5ccacd320b0fb",
   "lastOpenFiles": [
-    "Computer Science/React Router.md",
+    "Computer Science/WebSockets.md",
+    "Computer Science/Opaque Response Blocking.md",
     "Odoo/Learning Notes/Getting Started.md",
+    "Computer Science/React Router.md",
     "Computer Science/gcc.md",
     "Computer Science/ACME.md",
     "Computer Science/High Availability.md",
     "Computer Science/Linux Unified Key Setup.md",
-    "Computer Science/Untitled.md",
     "Computer Science/Linux System Hardening.md",
     "Computer Science/OpenSSL.md",
     "Odoo/View.md",
@@ -241,7 +291,6 @@
     "Computer Science/Extensible Markup Language.md",
     "Computer Science/JSON Web Tokens.md",
     "Computer Science/XML Path Language.md",
-    "LaTeX.md",
     "Law",
     "Computer Science/Projects/transcendence.canvas",
     "themes/everforest/theme.css",

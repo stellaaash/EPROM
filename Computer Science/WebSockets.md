@@ -1,8 +1,9 @@
 ---
 tags:
   - web
+  - protocol
 ---
-WebSockets was born out of a necessity for easy two way communication where **the server can just send stuff unprompted to the client**.
+The WebSockets protocol was born out of a necessity for easy two way communication where **the server can just send stuff unprompted to the client**.
 This happens through a persistent connection, during which the server can broadcast any information it deems fit to the client, **without the client issuing a request first**.
 # How It Works
 The base idea of a WebSocket connection is that it **gets upgraded from a [[HyperText Transfer Protocol]] connection** with a *handshake*.
@@ -81,4 +82,4 @@ A close frame **may contain a status code and a reason for closing in its payloa
 The closing handshake occurs once **either party sends a close frame**.
 The peer that receives the close frame should send back one as well, after which the connection is closed.
 # Resources
-- [WebSocket Protocol](https://websocket.org/guides/websocket-protocol/)
+- [Official WebSocket Website - WebSocket Protocol](https://websocket.org/guides/websocket-protocol/)

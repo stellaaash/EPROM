@@ -322,4 +322,126 @@
 - From the settings, you can modify and add floor maps. You can also modify the payment methods.
 - You can enable existing payment terminals down in the settings.
 - You can also link an IoT box to set up your own terminal.
-- 
+## Business Flow - eLearning
+### eLearning - Creating the Course
+- You can build a new course either from the backend, or directly on the website frontend from the "New" button in the top right.
+- When creating a course, set your layout, description, and allow people to rate your course or not, and off you go.
+- Now you're on the page you can use to build your course: adding sections, content… All of Odoo Website's features are available here!
+- Content for a course could be a document, image, article, video, quiz, or certification.
+- You can retrieve content directly from a Google Drive account.
+- Set the estimated completion time for your resource so that students know what to expect. Finally, publish your resource.
+- When creating an article, you have access to all the Odoo Website features to build your lesson contents.
+### eLearning - Creating the Certification
+- Depending on the content type, data for the content will be auto-populated. For example, titles for PDFs, and duration for videos.
+- In the eLearning application, select `Courses -> Certification`. Create a new certification.
+- Technically, a certification is really just a quiz, but with a real reward at the end.
+### eLearning - Modifying the Course in the Backend
+- At all times, select the Course button in the top right to go to the backend view for the course.
+- From here, you can change your content, add images, modify the description, options, and karma- stuff?
+- Karma defines how many points the user receives on lesson reviewing and course completion.
+- You can gatekeep reviewing a course to a specific points minimum, so that not everyone can review content right away. This helps prevents spam from bot accounts.
+- For your course, you can change the Enroll Policy to define when someone can enroll. Either it's open, on invitation, or automatic on buying the course itself.
+- For paid courses, make sure the policy is set to "on payment", so that you can actually create a product for it, and sell it.
+- Smart buttons for a course show sales of that course, attendees to see who's doing it, etc.
+- You can link a product to your course directly, so that you can configure your price, type of product, etc. This is needed so that you can actually send the course. Linking it will allow users to actually see and use the course once the product is bought.
+- Of course, your course's product has to be published so that people can buy it on your website.
+- To publish the course, on the front-end page, in the top right, click the publish button.
+### Configuration
+- You'll need eLearning, eCommerce, Website, Sales, Survey, Email Marketing apps installed.
+- As for settings, you'll need to enable all 4 eLearning settings. These will need some more apps (survey for certifications, email marketing for mailing).
+## Business Flow - Online Subscriptions
+### Subscriptions - Creating Subscriptions
+- In the Sales app settings, you have to enable the Online Payment option to be able to sell stuff online. Also set automatic invoice to on, so that the invoice is automatically sent out, and the revenue automatically logged in the accounting.
+- For subscriptions, set the sales and subcriptions tickboxes to on.
+- Because subscriptions are set up as sales products, invoices and a ton of other features get enabled, including but not limited to regular invoices for the recurrence of the subscription.
+- The `Create on Order` field creates a record, like a task, on a customer buying the product. This way, you can prompt your team to proceed on an order without leaving your customers hanging.
+- You can set the cost per unit of measure; if you're making subscriptions for classes, you could have a unit of measure category "working time" that says how many hours are needed internally, and then individual units for an hour, a day, a certain number of classes (example given is 8 classes amounts to 8 hours).
+  Not gonna lie I haven't really gotten much of the math in there.
+- Cross-sell/upsell products allow you to suggest optional/complementary products on the shopping page of your website.
+### Subscriptions - Selling Subscriptions
+- Once an order has been completed, it will appear on the backend.
+- The default view will only show you ongoing subscriptions.
+- The smart buttons will show you the linked records, including tasks that may have been created automatically on order confirmation.
+### Subscriptions - Tracking Hours
+- In the Timesheets tab of a subscription order, you can set the hours you've spent on working on a subscription (for example, if you're an instructor for a subscribed course). This will compare your working hours with the total allocated time in the subscription order, and update the time remaining accordingly. This will also update a new smart button on the order that will show you the currently logged hours.
+## Business Flow - Administrative Department
+### Documents - Handling Documents
+- Documents has both a tree view, and the usual folders and group by search box.
+- You can share documents by adding people or email addresses, and manage general access. You can also copy the link.
+- You can upload documents directly, in full resolution without compression on the images.
+- On each document, you can add info and tags, which contains the chatter for the document, too.
+- Odoo allows you to have email addresses to receive documents on. You set it on a folder, and what it does is that every time you send a document to that email, it will automatically be uploaded to the Documents app, in that folder!
+- You can also scan physical documents, in batches too. If you connect your scanner device to your database through the email alias, they will all become automatically sorted as you scan and send them. Neat!
+- When scanning multiple distinct documents in a single pdf, you can use the Split PDF feature to split it in different documents. You select the ones that pertain to the type of document you're looking for, then adjust the splits. Finally, you can select the right `Create ...`  button at the top of the screen to create the right records, for example vendor bills, customer invoices, etc.
+### Accounting - Handling Bills
+- You can use the `Reload AI Data` button to scan PDFs and fill in the fields of a bill or other document. The due date, accounting date, and fields all get filled in automatically.
+### Sign - Handling and Signing Contracts
+- In the Documents app, you can easily create a contract by tapping the Sign button on top of a document.
+- This will show you a list of fields, which you can drag to create your signing form. Kinda like Docuseal and other similar apps.
+- Once it's ready, you can send it, or sign it directly if you're with your customer/contractor.
+- The customer will receive an email with a sign document button.
+- Once all the fields are filled in, the other party will be able to send it back to us.
+- Back in the backend, you will receive the response in the Documents app.
+- Templates for contracts only appear in the Sign application, not in the Documents app. So, when you use the Sign button on a document, it will create a new template in the Sign application, be sure to check it out over there.
+- You can also create a `Request a Signature` activity, by the way.
+### Documents - Following Up
+- You can create tasks from documents. For this, from the documents app, in the actions menu on the cog, you can select the actions that are available to you from a given document with `Actions on Select`. For example, you could add a button for `Create a Task` which will allow you to create one directly from a document.
+- In addition to those standard actions you can add, you can select `Automations` in the cog menu, to create new automations.
+- In there, you can, for example, set a task to be created on a given trigger, like adding a specific tag to a document. The example in the video was adding the Presentations tag, which moved the document to the Marketing folder, and creating an activity for that document.
+## Business Flow - Construction Project
+### Sales - Quotation for a Construction
+- For a construction project, you could have invidiual lines for each stage, with the time it takes, an either an hourly or daily fee.
+- You could also set UoMs (unit of measure) for weeks or months, if your pricing uses those units instead.
+### Project - Managing the ConstructionProject
+- When a sales order is confirmed, a project and all related tasks will be automatically created, and, if applicable, using the number of hours defined in your unit of measure and amount in the sales order.
+- You can create activities directly from a task in the kanban view.
+- You can log hours spent on invidiual tasks to update the amount of time alloted to a specific task left.
+- The built-in timer allows you to track your time spent on a task in real-time, using the `Start` button on a task's form view.
+### Invoicing - Invoicing the Hours for the Project
+- If you go back to the quotation after a few hours have been logged, the hours will have been updated in the `Delivered` column on each line of the Sales Order. This is because we use `Days` as the unit of measure.
+- Sales orders have smart buttons allowing you to not only access the related project and tasks, but also the recorder hours so far.
+- Careful; hours logged are time sheets. This means they need to be approved by the right people; if hours don't show up in the sales order, that's why.
+### Purchase - Buying Material
+- When creating a request for quotation in the Purchase app, Odoo will display any On-time delivery data in the `Expected Arrival` field. This may be blank if it's your first time ordering from a given supplier.
+- To link your new request for quotation to the current project this purchase will be for, make sure to assign any lines related to that project to the right analytical account. This happens in the `Analytic Distribution` column. Select your project from there.
+- You'll need to enable the analytic accounts in the settings for this. And make sure the column is actually visible, too.
+### Accounting - Paying our Bills
+- From the purchase order, you can create a bill directly. Or, in the accounting app, you can create it directly too.
+- Use the `Auto-Complete` feature to select the purchase order and fill in the bill automatically.
+- Make sure the analytic account carried over, as well.
+### Sales - Invoincing our Customer
+- On the same sales order as at the beginning, you can create the invoice. Using the analytic account, the purchase order lines are automatically added to the customer invoice, so that your purchases for their project are automatically linked. Any blue lines are ready to be invoiced (for example, received materials, or delivered hours).
+- In the `To Invoice -> Orders to Invoice` view, you can view all sales orders with stuff to invoice.
+- When you select orders, you have a button to create invoices automatically. This will create a new invoice with all the blue to-invoice lines.
+### Configuration
+- For this flow, a few settings and configurations are necessary.
+- In the products menu, in the Inventory app, create a service product for each hour worked by your employees (in this case, architects). Set the `Invoicing Policy` to `Based on Timesheets` to link the actual time logged to what you'll invoice your customers.
+- Set `Create on Order` to `Project & Task` to create a new project and invidual tasks for the sales order, for when you sell hours of this product.
+- When you have a product that you want to pass the cost down to the customer, set the `Re-Invoice Costs` to `Sales price`. This adds a markup to the purchase price. Alternatively, use `At cost` to make them pay the actual amount, without any margin for you.
+- Make sure to set `Invoicing Policy` to `Delivered quantities` too, so that your customer isn't invoiced your entire order, just the amount that was delivered for their project.
+- For analytic accounts, make sure to enable the feature in the accounting app.
+## Business Flow - Airproof
+### Inventory - Creating the Products
+- Cost for a product allows you to track expenses for getting/building a product.
+- In the `Inventory` tab, you can set the `Manufacture` tick to signify that those products are manufactured. Also tick the `Replenish on Order (MTO)` tick to automatically create orders when sales of this product occur. Make sure the `Multi-Step Routes` feeatures is enabled, and that the route is unarchived from the default routes.
+### Manufacturing - Building the Products
+- You can set bills of materials for each product that you build.
+### eCommerce - Selling the Products
+- You can modify forms to change their actions, in the Form section of the `Customize` tab on the website editor. You could make it so that filling in the form creates a new opportunity in the CRM app.
+### CRM - Taking Care of Leads
+- From a lead, you can directly create a quotation.
+- You can setup quotation templates to simplify the quotation creation process.
+- Pricelists allow you to set promotions, or change pricing depending on time of the year. Pricelists contain rules for determining prices for your products, or percentages applied to your product prices. Either for seasons, different customers, current available stock, you decide what your pricelists mean.
+- For shipping, make sure your company has an address and zipcode, and products, a weight configured.
+### Manufacturing/Inventory - Fulfilling the Order
+- On a manufacturing order, you can use the `Check availability` button to check that all your required materials are currently in stock.
+- In `Operations -> Replenishment`, it will list all materials that you need to purchase again. This will create a purchase order in `Requests for Quotation`.
+### Sales - Invoicing the Customer
+- Once you sent an invoice for a down order, if you want the customer to pay the rest, you can create another invoice for the full amount (the down payment will be deducted automatically).
+### Setting Access Rights
+- For an intern, for example, you'd set access rights in the `Manage Users` setting.
+- It all happens in the `Access Rights` tab. Here, you define what each user has access to, and not access to.
+- Check the docs for more info.
+### Dashboards - Getting an Overview
+- You can filter the metrics for specific products, salespersons, application, etc.
+- When switching applications in the dashboards, different filter options will appear.
