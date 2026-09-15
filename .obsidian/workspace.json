@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "d9c2228558d0fd3b",
+        "id": "5854506ede58afd2",
         "type": "tabs",
         "children": [
           {
-            "id": "32eec4738997bfb1",
+            "id": "9b1b77228e23bc45",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Computer Science/WebSockets.md",
+                "file": "Odoo/Learning Notes/Accounting and Invoicing.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,16 +28,16 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "WebSockets"
+              "title": "Accounting and Invoicing"
             }
           },
           {
-            "id": "6f6c9925a1b2aa8e",
+            "id": "7430af63119bee7f",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Computer Science/Opaque Response Blocking.md",
+                "file": "Computer Science/React.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,35 +52,11 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Opaque Response Blocking"
-            }
-          },
-          {
-            "id": "8a05acf230fb8b65",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Odoo/Learning Notes/Getting Started.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Getting Started"
+              "title": "React"
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -174,7 +150,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Odoo/Learning Notes/Getting Started.md",
+                "file": "Computer Science/React.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -242,7 +218,7 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -262,12 +238,14 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "f0c5ccacd320b0fb",
+  "active": "7430af63119bee7f",
   "lastOpenFiles": [
+    "Computer Science/React Router.md",
+    "Computer Science/React.md",
+    "Odoo/Learning Notes/Accounting and Invoicing.md",
+    "Odoo/Learning Notes/Getting Started.md",
     "Computer Science/WebSockets.md",
     "Computer Science/Opaque Response Blocking.md",
-    "Odoo/Learning Notes/Getting Started.md",
-    "Computer Science/React Router.md",
     "Computer Science/gcc.md",
     "Computer Science/ACME.md",
     "Computer Science/High Availability.md",
@@ -289,8 +267,6 @@
     "Odoo/Model.md",
     "Odoo/Action.md",
     "Computer Science/Extensible Markup Language.md",
-    "Computer Science/JSON Web Tokens.md",
-    "Computer Science/XML Path Language.md",
     "Law",
     "Computer Science/Projects/transcendence.canvas",
     "themes/everforest/theme.css",
