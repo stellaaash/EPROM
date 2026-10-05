@@ -6,7 +6,7 @@ abbreviation: GDPR
 The GDPR is a data protection law, implemented in the [[European Union]] in May 2018.
 Its goal is **to protect personal data, which is "any data associated with an individual that can be utilized to identify them"**.
 # Key Points
-- **Prior approval** must be obtained **before collecting** any personal data
+- **Prior approval** must be obtained **before collecting** any personal data, including by AI systems.
 - **Personal data** should be **kept at a minimum**, and only collected **when necessary**.
 - Adequate measures need to be adopted to **protect stored personal data**.
 # Jurisdiction

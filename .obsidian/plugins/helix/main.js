@@ -3706,6 +3706,7 @@ function escapeRegex(text) {
 
 // main.ts
 var import_state5 = require("@codemirror/state");
+var import_view4 = require("@codemirror/view");
 var import_obsidian = require("obsidian");
 
 // src/logic.ts
@@ -3754,6 +3755,21 @@ var HelixPlugin = class extends import_obsidian.Plugin {
         },
         drawSelection: false
       })));
+      this.extensions.push(import_state5.Prec.highest(import_view4.keymap.of([{
+        key: "Enter",
+        run: (view) => {
+          var _a;
+          const editor = (_a = view.state.field(import_obsidian.editorInfoField, false)) == null ? void 0 : _a.editor;
+          if (!editor)
+            return false;
+          if (!this.app.vault.getConfig("smartIndentList"))
+            return false;
+          if (typeof editor.newlineAndIndentContinueMarkdownList !== "function")
+            return false;
+          editor.newlineAndIndentContinueMarkdownList();
+          return true;
+        }
+      }])));
     }
     await this.saveSettings();
     if (reload)
