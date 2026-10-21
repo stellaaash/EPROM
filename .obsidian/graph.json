@@ -11,28 +11,28 @@
       "query": "path:Math  ",
       "color": {
         "a": 1,
-        "rgb": 14701138
+        "rgb": 15961000
       }
     },
     {
       "query": "path:\"Computer Science\"  ",
       "color": {
         "a": 1,
-        "rgb": 6981170
+        "rgb": 16429959
       }
     },
     {
       "query": "path:Music  ",
       "color": {
         "a": 1,
-        "rgb": 5146596
+        "rgb": 9024762
       }
     },
     {
       "query": "path:Odoo  ",
       "color": {
         "a": 1,
-        "rgb": 10379179
+        "rgb": 13346551
       }
     }
   ],
@@ -46,6 +46,6 @@
   "repelStrength": 10,
   "linkStrength": 1,
   "linkDistance": 150,
-  "scale": 0.06021752314236542,
+  "scale": 0.3643579031175315,
   "close": true
 }

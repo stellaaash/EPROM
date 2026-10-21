@@ -1,0 +1,3 @@
+A Linux kernel feature that **lets you load small programs into the running kernel and attach them to hooks**. These hooks could be any event, such as a network interface receiving a packet, a socket opening, a syscall firing.
+The programs you install **share state with the userspace through key-value maps**.
+This powerful feature allows you to add custom kernel behavior without writing a kernel module or rebooting.

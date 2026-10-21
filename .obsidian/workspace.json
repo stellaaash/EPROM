@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "5854506ede58afd2",
+        "id": "4230a88f55000aa8",
         "type": "tabs",
         "children": [
           {
-            "id": "9b1b77228e23bc45",
+            "id": "f8078e698ad38897",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Odoo/Learning Notes/Accounting and Invoicing.md",
+                "file": "Odoo/Action.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,10 +28,35 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Accounting and Invoicing"
+              "title": "Action"
+            }
+          },
+          {
+            "id": "7676e56030544c6b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Odoo/Learning Notes/Inventory.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Inventory"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -43,7 +68,6 @@
       {
         "id": "7314ae3322c1ade6",
         "type": "tabs",
-        "dimension": 68.67364746945898,
         "children": [
           {
             "id": "19abd76a06e1d099",
@@ -66,7 +90,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#math",
+                "query": "",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -88,28 +112,10 @@
             }
           }
         ]
-      },
-      {
-        "id": "b3405bf85693d9b7",
-        "type": "tabs",
-        "dimension": 31.326352530541012,
-        "children": [
-          {
-            "id": "2aa113e46b2d22b9",
-            "type": "leaf",
-            "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
-            }
-          }
-        ]
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 329
   },
   "right": {
     "id": "94bfcc952b51a9a3",
@@ -125,7 +131,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Odoo/Learning Notes/Accounting and Invoicing.md",
+                "file": "Odoo/Learning Notes/Inventory.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -150,12 +156,36 @@
             }
           },
           {
-            "id": "ebcc170fe1384ed4",
+            "id": "bc852d9c449dd058",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
+            }
+          },
+          {
+            "id": "81fb030937024a82",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Math/Rotation Matrix.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from Rotation Matrix"
+            }
+          },
+          {
+            "id": "8c61da6e10e7f41b",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Computer Science/Risk Management.md",
+                "file": "Computer Science/React Router.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -165,39 +195,15 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Risk Management"
-            }
-          },
-          {
-            "id": "81fb030937024a82",
-            "type": "leaf",
-            "state": {
-              "type": "outgoing-link",
-              "state": {
-                "file": "Computer Science/Risk Management.md",
-                "linksCollapsed": false,
-                "unlinkedCollapsed": true
-              },
-              "icon": "links-going-out",
-              "title": "Outgoing links from Risk Management"
-            }
-          },
-          {
-            "id": "f0c5ccacd320b0fb",
-            "type": "leaf",
-            "state": {
-              "type": "git-view",
-              "state": {},
-              "icon": "git-pull-request",
-              "title": "Source Control"
+              "title": "Backlinks for React Router"
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 349
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -207,60 +213,56 @@
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
       "bases:Create new base": false,
-      "omnisearch:Omnisearch": false,
+      "obsidian-git:Open Git source control": false,
       "obsidian-excalidraw-plugin:New drawing": false,
       "obsidian-kanban:Create new board": false,
-      "obsidian-git:Open Git source control": false
+      "omnisearch:Omnisearch": false
     }
   },
-  "active": "9b1b77228e23bc45",
+  "active": "bc852d9c449dd058",
   "lastOpenFiles": [
-    "Computer Science/Kafka.md",
-    "Computer Science/Types of AI.md",
-    "Computer Science/OpenShift.md",
-    "Computer Science/Natural Language Processing.md",
-    "Computer Science/OpenID.md",
-    "Law/EU AI Act.md",
-    "Computer Science/Neural Network.md",
-    "Computer Science/Machine Learning.md",
-    "Computer Science/Jenkins.md",
-    "Computer Science/Kubernetes.md",
+    "Odoo/Action.md",
+    "Computer Science/Open Container Initiative.md",
+    "Odoo/Learning Notes/Inventory.md",
+    "Computer Science/Go Fiber.md",
+    "Computer Science/Untitled.md",
     "Computer Science/Helm.md",
+    "Computer Science/Traefik.md",
+    "Computer Science/Kubernetes.md",
+    "Computer Science/Docker.md",
+    "Computer Science/Vite.md",
+    "Computer Science/Sonatype Nexus.md",
+    "Computer Science/Hubble.md",
+    "Computer Science/Cilium.md",
+    "Computer Science/eBPF.md",
+    "Computer Science/OpenShift.md",
+    "Computer Science/OpenID.md",
+    "Computer Science/Keycloak.md",
+    "Computer Science/Kustomize.md",
+    "Computer Science/Argo CD.md",
     "Computer Science/Renovate.md",
-    "Odoo/Learning Notes/Accounting and Invoicing.md",
-    "Computer Science/React.md",
-    "Computer Science/React Router.md",
-    "Computer Science/Projects/transcendence.canvas",
-    "Odoo/Learning Notes/Getting Started.md",
-    "Computer Science/WebSockets.md",
-    "Computer Science/Opaque Response Blocking.md",
-    "Computer Science/gcc.md",
-    "Computer Science/ACME.md",
-    "Computer Science/High Availability.md",
-    "Computer Science/Linux Unified Key Setup.md",
-    "Computer Science/Linux System Hardening.md",
-    "Computer Science/OpenSSL.md",
-    "Odoo/View.md",
-    "Odoo/QWeb.md",
-    "Odoo/Learning Notes",
-    "Law",
-    "themes/everforest/theme.css",
-    "themes/everforest/manifest.json",
-    "themes/everforest",
-    "themes",
-    "Computer Science/Projects/webserv.canvas",
-    "Computer Science/Projects/miniRT.canvas",
-    "Computer Science/Projects/Philosophers.canvas",
-    "Computer Science/Projects/Minishell.canvas",
-    "Computer Science/Projects",
+    "Computer Science/Jenkins.md",
+    "Computer Science/Apache Kafka.md",
+    "Computer Science/JSON Web Tokens.md",
+    "Computer Science/kubectl.md",
+    "Computer Science/YAML.md",
+    "Computer Science/ISO 27001.md",
     "Computer Science/Code projects/webserv.canvas",
-    "Computer Science/Hardware",
     "Computer Science/Programming/~syncthing~git.md.tmp",
     "Odoo/Projects/stc-location/Meetings/~syncthing~M004 - 28-02-2025 - Payment Process 2.md.tmp",
     "Odoo/Projects/stc-location/Scratchboard.canvas",
+    "Untitled.base",
+    "Computer Science/~syncthing~Open Web Application Security Project.md.tmp",
+    "Computer Science/Networking/~syncthing~Webhook.md.tmp",
+    "Computer Science/~syncthing~chroot.md.tmp",
+    "Computer Science/Programming/~syncthing~LLVM.md.tmp",
+    "Computer Science/Networking/~syncthing~Simple Mail Transfer Protocol.md.tmp",
+    "Computer Science/Networking/~syncthing~Virtual Private Network.md.tmp",
+    "Computer Science/Networking/~syncthing~TCP IP Model.md.tmp",
     "Untitled.canvas",
     "Computer Science/Code projects/miniRT.canvas",
     "Pasted image 20251202195510.png",
-    "Computer Science/Code projects/Philosophers.canvas"
+    "Computer Science/Code projects/Philosophers.canvas",
+    "Computer Science/Code projects/Minishell.canvas"
   ]
 }

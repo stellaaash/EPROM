@@ -335,8 +335,58 @@
 - In the continental inventory method method, the cost of a good is taken into account as soon as it enters the stock.
 - You'll need the db to use continental accounting for this, not anglo-saxon.
 - Purchase orders don't create journal entries. The bill does.
+- Make sure the automated accounting feature is on, and that the `Inventory Valuation` setting of your product category is set to `Automated`.
+- With this method, the accountants need to make sure to enter products into balance sheet if they aren't sold quickly enough so that the accounting reports don't drift *too* much.
 ## Inventory Valuation (Anglo-Saxon)
 > See note in the previous section.
 - Used primarly by english-speaking countries like the US, UK and Canada.
 - The difference with Continental is that the cost of goods are only recognized once they have been sold instead of as they enter the inventory.
-- 
+- Make sure the automated accounting feature is on, and that the `Inventory Valuation` setting of your product category is set to `Automated`.
+# End of Period
+## Multi-Currency - Realized Gains/Losses
+- Realized gains/losses are when currency rates change between the time when you receive/send a bill/invoice, and when the time to pay comes. For example, you might have sent an invoice for 100 dollars, but the dollar rate goes down in between and now the actual amount you'll receive from the 100 dollars will be less in your home currency. That's a realized loss. For the opposite, think of a bill in dollars that you pay only after the rates have lowered; you'll have a realized gain.
+- "Realized" means that we've actually registered a payment; you can't dispute it.
+- Odoo Multi-currency allows you to automate the process of taking realized gains/losses into account.
+- The `Automatic Currency Rates` feature in the Accounting app allows odoo to automatically update exchange rates on a regular basis which you decide (you can actually choose manual if you don't want to sync automatically). You also choose the bank from which the sync will happen.
+- Still in the settings, you can access the list of currencies and active the ones you'll use. For each currency, you'll have a list of rates as updated by your automatic currency rates feature.
+- Odoo automatically converts foreign currencies to your own currency in your documents. It uses those rates to do that. Basically, you use your main currency to create your documents, and depending on the document's currency, Odoo will do the conversion automatically. You could have an invoice in Dollars, but the Debit and Credit amounts will still be in your home currency.
+- When you add a payment for a document that was in a foreign currency, Odoo will automatically create an exchange journal entry for the different in exchange rates between the document's posting date and the payment date. That's if you actually do the configuration correctly.
+- If you also have a bank account in a foreign currency, you'll also need to configure it correctly. The currency for the journal and the bank account need to be set correctly. Odoo will convert other currencies that the journal's into that currency, even if the journal has a different currency than your home country's.
+- In the case of a bank account in another currency, Odoo will not create an exchange entry automatically, you'll have to do it yourself.
+## Unrealized Gains/Losses
+- Unrealized gains and losses are still about the exchange rates changing over time, and thus the real amounts paid/received for documents changing, but this time, it's not about when the document gets paid.
+- Instead, unrealized gains and losses need to be accounted for when closing the fiscal period, to represent accurately the current state of accounting at that time of the year. These gains/losses are uncertain, contrary to the realized gains/losses.
+- In odoo, this has to be done using a manual trigger, and you'll need to reverse the entry at the beginning of the new fiscal period.
+- The specific report you need is found in `Accounting -> Review -> Regularization Entries -> Unrealized Currencies`.
+- Then, in this report, use the `Adjustment Entry` button to generate this entry and the reversal entry. These will automatically be posted on the dates you determined.
+- Make sure to set the reversal entry to the first day of the new fiscal period.
+## Closing the Fiscal Year
+- Best practices for year closing:
+	- Bank accounts fully reconciled
+	- Matching book balance and bank statement balance
+	- Customer invoices and bills have been created
+	- Draft entries confirmed or cancelled
+	- Expenses accurate, and validate them
+	- Received payments encoded and confirmed
+	- Close all suspense accounts
+	- Loans registered for automatic ammortization calculations
+	- Review overdue payable and receivables
+	- Assess whether provisioning for uncertain liabilities or other stuff is required
+	- Book depreciation and deferred revenue entries
+- The balance sheet is automatically calculated by Odoo; with an unallocated revenue signifying your revenue for the year. All that's left to do is to allocate it.
+- In the accounting settings, make sure your fiscal year end date is set to your company's needs. If you need to edit fiscal years manually because of starting in the middle of the year, or having a fiscal year longer than 1 year, enable the Fiscal Years feature and edit from there.
+- In `Report -> Profit and Loss`, you'll find the profit and loss statement. You'll see your profit or loss here; this amount is also found in the balance sheet, labelled as `Unallocated Earnings/Losses`.
+- To close, copy the profit/loss amount. Then, create a journal entry on the last date of the fiscal year according to your fiscal localization's accounting standards.
+- After this, the unallocated earnings line of the balance sheet should be at 0.
+- Then, you'll need to use the annual closing feature to complete the process. In the tax returns journal, you'll find the annual closing tax return. This has a lot of checks for annual closing; some of those are automated. If one of these are anomalies, you should fix it before closing the year.
+- Once all checks are reviewed or supervised, you can validate the report.
+- You can add your own checks if you need, under developer mode and `Configuration -> Checks`.
+- You can reset a report if it has been validated.
+- When you submit, you'll see fiscal localization-relevant instructions for submitting an year-end report.
+- The, you lock the fiscal year in `Accounting -> Lock dates`. There are five dates:
+	- Sales Journal lock date prevents creating new invoices and journal entries after closing. Any invoice posted after this date will have an accounting date in the next period.
+	- Purchase journal lock date is the same mechanism but for vendor bills.
+	- The lock tax return date ensure no journal entries affect tax accounts before that date (this is automatically set when you validate your monthly tax return)
+	- The lock everything date prevents all journal entries, setting their date to after the fiscal period end instead.
+	- These are all reversible with accounting/admin rights; you can set exceptions if you need to make a quick change. All of it will be logged into the chatter of the company record.
+	- The hard lock isn't reversible at all; this is necessary for some countries, not others. Don't use it if it's not standard to lock your accounting at the end of the fiscal year in your country.
