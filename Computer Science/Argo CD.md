@@ -13,26 +13,26 @@ There are two ways to run CD on a [[Kubernetes]] cluster:
 The second approach is called *GitOps*, since you make Git the source of truth, with the agent (Argo CD) acting on that source of truth inside of the cluster.
 # Core Concepts
 ## Application
-A CRD for a group of Kubernetes resources, so one manifest for multiple resources.
+A **CRD for a group of Kubernetes resources**, so one manifest for multiple resources.
 ## Application Source Type
-Which Tool is used to build the app.
+**Which Tool is used to build** the app.
 ## Target State
-The desired state of the application, as represented in the Git repository.
+The desired state of the application, as **represented in the Git repository**.
 ## Live State
-The current state of that application: what resources are deployed.
+The current state of that application: **what resources are deployed**.
 ## Sync Status
-Whether or not the live state matches the target state.
+**Whether or not the live state matches the target state**.
 ## Sync
-The process of updating the live state to the target state.
+The process of **updating the live state to the target state**.
 It could happen, for example, but applying changes to a k8s cluster.
 ## Sync Operation Status
-Whether or not a sync succeeded.
+**Whether or not a sync succeeded**.
 ## Refresh
-Compare the current state in Git to the live state, and figure out what is different.
+**Compare the current state in Git to the live state**, and figure out what is different.
 ## Health
-The health of the app: whether it's running correctly, can server requests, etc.
+The health of the app: **whether it's running correctly**, can server requests, etc.
 ## Tool
-A tool to create manifests from a directory of files: [[Kustomize]], [[Helm]].
+A **tool to create manifests from a directory of files**: [[Kustomize]], [[Helm]].
 Essentially, it should take a group of files and output ready Kubernetes manifests.
 # Detecting Changes
 Argo CD plugs into the Kubernetes watch API for resources it manages. This way, as soon as a change is made manually, the resource will switch to OutOfSync.

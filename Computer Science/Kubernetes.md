@@ -257,7 +257,6 @@ It has a tolerance ceiling, and **when the failure count for that probe exceeds 
 
 > [!CAUTION]
 > Be careful to set these up correctly; make sure the conditions for liveliness probes only target cases when the app truly cannot proceed without a restart. Otherwise, you'll get restarts for things that could have been resolved without one, lowering your app's stability.
-
 ### Readiness Probe
 These probes **check whether the app is ready to accept traffic**, for example at startup time or after having recovered from a fault or overload.
 If it fails, the EndpointSlice controller will **remove the Pod's IP from the EndpointSlices** of all Services that match the Pod.

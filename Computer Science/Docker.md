@@ -52,7 +52,7 @@ The `latest` tag is available for all images on Docker Hub, and is the default t
 # Registries
 Registries are **centralized locations where container images are stored**. Not least of which is Docker Hub.
 There are other available registries though, including ones you can set up.
-- [[Amazon Elastic Container Registry]]
+- [[Amazon Web Services#Elastic Container Registry (ECR)]]
 - [[Azure Container Registry]]
 - [[Google Container Registry]]
 ## Repositories

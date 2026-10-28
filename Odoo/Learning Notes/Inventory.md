@@ -86,4 +86,78 @@
 - Then, when you confirm a quotation for those products, Odoo will trigger the routes you set up with MTO. You can use the `Replenishment` smart button to go to the RFQ that Odoo created. You'll then confirm it to create a purchase order, receive it, validate it, and you're good to sell those products with the sales order.
 # Replenishment
 ## Reordering Rules
+- Reordering rules automatically inventory levels, and automatically create RFQ.
+- You can use automatic or manual reordering rules. The former is good for products with larger inventory, and things you want to automate. The latter gives you more control.
+- You can only configure reordering rules for products that have the purchase option, are goods, and are tracked in the inventory. In the purchase tab, you'll also need at least one vendor. These vendors will be used to determine the prices of the automatically created RFQs.
+- You can then use the `Reordering Rules` smart button to edit rules.
+- On each rule, you can set a minimum and maximum amount in the inventory. The new RFQ's number of bought product will be determined by subtracting the maximum amount from what you currently have in inventory; effectively buying enough products to go back to the max as soon as the forecasted quantity hits the minimum.
+- The forecasted column says what you'll be having after all confirmed sales/purchase orders are fulfilled.
+- The trigger column determines whether the rule is automatic or manual. Automatic will create the RFQ automatically; manual will need you to click the `Order` button on the rule line.
+- Odoo runs its procurement job once per day, so automatic reordering rules are triggered once per day.
+## Lead Times
+> Reading the docs might help make this less fuzzy for me (and also just playing around with it in a real situation, or with demo data)
+- Lead times are often used with reordering rules.
+- You can set the customer lead time for a product in the inventory tab. This sets the expected delivery day for new orders, so the customers have an idea of when their product will arrive.
+- You can configure security lead times for sales and purchases in the inventory settings; these are additional lead times that you add to give your company (and others, in the case of purchases) some margin for order completion. For example, for a security lead time for sales of 1 day, that means we'll make sure the order is ready one day in advance (the scheduled date will be one day earlier than the actual deadline for the order).
+- In effect, a security lead time will add (or subtract) time on your scheduled date for orders.
+- You can send vendor lead times in the purchase tab of products. This sets how long a product will arrive once an order is confirmed from a vendor. You can also set security lead times for purchases, the same way they are set for sales.
+- You can also set the `Days to Purchase` lead time, which is the time it takes for a Purchase Order to actually be confirmed by your vendors.
+- You might get a warning if you set the delivery date for a quotation sooner than the expected date (based on the customer lead time).
+## Resupplying Warehouses
+- Some businesses have a central warehouse from which they source the local warehouses, like shops.
+- You'll need a few features for this: `Storage Locations` and `Multi-Step Routes`.
+- Then, you can configure Warehouses in the settings. Here on a warehouse, you can define that a warehouse should be resupplied from other warehouses. You can also untick all options that you know a warehouse won't have to do, like directly buying to resupply, or manufacturing to resupply.
+- Then, on products you want to resupply from other warehouses, you'll have to set the route in the product form's inventory tab, under `Operations`.
+- Then, on the reordering rules smart button, you can create a new rule for the route. Then, set the min and max fields accordingly (see the reordering rules docs).
+- In effect, you can use reordering rules with other warehouses just as you would use them for creating RFQs. Except instead of RFQs, transfers between the warehouses will be created.
+# Traceability
+## Lots & Serial Numbers
+- A lot is a group of identical items received, stored, or shipped together. Best used for bulk items, for when defects affect an entire shipment.
+- A serial number is a unique number for a single product. Best used for per-item tracking, for when you provide support for items after sale.
+- In the Inventory settings, you'll need the `Lots & Serial Numbers` enabled.
+- Then, for each product, you can set the `Track Inventory` type. You'll need the product to be storable (a goods). You could track the product by quantity, by serial number, or by lots.
+- When receiving products tracked by lots of serial numbers, you'll need to set the lot and serial numbers with the details button next to the quantity on the receipt lines.
+- For serial and lot numbers, you can set them manually, import them if you have a set, or you could also generate numbers.
+- On confirmed receipts, you have a traceability smart button to see all moves of your products, where they did, how much, and their lot/serial numbers.
+- You can also see this smart button and more on individual lots or serial numbers.
+## Working with Perishable Products
+- Odoo helps you ship products that expire sooner than ones that expire later.
+- It also helps you take not of perished products so that you don't sell them, and applies accounting entries accordingly.
+- You'll need a few features: `Lots & Serial Numbers` as well as `Expiration Dates`. You'll also need `Storage Locations` and `Multi-Step Routes`. You can only track perishable dates if your product is tracked by lots or serial numbers.
+- You can set expiration dates for a product in the `Inventory` tab of a product. You have to set the `Expiration Date` check first.
+- The `Expiration Date` field has to be the highest number; the other fields depend on it.
+- When a product expires, the `Responsible` person will be notified.
+- The `Best Before Date` sets the amount of days before the product starts to deteriorate, so the amount of days it is good *before* the expiration date.
+- `Removal Date` sets the desired date for selling or discarding.
+- `Alert Date` sets when alerts should be sent for a lot or serial number; it will added to the latter's chatter for the responsible user.
+- In the product categories, you can set the `Force Removal Strategy`.
+- As for the accounting side, make sure the product category also has the right inventory valuation methods (FIFO or AVCO and perpetual inventory valuation).
+- But when are losses saved? You can set up a loss location and journal. You can set any location's type to `Inventory Loss` to set a location for losses. You also can set the `Loss Account` for the accounting.
+- From the lots/serial numbers page, you can set the dates for each product lot/serial number. The handy `Expiration Alerts` filter shows you expired or soon to be expired products.
+## Expiration Dates
+- You'll need the `Lots & Serial Numbers` and `Expiration Dates` features, as well as `Storage Locations` and `Multi-Step Routes`.
+- FEFO is used to sell perishables products by selling the ones with the earliest expirations dates.
+- You can this method in the inventory location form's `Removal Strategy`.
+# Warehouse Transfers
+## Push & Pull Rules
+- Routes are paths in which products can move; defined by rules.
+- Pull Rules are used to define how a product gets delivered to a customer. It starts with a customer order, then the stock is checked, the product picked, packed, and then shipped. You define the steps relevant to your business and warehouses in pull rules.
+- As for push rules, they are used for when you receive products at a specific location, for example, when receiving them from vendors (with receipt, QA and then storage, for example).
+- You'll need the `Storage Locations` and `Multi-Step Routes` features are enabled.
+- When you update the incoming/outgoing shipments step amount in the warehouse configuration, Odoo automatically updates the push and pull rules for you.
+- From a product's inventory tab, you can set the routes that applies to this product. You'll also have a button to see the table view of your routes, with a visual representation of each.
+- In `Configuration -> Routes`, you can define rules for a route.
+- In a rule's form view, you'll see configuration options and a text automatically generated from the options you pick.
+## Putaway Rules
+- Putaway rules define how incoming shipments should be stored.
+- They are useful to automate storing of incoming products in Odoo.
+- `Multi-Step Routes` and `Storage Locations` are needed.
+- In `Configuration -> Putaway Rules`, you can create new rules. You'll need to decide the arriving location, which products/product categories this applies to, and where to store exactly.
+- Only sublocations can be chosen in the `Store to` field. This means that if a product arrives in `WH/Stock`, you'll only be able to store it automatically in one of its sub locations. If you need the products to move to another parent location entirely, you'll need a standard rule, not a putaway rule.
+## Storage Categories
+- Storage Categories are smarter putaway rules: they check if the receiving storage still has space before leaving the source location.
+- You'll need the `Storage Locations` feature, obviously.
+- To set up storage categories, go to `Configuration -> Storage Categories`.
+- In a category, you can set a capacity and limit, including the max weight. You can set the maximum quantity per product.
+- If a storage location of a category has its category full, Odoo will choose another location based on your putaway rules.
 - 
